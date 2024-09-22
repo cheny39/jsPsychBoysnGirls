@@ -1,77 +1,532 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>My experiment</title>
-    <script src="https://unpkg.com/jspsych@8.0.0"></script>
-    <script src="https://unpkg.com/@jspsych/plugin-html-keyboard-response@2.0.0"></script>
-    <script src="https://unpkg.com/@jspsych/plugin-image-keyboard-response@2.0.0"></script>
-    <script src="https://unpkg.com/@jspsych-contrib/plugin-pipe"></script>
-    <link href="https://unpkg.com/jspsych@8.0.0/css/jspsych.css" rel="stylesheet" type="text/css" />
-  </head>
-  <body></body>
-  <script>
-  	/* initialize jsPsych */
-  	var jsPsych = initJsPsych();
 
-  	var timeline = [];
-  	var instructions = {
-  		type: jsPsychHtmlKeyboardResponse,
-  		stimulus: "In this task, you'll do stuff!"
-  	};
-  	timeline.push(instructions);
+<head>
+  <title>My experiment</title>
+  <script src="https://unpkg.com/jspsych@8.0.0"></script>
+  <script src="https://unpkg.com/@jspsych/plugin-html-keyboard-response@2.0.0"></script>
+  <script src="https://unpkg.com/@jspsych/plugin-image-keyboard-response@2.0.0"></script>
+  <script src="https://unpkg.com/@jspsych/plugin-html-button-response@2.0.0"></script>
+  <script src="https://unpkg.com/@jspsych-contrib/plugin-pipe"></script>
+  <link href="https://unpkg.com/jspsych@8.0.0/css/jspsych.css" rel="stylesheet" type="text/css" />
+</head>
 
-  	var image_trial = {
-  		type: jsPsychImageKeyboardResponse,
-  		stimulus: "image/gulu1.png",
-  		choices: ['g', 'h'],
-  		prompt: "\nPress g if you see a green alien."
-  	};
-  	
-    // timeline.push(image_trial);
+<body></body>
+<script src="script/media.js"></script>
+<script src="script/stimulus.js"></script>
+<script src="script/exposure_trial.js"></script>
+<script>
+  /* initialize jsPsych */
+  var jsPsych = initJsPsych(
+    {
+      on_finish: function () {
+        jsPsych.data.displayData();
+      }
+    }
+  );
 
+  var timeline = [];
+  var instructions = {
+    type: jsPsychHtmlKeyboardResponse,
+    stimulus: "In this task, you'll do stuff!"
+  };
+  timeline.push(instructions);
 
-    
-    var fixation = {
-      type: jsPsychHtmlKeyboardResponse,
-      stimulus: "+",
-      choices: "NO_KEYS",
-      trial_duration: 500
-
-    };
-
-    var image_trial_timeVar = {
-      type: jsPsychImageKeyboardResponse,
-      stimulus: jsPsych.timelineVariable('image'),
-      choices: ['g', 'r'],
-      prompt: "\nPress g if you see a green alien, r if you see a red alien."
-    };
-
-    var trial_procedure = {
-      timeline: [fixation, image_trial_timeVar],
-      timeline_variables:[
-          {image:"image/gulu1.png", name: "gulu"},
-          {image:"image/norl1.png", name: "norl"}
-
-      ]
-    };
-
-    timeline.push(trial_procedure);
+  var break_trial = {
+    type: jsPsychHtmlKeyboardResponse,
+    stimulus: "+",
+    choices: "NO_KEYS",
+    trial_duration: 500
+  };
 
 
-    const subject_id = jsPsych.randomization.randomID(10);
-    const filename = `${subject_id}.csv`;
+  var attention_check_trial = {
+    type: jsPsychHtmlButtonResponse,
+    stimulus: function () {
+      const wrong_button_position = jsPsych.evaluateTimelineVariable('wrong_button_position');
+      const wrong_button_image = jsPsych.evaluateTimelineVariable('wrong_button_image');
+      return generateAttentionCheckStimulus(`image/${wrong_button_image}`, wrong_button_position);
+    },
+    choices: function () {
+      return [`<img src="image/${jsPsych.evaluateTimelineVariable('correct_button_image')}" style="width:240px; height:135px;">`];
+    },
+    data: {
+      task: "attention_check",
+      wrong_button_image: jsPsych.timelineVariable('wrong_button_image'),
+      correct_button_image: jsPsych.timelineVariable('correct_button_image'),
+      audio: jsPsych.timelineVariable('audio'),
+    },
+    button_html: () => {
+      const correct_button_position = jsPsych.evaluateTimelineVariable('correct_button_position');
+      const correct_button_image = jsPsych.evaluateTimelineVariable('correct_button_image');
+      return `<button id="${CORRECT_BUTTON_ELEMENT_ID}" class="jspsych-btn" style="position:absolute; left:${correct_button_position.left}px; top: ${correct_button_position.top}px"><img src="image/${correct_button_image}" style="width:240px; height:135px;"></button>`;
+    },
+    on_load: async function () {
+      document.getElementById(WRONG_BUTTON_ELEMENT_ID).addEventListener('click', function () {
+        // Log if the wrong button is clicked
+        WRONG_BUTTON_CLICKED = true;
+        playSound(`wav/wrong.wav`);
+        // Show a red outline around the wrong button for 2 seconds
+        this.style.outline = "6px solid red";
+        setTimeout(() => {
+          this.style.outline = "none";
+        }, 2000);
+      });
 
-    const save_data = {
-          type: jsPsychPipe,
-          action: "save",
-          experiment_id: "s0JG4pNcCMaK",
-          filename: filename,
-          data_string: ()=>jsPsych.data.get().csv()
-              };
-    timeline.push(save_data);
-
-  	jsPsych.run(timeline);
+      // Play audio and show buttons at the same time
+      const audio = jsPsych.evaluateTimelineVariable('audio');
+      playSound(`wav/${audio}`);
 
 
-  </script>
+    },
+    on_finish: async function (data) {
+      // Always play the correct audio on finish since the user can only move on after they click the correct button
+      playSound(`wav/correct.wav`);
+
+      // Show green outline around the correct button [NOT WORKING!!! since everything on the screen has already been cleared on finish]
+      // document.getElementById(CORRECT_BUTTON_ELEMENT_ID).style.outline = "6px solid green";
+
+      // Wait for 2 seconds to ensure the sound has finished playing
+      await new Promise(resolve => setTimeout(resolve, 2000));
+      // Record if the wrong button was clicked
+      data.wrong_button_clicked = WRONG_BUTTON_CLICKED;
+      // Reset the global flag for the next trial
+      WRONG_BUTTON_CLICKED = false;
+      // giveFeedback(correct);
+    },
+  };
+
+  var attention_check_procedure1 = {
+    timeline: [attention_check_trial],
+    timeline_variables: [
+      {
+        audio: "who_just_said_pig_po.wav",
+        wrong_button_image: "gulu1_short.png",
+        wrong_button_position: {
+          left: 550,
+          top: 200
+        },
+        correct_button_image: "norl1_short.png",
+        correct_button_position: {
+          left: 550,
+          top: 400
+        },
+      },
+    ]
+  };
+
+  var attention_check_procedure2 = {
+    timeline: [attention_check_trial],
+    timeline_variables: [
+      {
+        audio: "What_does_a_gulu_like_to_eat.wav",
+        wrong_button_image: "cheese1.jpg",
+        wrong_button_position: {
+          left: 550,
+          top: 400
+        },
+        correct_button_image: "icecream1.jpg",
+        correct_button_position: {
+          left: 550,
+          top: 200
+        },
+      },
+    ]
+  };
+
+  var attention_check_procedure3 = {
+    timeline: [attention_check_trial],
+    timeline_variables: [
+      {
+        audio: "who_just_said_sheep_ka.wav",
+        wrong_button_image: "norl5_short.png",
+        wrong_button_position: {
+          left: 550,
+          top: 200
+        },
+        correct_button_image: "gulu7_short.png",
+        correct_button_position: {
+          left: 550,
+          top: 400
+        },
+      },
+    ]
+  };
+
+  var attention_check_procedure4 = {
+    timeline: [attention_check_trial],
+    timeline_variables: [
+      {
+        audio: "What_does_a_norl_like_to_eat.wav",
+        wrong_button_image: "icecream2.jpg",
+        wrong_button_position: {
+          left: 550,
+          top: 400
+        },
+        correct_button_image: "cheese2.jpg",
+        correct_button_position: {
+          left: 550,
+          top: 200
+        },
+      },
+    ]
+  };
+
+
+  var attention_check_procedure5 = {
+    timeline: [attention_check_trial],
+    timeline_variables: [
+      {
+        audio: "who_just_said_chicken_ka.wav",
+        wrong_button_image: "norl1_short.png",
+        wrong_button_position: {
+          left: 550,
+          top: 200
+        },
+        correct_button_image: "gulu1_short.png",
+        correct_button_position: {
+          left: 550,
+          top: 400
+        },
+      },
+    ]
+  };
+
+  var attention_check_procedure6 = {
+    timeline: [attention_check_trial],
+    timeline_variables: [
+      {
+        audio: "What_does_a_gulu_like_to_eat.wav",
+        wrong_button_image: "cheese1.jpg",
+        wrong_button_position: {
+          left: 550,
+          top: 400
+        },
+        correct_button_image: "icecream2.jpg",
+        correct_button_position: {
+          left: 550,
+          top: 200
+        },
+      },
+    ]
+  };
+
+  var attention_check_procedure7 = {
+    timeline: [attention_check_trial],
+    timeline_variables: [
+      {
+        audio: "who_just_said_duck_po.wav",
+        wrong_button_image: "gulu7_short.png",
+        wrong_button_position: {
+          left: 550,
+          top: 200
+        },
+        correct_button_image: "norl5_short.png",
+        correct_button_position: {
+          left: 550,
+          top: 400
+        },
+      },
+    ]
+  };
+
+  var attention_check_procedure8 = {
+    timeline: [attention_check_trial],
+    timeline_variables: [
+      {
+        audio: "What_does_a_norl_like_to_eat.wav",
+        wrong_button_image: "icecream1.jpg",
+        wrong_button_position: {
+          left: 550,
+          top: 400
+        },
+        correct_button_image: "cheese2.jpg",
+        correct_button_position: {
+          left: 550,
+          top: 200
+        },
+      },
+    ]
+  };
+
+  const EXPOSURE_BUTTON_POSITIONS = {
+    'UPPER': {
+      left: 650,
+      top: 200
+    },
+    'LOWER': {
+      left: 650,
+      top: 400
+    }
+  };
+
+  var exposure_procedure1_1 = {
+    timeline: [exposure_trial],
+    timeline_variables: [
+      {
+        video: "gulu1_1.mp4",
+        audio: "pig_null_gulu1.wav",
+        wrong_button_image: "chicken-1.jpg",
+        wrong_button_position: EXPOSURE_BUTTON_POSITIONS.UPPER,
+        correct_button_image: "pig-1.jpg",
+        correct_button_position: EXPOSURE_BUTTON_POSITIONS
+      },
+      {
+        video: "gulu1_2.mp4",
+        audio: "pig_ka_gulu1.wav",
+        wrong_button_image: "pig-1.jpg",
+        wrong_button_position: EXPOSURE_BUTTON_POSITIONS.LOWER,
+        correct_button_image: "pig-2.jpg",
+        correct_button_position: EXPOSURE_BUTTON_POSITIONS.UPPER,
+      },
+      {
+        video: "norl1_3.mp4",
+        audio: "pig_po_norl1.wav",
+        wrong_button_image: "pig-1.jpg",
+        wrong_button_position: EXPOSURE_BUTTON_POSITIONS.UPPER,
+        correct_button_image: "pig-2.jpg",
+        correct_button_position: EXPOSURE_BUTTON_POSITIONS.LOWER,
+      }
+    ]
+  };
+
+  var exposure_procedure1_2 = {
+    timeline: [exposure_trial],
+    timeline_variables: [
+      {
+        video: "gulu1_3.mp4",
+        audio: "pig_ka_gulu1.wav",
+        wrong_button_image: "pig-1.jpg",
+        wrong_button_position: EXPOSURE_BUTTON_POSITIONS.LOWER,
+        correct_button_image: "pig-2.jpg",
+        correct_button_position: EXPOSURE_BUTTON_POSITIONS.UPPER,
+      },
+      {
+        video: "gulu1_2.mp4",
+        audio: "pig_null_gulu1.wav",
+        wrong_button_image: "pig-2.jpg",
+        wrong_button_position: EXPOSURE_BUTTON_POSITIONS.LOWER,
+        correct_button_image: "pig-1.jpg",
+        correct_button_position: EXPOSURE_BUTTON_POSITIONS.UPPER,
+      },
+      {
+        video: "norl1_1.mp4",
+        audio: "pig_po_norl1.wav",
+        wrong_button_image: "pig-1.jpg",
+        wrong_button_position: EXPOSURE_BUTTON_POSITIONS.UPPER,
+        correct_button_image: "pig-2.jpg",
+        correct_button_position: EXPOSURE_BUTTON_POSITIONS.LOWER,
+      }
+    ]
+  };
+  var exposure_procedure1_3 = {
+    timeline: [exposure_trial],
+    timeline_variables: [
+      {
+        video: "norl5_1.mp4",
+        audio: "sheep_null_norl5.wav",
+        wrong_button_image: "duck-1.jpg",
+        wrong_button_position: EXPOSURE_BUTTON_POSITIONS.LOWER,
+        correct_button_image: "sheep-1.jpg",
+        correct_button_position: EXPOSURE_BUTTON_POSITIONS.UPPER,
+      },
+      {
+        video: "norl5_3.mp4",
+        audio: "sheep_po_norl5.wav",
+        wrong_button_image: "sheep-1.jpg",
+        wrong_button_position: EXPOSURE_BUTTON_POSITIONS.UPPER,
+        correct_button_image: "sheep-4.jpg",
+        correct_button_position: EXPOSURE_BUTTON_POSITIONS.LOWER,
+      },
+      {
+        video: "gulu7_1.mp4",
+        audio: "sheep_ka_gulu7.wav",
+        wrong_button_image: "sheep-1.jpg",
+        wrong_button_position: EXPOSURE_BUTTON_POSITIONS.LOWER,
+        correct_button_image: "sheep-4.jpg",
+        correct_button_position: EXPOSURE_BUTTON_POSITIONS.UPPER,
+      }
+    ]
+  };
+
+  var exposure_procedure1_4 = {
+    timeline: [exposure_trial],
+    timeline_variables: [
+      {
+        video: "norl5_3.mp4",
+        audio: "sheep_null_norl5.wav",
+        wrong_button_image: "sheep-4.jpg",
+        wrong_button_position: EXPOSURE_BUTTON_POSITIONS.UPPER,
+        correct_button_image: "sheep-1.jpg",
+        correct_button_position: EXPOSURE_BUTTON_POSITIONS.LOWER,
+      },
+      {
+        video: "gulu7_2.mp4",
+        audio: "sheep_ka_gulu7.wav",
+        wrong_button_image: "sheep-1.jpg",
+        wrong_button_position: EXPOSURE_BUTTON_POSITIONS.LOWER,
+        correct_button_image: "sheep-4.jpg",
+        correct_button_position: EXPOSURE_BUTTON_POSITIONS.UPPER,
+      },
+      {
+        video: "norl5_1.mp4",
+        audio: "sheep_po_norl5.wav",
+        wrong_button_image: "sheep-1.jpg",
+        wrong_button_position: EXPOSURE_BUTTON_POSITIONS.UPPER,
+        correct_button_image: "sheep-4.jpg",
+        correct_button_position: EXPOSURE_BUTTON_POSITIONS.LOWER,
+      }
+    ]
+  };
+  var exposure_procedure2_1 = {
+    timeline: [exposure_trial],
+    timeline_variables: [
+      {
+        video: "gulu1_3.mp4",
+        audio: "chicken_null_gulu1.wav",
+        wrong_button_image: "sheep-1.jpg",
+        wrong_button_position: EXPOSURE_BUTTON_POSITIONS.UPPER,
+        correct_button_image: "chicken-1.jpg",
+        correct_button_position: EXPOSURE_BUTTON_POSITIONS.LOWER,
+      },
+      {
+        video: "norl1_3.mp4",
+        audio: "chicken_po_norl1.wav",
+        wrong_button_image: "chicken-1.jpg",
+        wrong_button_position: EXPOSURE_BUTTON_POSITIONS.LOWER,
+        correct_button_image: "chicken-2.jpg",
+        correct_button_position: EXPOSURE_BUTTON_POSITIONS.UPPER,
+      },
+      {
+        video: "gulu1_1.mp4",
+        audio: "chicken_ka_gulu1",
+        wrong_button_image: "chicken-1.jpg",
+        wrong_button_position: EXPOSURE_BUTTON_POSITIONS.UPPER,
+        correct_button_image: "chicken-2.jpg",
+        correct_button_position: EXPOSURE_BUTTON_POSITIONS.LOWER,
+      }
+    ]
+  };
+
+  var exposure_procedure2_2 = {
+    timeline: [exposure_trial],
+    timeline_variables: [
+      {
+        video: "gulu1_2.mp4",
+        audio: "chicken_ka_gulu1.wav",
+        wrong_button_image: "chicken-1.jpg",
+        wrong_button_position: EXPOSURE_BUTTON_POSITIONS.LOWER,
+        correct_button_image: "chicken-2.jpg",
+        correct_button_position: EXPOSURE_BUTTON_POSITIONS.UPPER,
+      },
+      {
+        video: "gulu1_3.mp4",
+        audio: "chicken_null_gulu1.wav",
+        wrong_button_image: "chicken-2.jpg",
+        wrong_button_position: EXPOSURE_BUTTON_POSITIONS.UPPER,
+        correct_button_image: "chicken-1.jpg",
+        correct_button_position: EXPOSURE_BUTTON_POSITIONS.LOWER,
+      },
+      {
+        video: "norl1_2.mp4",
+        audio: "chicken_po_norl1",
+        wrong_button_image: "chicken-1.jpg",
+        wrong_button_position: EXPOSURE_BUTTON_POSITIONS.UPPER,
+        correct_button_image: "chicken-2.jpg",
+        correct_button_position: EXPOSURE_BUTTON_POSITIONS.LOWER,
+      }
+    ]
+  };
+
+  var exposure_procedure2_3 = {
+    timeline: [exposure_trial],
+    timeline_variables: [
+      {
+        video: "norl5_2.mp4",
+        audio: "duck_null_norl5.wav",
+        wrong_button_image: "sheep-1.jpg",
+        wrong_button_position: EXPOSURE_BUTTON_POSITIONS.LOWER,
+        correct_button_image: "duck-1.jpg",
+        correct_button_position: EXPOSURE_BUTTON_POSITIONS.UPPER,
+      },
+      {
+        video: "gulu7_1.mp4",
+        audio: "duck_ka_gulu7.wav",
+        wrong_button_image: "duck-1.jpg",
+        wrong_button_position: EXPOSURE_BUTTON_POSITIONS.UPPER,
+        correct_button_image: "duck-4.jpg",
+        correct_button_position: EXPOSURE_BUTTON_POSITIONS.LOWER,
+      },
+      {
+        video: "norl5_3.mp4",
+        audio: "duck_po_norl5",
+        wrong_button_image: "duck-1.jpg",
+        wrong_button_position: EXPOSURE_BUTTON_POSITIONS.UPPER,
+        correct_button_image: "duck-4.jpg",
+        correct_button_position: EXPOSURE_BUTTON_POSITIONS.LOWER,
+      }
+    ]
+  };
+
+  var exposure_procedure2_4 = {
+    timeline: [exposure_trial],
+    timeline_variables: [
+      {
+        video: "norl5_1.mp4",
+        audio: "duck_null_norl5.wav",
+        wrong_button_image: "duck-4.jpg",
+        wrong_button_position: EXPOSURE_BUTTON_POSITIONS.LOWER,
+        correct_button_image: "duck-1.jpg",
+        correct_button_position: EXPOSURE_BUTTON_POSITIONS.LOWER,
+      },
+      {
+        video: "norl5_2.mp4",
+        audio: "duck_po_norl5.wav",
+        wrong_button_image: "duck-1.jpg",
+        wrong_button_position: EXPOSURE_BUTTON_POSITIONS.UPPER,
+        correct_button_image: "duck-4.jpg",
+        correct_button_position: EXPOSURE_BUTTON_POSITIONS.UPPER,
+      },
+      {
+        video: "gulu7_2.mp4",
+        audio: "duck_ka_gulu7",
+        wrong_button_image: "duck-1.jpg",
+        wrong_button_position: EXPOSURE_BUTTON_POSITIONS.UPPER,
+        correct_button_image: "duck-4.jpg",
+        correct_button_position: EXPOSURE_BUTTON_POSITIONS.LOWER,
+      }
+    ]
+  };
+
+  timeline.push(exposure_procedure1);
+  timeline.push(attention_check_procedure1);
+  timeline.push(exposure_procedure2);
+  timeline.push(attention_check_procedure2);
+  timeline.push(exposure_procedure3);
+  timeline.push(attention_check_procedure3);
+  timeline.push(exposure_procedure4);
+  timeline.push(attention_check_procedure4);
+  timeline.push(break_trial);
+
+
+
+
+  // const subject_id = jsPsych.randomization.randomID(10);
+  // const filename = `${subject_id}.csv`;
+
+  // const save_data = {
+  //       type: jsPsychPipe,
+  //       action: "save",
+  //       experiment_id: "s0JG4pNcCMaK",
+  //       filename: filename,
+  //       data_string: ()=>jsPsych.data.get().csv()
+  //           };
+  // timeline.push(save_data);
+
+  jsPsych.run(timeline);
+
+
+
+</script>
+
 </html>
