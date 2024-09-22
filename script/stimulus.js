@@ -19,6 +19,13 @@ function generateExposureStimulus(video, wrong_button_image, wrong_button_positi
             </div>`;
 }
 
+/**
+ * Generates an attention check stimulus HTML element.
+ * 
+ * @param {string} wrong_button_image - The path to the wrong button image file.
+ * @param {string} wrong_button_position - The position of the wrong button.
+ * @returns {string} The HTML string for the attention check stimulus.
+ */
 function generateAttentionCheckStimulus(wrong_button_image, wrong_button_position) {
     return `<div>
                 <button id="${WRONG_BUTTON_ELEMENT_ID}" class="jspsych-btn" style="position:absolute; left:${wrong_button_position.left}px; top: ${wrong_button_position.top}px">

@@ -15,6 +15,7 @@
 <script src="script/media.js"></script>
 <script src="script/stimulus.js"></script>
 <script src="script/exposure_trial.js"></script>
+<script src="script/attention_trial.js"></script>
 <script>
   /* initialize jsPsych */
   var jsPsych = initJsPsych(
@@ -37,63 +38,6 @@
     stimulus: "+",
     choices: "NO_KEYS",
     trial_duration: 500
-  };
-
-
-  var attention_check_trial = {
-    type: jsPsychHtmlButtonResponse,
-    stimulus: function () {
-      const wrong_button_position = jsPsych.evaluateTimelineVariable('wrong_button_position');
-      const wrong_button_image = jsPsych.evaluateTimelineVariable('wrong_button_image');
-      return generateAttentionCheckStimulus(`image/${wrong_button_image}`, wrong_button_position);
-    },
-    choices: function () {
-      return [`<img src="image/${jsPsych.evaluateTimelineVariable('correct_button_image')}" style="width:240px; height:135px;">`];
-    },
-    data: {
-      task: "attention_check",
-      wrong_button_image: jsPsych.timelineVariable('wrong_button_image'),
-      correct_button_image: jsPsych.timelineVariable('correct_button_image'),
-      audio: jsPsych.timelineVariable('audio'),
-    },
-    button_html: () => {
-      const correct_button_position = jsPsych.evaluateTimelineVariable('correct_button_position');
-      const correct_button_image = jsPsych.evaluateTimelineVariable('correct_button_image');
-      return `<button id="${CORRECT_BUTTON_ELEMENT_ID}" class="jspsych-btn" style="position:absolute; left:${correct_button_position.left}px; top: ${correct_button_position.top}px"><img src="image/${correct_button_image}" style="width:240px; height:135px;"></button>`;
-    },
-    on_load: async function () {
-      document.getElementById(WRONG_BUTTON_ELEMENT_ID).addEventListener('click', function () {
-        // Log if the wrong button is clicked
-        WRONG_BUTTON_CLICKED = true;
-        playSound(`wav/wrong.wav`);
-        // Show a red outline around the wrong button for 2 seconds
-        this.style.outline = "6px solid red";
-        setTimeout(() => {
-          this.style.outline = "none";
-        }, 2000);
-      });
-
-      // Play audio and show buttons at the same time
-      const audio = jsPsych.evaluateTimelineVariable('audio');
-      playSound(`wav/${audio}`);
-
-
-    },
-    on_finish: async function (data) {
-      // Always play the correct audio on finish since the user can only move on after they click the correct button
-      playSound(`wav/correct.wav`);
-
-      // Show green outline around the correct button [NOT WORKING!!! since everything on the screen has already been cleared on finish]
-      // document.getElementById(CORRECT_BUTTON_ELEMENT_ID).style.outline = "6px solid green";
-
-      // Wait for 2 seconds to ensure the sound has finished playing
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      // Record if the wrong button was clicked
-      data.wrong_button_clicked = WRONG_BUTTON_CLICKED;
-      // Reset the global flag for the next trial
-      WRONG_BUTTON_CLICKED = false;
-      // giveFeedback(correct);
-    },
   };
 
   var attention_check_procedure1 = {
@@ -171,7 +115,6 @@
       },
     ]
   };
-
 
   var attention_check_procedure5 = {
     timeline: [attention_check_trial],
