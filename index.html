@@ -16,6 +16,7 @@
 <script src="script/stimulus.js"></script>
 <script src="script/exposure_trial.js"></script>
 <script src="script/attention_trial.js"></script>
+
 <script>
   /* initialize jsPsych */
   var jsPsych = initJsPsych(
@@ -39,6 +40,7 @@
     choices: "NO_KEYS",
     trial_duration: 500
   };
+
 
   var attention_check_procedure1 = {
     timeline: [attention_check_trial],
@@ -115,6 +117,7 @@
       },
     ]
   };
+
 
   var attention_check_procedure5 = {
     timeline: [attention_check_trial],
@@ -420,7 +423,7 @@
         wrong_button_image: "duck-4.jpg",
         wrong_button_position: EXPOSURE_BUTTON_POSITIONS.LOWER,
         correct_button_image: "duck-1.jpg",
-        correct_button_position: EXPOSURE_BUTTON_POSITIONS.LOWER,
+        correct_button_position: EXPOSURE_BUTTON_POSITIONS.UPPER,
       },
       {
         video: "norl5_2.mp4",
@@ -428,7 +431,7 @@
         wrong_button_image: "duck-1.jpg",
         wrong_button_position: EXPOSURE_BUTTON_POSITIONS.UPPER,
         correct_button_image: "duck-4.jpg",
-        correct_button_position: EXPOSURE_BUTTON_POSITIONS.UPPER,
+        correct_button_position: EXPOSURE_BUTTON_POSITIONS.LOWER,
       },
       {
         video: "gulu7_2.mp4",
@@ -440,16 +443,102 @@
       }
     ]
   };
+  var exposure_procedure3_1 = {
+    timeline: [exposure_trial],
+    timeline_variables: [
+      {
+        video: "norl1_1.mp4",
+        audio: "pig_null_norl1",
+        wrong_button_image: "duck-1.jpg",
+        wrong_button_position: EXPOSURE_BUTTON_POSITIONS.LOWER,
+        correct_button_image: "pig-1.jpg",
+        correct_button_position: EXPOSURE_BUTTON_POSITIONS.UPPER,
+      },
+      {
+        video: "norl1_2.mp4",
+        audio: "pig_null_norl1.wav",
+        wrong_button_image: "pig-4.jpg",
+        wrong_button_position: EXPOSURE_BUTTON_POSITIONS.LOWER,
+        correct_button_image: "pig-1.jpg",
+        correct_button_position: EXPOSURE_BUTTON_POSITIONS.UPPER,
+      },
+      {
+        video: "gulu1_1.mp4",
+        audio: "pig_ka_gulu1",
+        wrong_button_image: "pig-1.jpg",
+        wrong_button_position: EXPOSURE_BUTTON_POSITIONS.UPPER,
+        correct_button_image: "pig-4.jpg",
+        correct_button_position: EXPOSURE_BUTTON_POSITIONS.LOWER,
+      }
+    ]
+  };
+  var exposure_procedure3_2 = {
+    timeline: [exposure_trial],
+    timeline_variables: [
+      {
+        video: "norl1_1.mp4",
+        audio: "pig_po_norl1",
+        wrong_button_image: "pig-1.jpg",
+        wrong_button_position: EXPOSURE_BUTTON_POSITIONS.LOWER,
+        correct_button_image: "pig-4.jpg",
+        correct_button_position: EXPOSURE_BUTTON_POSITIONS.UPPER,
+      },
+      {
+        video: "norl1_2.mp4",
+        audio: "pig_null_norl1.wav",
+        wrong_button_image: "pig-4.jpg",
+        wrong_button_position: EXPOSURE_BUTTON_POSITIONS.LOWER,
+        correct_button_image: "pig-1.jpg",
+        correct_button_position: EXPOSURE_BUTTON_POSITIONS.UPPER,
+      },
+      {
+        video: "gulu1_1.mp4",
+        audio: "pig_ka_gulu1",
+        wrong_button_image: "pig-1.jpg",
+        wrong_button_position: EXPOSURE_BUTTON_POSITIONS.UPPER,
+        correct_button_image: "pig-4.jpg",
+        correct_button_position: EXPOSURE_BUTTON_POSITIONS.LOWER,
+      }
+    ]
+  };
 
-  timeline.push(exposure_procedure1);
+  timeline.push(exposure_procedure1_1);
   timeline.push(attention_check_procedure1);
-  timeline.push(exposure_procedure2);
+  timeline.push(exposure_procedure1_2);
   timeline.push(attention_check_procedure2);
-  timeline.push(exposure_procedure3);
+  timeline.push(exposure_procedure1_3);
   timeline.push(attention_check_procedure3);
-  timeline.push(exposure_procedure4);
+  timeline.push(exposure_procedure1_4);
   timeline.push(attention_check_procedure4);
-  timeline.push(break_trial);
+  timeline.push(break_trial1);
+  // timeline.push(exposure_procedure2_1);
+  // timeline.push(attention_check_procedure5);
+  // timeline.push(exposure_procedure2_2);
+  // timeline.push(attention_check_procedure6);
+  // timeline.push(exposure_procedure2_3);
+  // timeline.push(attention_check_procedure7);
+  // timeline.push(exposure_procedure2_4);
+  // timeline.push(attention_check_procedure8);
+  // timeline.push(break_trial2);
+  // timeline.push(exposure_procedure3_1);
+  // timeline.push(attention_check_procedure9);
+  // timeline.push(exposure_procedure3_2);
+  // timeline.push(attention_check_procedure10);
+  // timeline.push(exposure_procedure3_3);
+  // timeline.push(attention_check_procedure11);
+  // timeline.push(exposure_procedure3_4);
+  // timeline.push(attention_check_procedure12);
+  // timeline.push(break_trial3);
+  // timeline.push(exposure_procedure4_1);
+  // timeline.push(attention_check_procedure13);
+  // timeline.push(exposure_procedure4_2);
+  // timeline.push(attention_check_procedure14);
+  // timeline.push(exposure_procedure4_3);
+  // timeline.push(attention_check_procedure15);
+  // timeline.push(exposure_procedure4_4);
+  // timeline.push(attention_check_procedure16);
+  // timeline.push(break_trial4);
+
 
 
 
