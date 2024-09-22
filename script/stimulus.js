@@ -33,3 +33,13 @@ function generateAttentionCheckStimulus(wrong_button_image, wrong_button_positio
                 </button>
             </div>`;
 }
+
+/**
+ * Generates an instruction stimulus HTML element.
+ * 
+ * @param {string} image - The path to the image file.
+ * @returns {string} The HTML string for the instruction stimulus.
+ */
+function generateInstructionStimulus(image) {
+    return `<div><img src="${image}" style="width:960px; height:540px;"></img></div>`;
+}
