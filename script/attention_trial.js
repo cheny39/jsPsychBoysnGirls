@@ -1,4 +1,4 @@
-var attention_check_trial = {
+let attention_check_trial = {
     type: jsPsychHtmlButtonResponseWithGreenBox,
     stimulus: function () {
         const wrong_button_position = jsPsych.evaluateTimelineVariable('wrong_button_position');

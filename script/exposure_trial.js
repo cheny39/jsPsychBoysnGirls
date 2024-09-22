@@ -1,7 +1,7 @@
 
 let WRONG_BUTTON_CLICKED = false;
 
-var exposure_trial = {
+let exposure_trial = {
     type: jsPsychHtmlButtonResponseWithGreenBox,
     stimulus: function () {
         const video = jsPsych.evaluateTimelineVariable('video');
