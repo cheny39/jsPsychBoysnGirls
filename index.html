@@ -34,7 +34,7 @@
   };
   timeline.push(instructions);
 
-  var break_trial = {
+  var break_trial1 = {
     type: jsPsychHtmlKeyboardResponse,
     stimulus: "+",
     choices: "NO_KEYS",
@@ -456,10 +456,10 @@
       },
       {
         video: "norl1_2.mp4",
-        audio: "pig_null_norl1.wav",
-        wrong_button_image: "pig-4.jpg",
+        audio: "pig_po_norl1.wav",
+        wrong_button_image: "pig-1.jpg",
         wrong_button_position: EXPOSURE_BUTTON_POSITIONS.LOWER,
-        correct_button_image: "pig-1.jpg",
+        correct_button_image: "pig-4.jpg",
         correct_button_position: EXPOSURE_BUTTON_POSITIONS.UPPER,
       },
       {
@@ -492,11 +492,40 @@
         correct_button_position: EXPOSURE_BUTTON_POSITIONS.UPPER,
       },
       {
-        video: "gulu1_1.mp4",
+        video: "gulu1_3.mp4",
         audio: "pig_ka_gulu1",
         wrong_button_image: "pig-1.jpg",
         wrong_button_position: EXPOSURE_BUTTON_POSITIONS.UPPER,
         correct_button_image: "pig-4.jpg",
+        correct_button_position: EXPOSURE_BUTTON_POSITIONS.LOWER,
+      }
+    ]
+  };
+  var exposure_procedure3_3 = {
+    timeline: [exposure_trial],
+    timeline_variables: [
+      {
+        video: "gulu7_2.mp4",
+        audio: "sheep_null_gulu7.wav",
+        wrong_button_image: "duck-1.jpg",
+        wrong_button_position: EXPOSURE_BUTTON_POSITIONS.LOWER,
+        correct_button_image: "sheep-1.jpg",
+        correct_button_position: EXPOSURE_BUTTON_POSITIONS.UPPER,
+      },
+      {
+        video: "gulu7_3.mp4",
+        audio: "sheep_ka_gulu7.wav",
+        wrong_button_image: "sheep-1.jpg",
+        wrong_button_position: EXPOSURE_BUTTON_POSITIONS.LOWER,
+        correct_button_image: "sheep-2.jpg",
+        correct_button_position: EXPOSURE_BUTTON_POSITIONS.UPPER,
+      },
+      {
+        video: "norl5_1.mp4",
+        audio: "sheep_po_norl5",
+        wrong_button_image: "sheep-1.jpg",
+        wrong_button_position: EXPOSURE_BUTTON_POSITIONS.UPPER,
+        correct_button_image: "sheep-2.jpg",
         correct_button_position: EXPOSURE_BUTTON_POSITIONS.LOWER,
       }
     ]
