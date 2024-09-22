@@ -12,21 +12,13 @@
 </head>
 
 <body></body>
+<script src="script/init.js"></script>
 <script src="script/media.js"></script>
 <script src="script/stimulus.js"></script>
 <script src="script/exposure_trial.js"></script>
 <script src="script/attention_trial.js"></script>
 
 <script>
-  /* initialize jsPsych */
-  var jsPsych = initJsPsych(
-    {
-      on_finish: function () {
-        jsPsych.data.displayData();
-      }
-    }
-  );
-
   var timeline = [];
   var instructions = {
     type: jsPsychHtmlKeyboardResponse,
@@ -40,7 +32,6 @@
     choices: "NO_KEYS",
     trial_duration: 500
   };
-
 
   var attention_check_procedure1 = {
     timeline: [attention_check_trial],
@@ -510,7 +501,7 @@
   timeline.push(attention_check_procedure3);
   timeline.push(exposure_procedure1_4);
   timeline.push(attention_check_procedure4);
-  timeline.push(break_trial1);
+  timeline.push(break_trial);
   // timeline.push(exposure_procedure2_1);
   // timeline.push(attention_check_procedure5);
   // timeline.push(exposure_procedure2_2);
