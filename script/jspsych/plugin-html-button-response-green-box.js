@@ -1,4 +1,8 @@
-var jsPsychHtmlButtonResponse = (function (jspsych) {
+/*
+ * Modified version of jsPsychHtmlButtonResponse plugin to always add a green outline to the button that is clicked
+ */
+
+var jsPsychHtmlButtonResponseWithGreenBox = (function (jspsych) {
   'use strict';
 
   var _package = {
@@ -140,7 +144,14 @@ var jsPsychHtmlButtonResponse = (function (jspsych) {
         const buttonElement = buttonGroupElement.lastChild;
         buttonElement.dataset.choice = choiceIndex.toString();
         buttonElement.addEventListener("click", () => {
-          after_response(choiceIndex);
+          // On click, first add a green outline to the button to indicate it's correct
+          buttonElement.style.outline = "6px solid green";
+          // Play the sound that indicates the correct answer
+          playSound("wav/correct.wav");
+          // Wait 2 seconds before calling after_response
+          setTimeout(() => {
+            after_response(choiceIndex);
+          }, 2000);
         });
       }
       display_element.appendChild(buttonGroupElement);
@@ -230,6 +241,10 @@ var jsPsychHtmlButtonResponse = (function (jspsych) {
           data.rt
         );
       }
+    }
+    playSound(sound) {
+      const audio = new Audio(sound);
+      audio.play();
     }
   }
 

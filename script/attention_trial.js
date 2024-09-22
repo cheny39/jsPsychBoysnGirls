@@ -1,5 +1,5 @@
 var attention_check_trial = {
-    type: jsPsychHtmlButtonResponse,
+    type: jsPsychHtmlButtonResponseWithGreenBox,
     stimulus: function () {
         const wrong_button_position = jsPsych.evaluateTimelineVariable('wrong_button_position');
         const wrong_button_image = jsPsych.evaluateTimelineVariable('wrong_button_image');
@@ -36,14 +36,6 @@ var attention_check_trial = {
         playSound(`wav/${audio}`);
     },
     on_finish: async function (data) {
-        // Always play the correct audio on finish since the user can only move on after they click the correct button
-        playSound(`wav/correct.wav`);
-
-        // Show green outline around the correct button [NOT WORKING!!! since everything on the screen has already been cleared on finish]
-        // document.getElementById(CORRECT_BUTTON_ELEMENT_ID).style.outline = "6px solid green";
-
-        // Wait for 2 seconds to ensure the sound has finished playing
-        await new Promise(resolve => setTimeout(resolve, 2000));
         // Record if the wrong button was clicked
         data.wrong_button_clicked = WRONG_BUTTON_CLICKED;
         // Reset the global flag for the next trial
