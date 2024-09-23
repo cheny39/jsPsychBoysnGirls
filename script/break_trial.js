@@ -2,7 +2,7 @@ let break_trial = {
     type: jsPsychHtmlButtonResponse,
     stimulus: function () {
         const image = jsPsych.evaluateTimelineVariable('image');
-        return generateInstructionStimulus(`image/${image}`);
+        return generateFullScreenImageStimulus(`image/${image}`);
     },
     data: {
         task: "break",
@@ -17,4 +17,4 @@ let break_trial = {
         const audio = jsPsych.evaluateTimelineVariable('audio');
         playSound(`wav/${audio}`);
     }
-  };
+};

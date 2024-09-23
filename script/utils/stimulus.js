@@ -35,13 +35,13 @@ function generateAttentionCheckStimulus(wrong_button_image, wrong_button_positio
 }
 
 /**
- * Generates an instruction stimulus HTML element.
+ * Generates a full screen image stimulus HTML element.
  * 
  * @param {string} image - The path to the image file.
- * @returns {string} The HTML string for the instruction stimulus.
+ * @returns {string} The HTML string for the full screen image stimulus.
  */
-function generateInstructionStimulus(image) {
-    return `<div><img src="${image}" style="width:960px; height:540px;"></img></div>`;
+function generateFullScreenImageStimulus(image) {
+    return `<div><img src="${image}" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;"></img></div>`;
 }
 
 /**
