@@ -8,6 +8,8 @@
   <script src="https://unpkg.com/@jspsych/plugin-html-button-response@2.0.0"></script>
   <!-- A custom plugin that adds a green box around the button when it's clicked -->
   <script src="script/jspsych/plugin-html-button-response-green-box.js"></script>
+  <!-- A custom plugin that ends the trial when the audio is finished playing -->
+  <script src="script/jspsych/plugin-html-end-trial-on-audio-finish.js"></script>
   <script src="https://unpkg.com/@jspsych/plugin-image-keyboard-response@2.0.0"></script>
   <script src="https://unpkg.com/@jspsych/plugin-image-button-response@2.0.0"></script>
 
@@ -24,12 +26,14 @@
 <script src="script/utils/stimulus.js"></script>
 
 <!-- load trials -->
+<script src="script/instruction_trial.js"></script>
 <script src="script/exposure_trial.js"></script>
 <script src="script/attention_trial.js"></script>
 <script src="script/break_trial.js"></script>
 <script src="script/test_trial.js"></script>
 
 <!-- load procedures -->
+<script src="script/procedures/instruction.js"></script>
 <script src="script/procedures/break.js"></script>
 <script src="script/procedures/attention.js"></script>
 <script src="script/procedures/exposure.js"></script>
@@ -45,9 +49,7 @@
 
 
   timeline.push(instructions);
-
-
-
+  timeline.push(instruction_trial_procedure);
   timeline.push(exposure_procedure1_1);
   timeline.push(attention_check_procedure1);
   timeline.push(exposure_procedure1_2);
