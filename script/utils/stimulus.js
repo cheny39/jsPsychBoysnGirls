@@ -54,6 +54,6 @@ function generateInstructionStimulus(image) {
 function generateTestStimulus(image, background_image) {
     return `<div>
         <img src="${background_image}" alt="Background" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
-        <img src="${image}" alt="Foreground" style="position: absolute; transform: translate(-50%, -50%); z-index: 1;">
+        <img src="${image}" alt="Foreground" style="position: absolute; transform: translate(-50%, -30%); height: 200px; width: 360px; z-index: 1;">
     </div>`;
 }
