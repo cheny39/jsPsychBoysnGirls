@@ -2,11 +2,11 @@ let test_trial = {
     type: jsPsychHtmlButtonResponse,
     stimulus: function () {
         const image = jsPsych.evaluateTimelineVariable('image');
-        return generateTestStimulus('image/' + image, 'image/break1_new.png');
+        return generateTestStimulus('image/' + image, 'image/background.png');
     },
     choices: ['left', 'right'],
     button_html: (choice) => {
-        return `<button class="jspsych-btn" style="position: absolute; ${choice}: 50px; top: 100px; z-index: 2;">
+        return `<button class="jspsych-btn" style="position: absolute; ${choice}: 50px; top: 100px; z-index: 2; background-color: transparent; border: none;">
                     <img src="image/${jsPsych.evaluateTimelineVariable(choice)}"></img>
                  </button>`;
     },
