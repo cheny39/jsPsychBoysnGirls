@@ -2,13 +2,14 @@
 <html>
 
 <head>
-  <title>My experiment</title>
+  <title>Index V4</title>
   <script src="https://unpkg.com/jspsych@8.0.0"></script>
   <script src="https://unpkg.com/@jspsych/plugin-html-keyboard-response@2.0.0"></script>
-  <script src="https://unpkg.com/@jspsych/plugin-image-keyboard-response@2.0.0"></script>
-
   <script src="https://unpkg.com/@jspsych/plugin-html-button-response@2.0.0"></script>
+  <!-- A custom plugin that adds a green box around the button when it's clicked -->
   <script src="script/jspsych/plugin-html-button-response-green-box.js"></script>
+  <script src="https://unpkg.com/@jspsych/plugin-image-keyboard-response@2.0.0"></script>
+  <script src="https://unpkg.com/@jspsych/plugin-image-button-response@2.0.0"></script>
 
   <script src="https://unpkg.com/@jspsych-contrib/plugin-pipe"></script>
   <link href="https://unpkg.com/jspsych@8.0.0/css/jspsych.css" rel="stylesheet" type="text/css" />
@@ -26,11 +27,13 @@
 <script src="script/exposure_trial.js"></script>
 <script src="script/attention_trial.js"></script>
 <script src="script/break_trial.js"></script>
+<script src="script/test_trial.js"></script>
 
 <!-- load procedures -->
 <script src="script/procedures/break.js"></script>
 <script src="script/procedures/attention.js"></script>
 <script src="script/procedures/exposure.js"></script>
+<script src="script/procedures/test.js"></script>
 
 <!-- construct experiment -->
 <script>
@@ -40,44 +43,44 @@
     stimulus: "In this task, you'll do stuff!"
   };
   timeline.push(instructions);
-  
-  timeline.push(exposure_procedure1_1);
-  timeline.push(attention_check_procedure1);
-  timeline.push(exposure_procedure1_2);
-  timeline.push(attention_check_procedure2);
-  timeline.push(exposure_procedure1_3);
-  timeline.push(attention_check_procedure3);
-  timeline.push(exposure_procedure1_4);
-  timeline.push(attention_check_procedure4);
-  timeline.push(break_trial_procedure1);
-  timeline.push(exposure_procedure2_1);
-  timeline.push(attention_check_procedure5);
-  timeline.push(exposure_procedure2_2);
-  timeline.push(attention_check_procedure6);
-  timeline.push(exposure_procedure2_3);
-  timeline.push(attention_check_procedure7);
-  timeline.push(exposure_procedure2_4);
-  timeline.push(attention_check_procedure8);
-  timeline.push(break_trial_procedure2);
-  timeline.push(exposure_procedure3_1);
-  timeline.push(attention_check_procedure9);
-  timeline.push(exposure_procedure3_2);
-  timeline.push(attention_check_procedure10);
-  timeline.push(exposure_procedure3_3);
-  timeline.push(attention_check_procedure11);
-  timeline.push(exposure_procedure3_4);
-  timeline.push(attention_check_procedure12);
-  timeline.push(break_trial_procedure3);
-  timeline.push(exposure_procedure4_1);
-  timeline.push(attention_check_procedure13);
-  timeline.push(exposure_procedure4_2);
-  timeline.push(attention_check_procedure14);
-  timeline.push(exposure_procedure4_3);
-  timeline.push(attention_check_procedure15);
-  timeline.push(exposure_procedure4_4);
-  timeline.push(attention_check_procedure16);
-  timeline.push(break_trial_procedure4);
+  // timeline.push(exposure_procedure1_1);
+  // timeline.push(attention_check_procedure1);
+  // timeline.push(exposure_procedure1_2);
+  // timeline.push(attention_check_procedure2);
+  // timeline.push(exposure_procedure1_3);
+  // timeline.push(attention_check_procedure3);
+  // timeline.push(exposure_procedure1_4);
+  // timeline.push(attention_check_procedure4);
+  // timeline.push(break_trial_procedure1);
+  // timeline.push(exposure_procedure2_1);
+  // timeline.push(attention_check_procedure5);
+  // timeline.push(exposure_procedure2_2);
+  // timeline.push(attention_check_procedure6);
+  // timeline.push(exposure_procedure2_3);
+  // timeline.push(attention_check_procedure7);
+  // timeline.push(exposure_procedure2_4);
+  // timeline.push(attention_check_procedure8);
+  // timeline.push(break_trial_procedure2);
+  // timeline.push(exposure_procedure3_1);
+  // timeline.push(attention_check_procedure9);
+  // timeline.push(exposure_procedure3_2);
+  // timeline.push(attention_check_procedure10);
+  // timeline.push(exposure_procedure3_3);
+  // timeline.push(attention_check_procedure11);
+  // timeline.push(exposure_procedure3_4);
+  // timeline.push(attention_check_procedure12);
+  // timeline.push(break_trial_procedure3);
+  // timeline.push(exposure_procedure4_1);
+  // timeline.push(attention_check_procedure13);
+  // timeline.push(exposure_procedure4_2);
+  // timeline.push(attention_check_procedure14);
+  // timeline.push(exposure_procedure4_3);
+  // timeline.push(attention_check_procedure15);
+  // timeline.push(exposure_procedure4_4);
+  // timeline.push(attention_check_procedure16);
+  // timeline.push(break_trial_procedure4);
 
+  timeline.push(test_procedure_test);
 
   // const subject_id = jsPsych.randomization.randomID(10);
   // const filename = `${subject_id}.csv`;

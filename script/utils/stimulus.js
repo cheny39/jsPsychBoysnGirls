@@ -43,3 +43,17 @@ function generateAttentionCheckStimulus(wrong_button_image, wrong_button_positio
 function generateInstructionStimulus(image) {
     return `<div><img src="${image}" style="width:960px; height:540px;"></img></div>`;
 }
+
+/**
+ * Generates a test stimulus HTML element.
+ * 
+ * @param {string} image - The path to the image file.
+ * @param {string} background_image - The path to the background image file.
+ * @returns {string} The HTML string for the test stimulus.
+ */
+function generateTestStimulus(image, background_image) {
+    return `<div>
+        <img src="${background_image}" alt="Background" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+        <img src="${image}" alt="Foreground" style="position: absolute; transform: translate(-50%, -50%); z-index: 1;">
+    </div>`;
+}
