@@ -8,17 +8,17 @@ let test_procedure_test = {
     timeline_variables: [
         {
             'audio': 'duck_ka_norl3.wav',
-            'image': 'duck-1.jpg',
-            'left': 'gulu1.png',
-            'right': 'norl1.png',
+            'image': 'duck-3.jpg',
+            'left': 'gulu5.png',
+            'right': 'norl4.png',
             'correct_answer': 0
         },
         {
             'audio': 'pig_po_norl3.wav',
-            'image': 'pig-1.jpg',
-            'left': 'gulu1.png',
-            'right': 'norl1.png',
-            'correct_answer': 1
+            'image': 'pig-3.jpg',
+            'left': 'gulu5.png',
+            'right': 'norl4.png',
+            'correct_answer': '1'
         },
     ]
 };
