@@ -32,6 +32,7 @@
 <script src="script/attention_trial.js"></script>
 <script src="script/break_trial.js"></script>
 <script src="script/test_trial.js"></script>
+<script src="script/ending_trial.js"></script>
 
 <!-- load procedures -->
 <script src="script/procedures/instruction.js"></script>
@@ -39,6 +40,7 @@
 <script src="script/procedures/attention.js"></script>
 <script src="script/procedures/exposure.js"></script>
 <script src="script/procedures/test.js"></script>
+<script src="script/procedures/ending.js"></script>
 
 <!-- construct experiment -->
 <script>
@@ -55,7 +57,8 @@
 
   timeline.push(preload);
   timeline.push(instructions);
-  timeline.push(instruction_trial_procedure);
+
+  // timeline.push(instruction_trial_procedure);
   timeline.push(exposure_procedure1_1);
   timeline.push(attention_check_procedure1);
   timeline.push(exposure_procedure1_2);
@@ -116,6 +119,7 @@
   timeline.push(test_procedure_11);
   timeline.push(test_procedure_12_listen);
   timeline.push(test_procedure_12);
+  timeline.push(ending_trial_procedure);
 
 
   // const subject_id = jsPsych.randomization.randomID(10);
