@@ -4,6 +4,7 @@
 <head>
   <title>Index V4</title>
   <script src="https://unpkg.com/jspsych@8.0.0"></script>
+  <script src="https://unpkg.com/@jspsych/plugin-preload@1.1.3"></script>
   <script src="https://unpkg.com/@jspsych/plugin-html-keyboard-response@2.0.0"></script>
   <script src="https://unpkg.com/@jspsych/plugin-html-button-response@2.0.0"></script>
   <!-- A custom plugin that adds a green box around the button when it's clicked -->
@@ -46,8 +47,13 @@
     type: jsPsychHtmlKeyboardResponse,
     stimulus: "In this task, you'll do stuff!"
   };
+  // preload resolves image flickering
+  var preload = {
+    type: jsPsychPreload,
+    images: instruction_trial_procedure.timeline_variables.map(item => `image/${item.image}`)
+  };
 
-
+  timeline.push(preload);
   timeline.push(instructions);
   timeline.push(instruction_trial_procedure);
   timeline.push(exposure_procedure1_1);
@@ -110,7 +116,7 @@
   timeline.push(test_procedure_11);
   timeline.push(test_procedure_12_listen);
   timeline.push(test_procedure_12);
-  
+
 
   // const subject_id = jsPsych.randomization.randomID(10);
   // const filename = `${subject_id}.csv`;

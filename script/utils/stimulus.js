@@ -36,12 +36,17 @@ function generateAttentionCheckStimulus(wrong_button_image, wrong_button_positio
 
 /**
  * Generates a full screen image stimulus HTML element.
- * 
+ * 1180 x 663.75 is the iPad Air screen aspect ratio for a 960 x 540 image.
  * @param {string} image - The path to the image file.
  * @returns {string} The HTML string for the full screen image stimulus.
  */
 function generateFullScreenImageStimulus(image) {
-    return `<div><img src="${image}" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; background-color: black;"></img></div>`;
+    return `<div style="display: flex; justify-content: center; align-items: center; width: 100vw; height: 100vh; background: black">
+                <div style="width: 1180px; height: 663.75px; position: relative; overflow: hidden;">
+                    <img src="${image}" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+                </div>
+            </div>`;
+    // return `<img src="${image}" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; background: black;"></img>`;
 }
 
 /**
