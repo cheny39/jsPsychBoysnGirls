@@ -8,7 +8,7 @@ let break_trial_procedure1 = {
         {
             audio: "found_more_animals.wav",
             image: "break1_new.png",
-            trial_duration: 4000,
+            // trial_duration: 4000,
             image_position: {
                 left: 0,
                 top: 0
@@ -22,7 +22,7 @@ let break_trial_procedure2 = {
         {
             audio: "found_more_animals.wav",
             image: "break2_new.png",
-            trial_duration: 4000,
+            // trial_duration: 4000,
             image_position: {
                 left: 0,
                 top: 0
@@ -36,7 +36,7 @@ let break_trial_procedure3 = {
         {
             audio: "found_more_animals.wav",
             image: "break3_new.png",
-            trial_duration: 4000,
+            // trial_duration: 4000,
             image_position: {
                 left: 0,
                 top: 0
@@ -50,7 +50,7 @@ let break_trial_procedure4 = {
         {
             audio: "found_more_animals.wav",
             image: "break4_new.png",
-            trial_duration: 4000,
+            // trial_duration: 4000,
             image_position: {
                 left: 0,
                 top: 0

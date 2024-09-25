@@ -1,5 +1,5 @@
 let break_trial = {
-    type: jsPsychHtmlButtonResponse,
+    type: jsPsychHtmlEndTrialOnAudioFinish,
     stimulus: function () {
         const image = jsPsych.evaluateTimelineVariable('image');
         return generateFullScreenImageStimulus(`image/${image}`);
@@ -8,13 +8,14 @@ let break_trial = {
         task: "break",
         image: jsPsych.timelineVariable('image'),
         audio: jsPsych.timelineVariable('audio'),
-        trial_duration: jsPsych.timelineVariable('trial_duration')
+        // trial_duration: jsPsych.timelineVariable('trial_duration')
     },
     choices: [],
-    trial_duration: jsPsych.timelineVariable('trial_duration'),
-    on_load: async function () {
-        // Play audio and show buttons at the same time
-        const audio = jsPsych.evaluateTimelineVariable('audio');
-        playSound(`wav/${audio}`);
-    }
+    // trial_duration: jsPsych.timelineVariable('trial_duration'),
+    // on_load: async function () {
+    //     // Play audio and show buttons at the same time
+    //     const audio = jsPsych.evaluateTimelineVariable('audio');
+    //     playSound(`wav/${audio}`);
+    // },
+    audio: jsPsych.timelineVariable('audio'),
 };
