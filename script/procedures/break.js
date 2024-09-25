@@ -48,9 +48,9 @@ let break_trial_procedure4 = {
     ...break_trial_procedure_base,
     timeline_variables: [
         {
-            audio: "v2_Amazing_We_have_all_the_anima.wav",
+            audio: "found_more_animals.wav",
             image: "break4_new.png",
-            trial_duration: 8500,
+            trial_duration: 4000,
             image_position: {
                 left: 0,
                 top: 0

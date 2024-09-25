@@ -6,6 +6,16 @@ const test_trial_listen_procedure_base = {
     timeline: [test_trial_listen],
 };
 
+let dont_touch_screen_prompt_trial_procedure = {
+    timeline: [dont_touch_screen_prompt_trial],
+    timeline_variables: [
+        {
+            'audio': 'Dont_touch_the_screen_yet.wav',
+            'image': 'whitesquare.png',
+        }
+    ]
+};
+
 
 let test_procedure_1_listen = {
     ...test_trial_listen_procedure_base,
