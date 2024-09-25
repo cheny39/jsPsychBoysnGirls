@@ -6,26 +6,6 @@ const test_trial_listen_procedure_base = {
     timeline: [test_trial_listen],
 };
 
-// // Only for testing, replace with the actual test procedure
-// let test_procedure_test = {
-//     ...test_trial_procedure_base,
-//     timeline_variables: [
-//         {
-//             'audio': 'duck_ka_norl3.wav',
-//             'image': 'duck-3.jpg',
-//             'left': 'gulu5.png',
-//             'right': 'norl4.png',
-//             'correct_answer': 0
-//         },
-//         {
-//             'audio': 'pig_po_norl3.wav',
-//             'image': 'pig-3.jpg',
-//             'left': 'gulu5.png',
-//             'right': 'norl4.png',
-//             'correct_answer': '1'
-//         },
-//     ]
-// };
 
 let test_procedure_1_listen = {
     ...test_trial_listen_procedure_base,

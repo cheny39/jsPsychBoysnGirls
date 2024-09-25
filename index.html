@@ -28,7 +28,6 @@
 
 <!-- load trials -->
 <script src="script/instruction_trial.js"></script>
-<script src="script/instruction_exposure_ready_trial.js"></script>
 <script src="script/exposure_trial.js"></script>
 <script src="script/attention_trial.js"></script>
 <script src="script/break_trial.js"></script>
@@ -42,7 +41,10 @@
 <script src="script/procedures/attention.js"></script>
 <script src="script/procedures/exposure.js"></script>
 <script src="script/procedures/exposure_practice.js"></script>
+<script src="script/procedures/instruction_test.js"></script>
+<script src="script/procedures/instruction_test_ready.js"></script>
 <script src="script/procedures/test.js"></script>
+<script src="script/procedures/test_practice.js"></script>
 <script src="script/procedures/ending.js"></script>
 
 <!-- construct experiment -->
@@ -60,46 +62,55 @@
 
   timeline.push(preload);
   timeline.push(instructions);
-  // timeline.push(introduction_trial_procedure);
+  timeline.push(introduction_trial_procedure);
   timeline.push(exposure_practice_procedure_trial);
-
-  // timeline.push(instruction_exposure_ready_trial_procedure);
-  // timeline.push(exposure_procedure1_1);
-  // timeline.push(attention_check_procedure1);
-  // timeline.push(exposure_procedure1_2);
-  // timeline.push(attention_check_procedure2);
-  // timeline.push(exposure_procedure1_3);
-  // timeline.push(attention_check_procedure3);
-  // timeline.push(exposure_procedure1_4);
-  // timeline.push(attention_check_procedure4);
-  // timeline.push(break_trial_procedure1);
-  // timeline.push(exposure_procedure2_1);
-  // timeline.push(attention_check_procedure5);
-  // timeline.push(exposure_procedure2_2);
-  // timeline.push(attention_check_procedure6);
-  // timeline.push(exposure_procedure2_3);
-  // timeline.push(attention_check_procedure7);
-  // timeline.push(exposure_procedure2_4);
-  // timeline.push(attention_check_procedure8);
-  // timeline.push(break_trial_procedure2);
-  // timeline.push(exposure_procedure3_1);
-  // timeline.push(attention_check_procedure9);
-  // timeline.push(exposure_procedure3_2);
-  // timeline.push(attention_check_procedure10);
-  // timeline.push(exposure_procedure3_3);
-  // timeline.push(attention_check_procedure11);
-  // timeline.push(exposure_procedure3_4);
-  // timeline.push(attention_check_procedure12);
-  // timeline.push(break_trial_procedure3);
-  // timeline.push(exposure_procedure4_1);
-  // timeline.push(attention_check_procedure13);
-  // timeline.push(exposure_procedure4_2);
-  // timeline.push(attention_check_procedure14);
-  // timeline.push(exposure_procedure4_3);
-  // timeline.push(attention_check_procedure15);
-  // timeline.push(exposure_procedure4_4);
-  // timeline.push(attention_check_procedure16);
-  // timeline.push(break_trial_procedure4);
+  timeline.push(instruction_exposure_ready_trial_procedure);
+  timeline.push(exposure_procedure1_1);
+  timeline.push(attention_check_procedure1);
+  timeline.push(exposure_procedure1_2);
+  timeline.push(attention_check_procedure2);
+  timeline.push(exposure_procedure1_3);
+  timeline.push(attention_check_procedure3);
+  timeline.push(exposure_procedure1_4);
+  timeline.push(attention_check_procedure4);
+  timeline.push(break_trial_procedure1);
+  timeline.push(exposure_procedure2_1);
+  timeline.push(attention_check_procedure5);
+  timeline.push(exposure_procedure2_2);
+  timeline.push(attention_check_procedure6);
+  timeline.push(exposure_procedure2_3);
+  timeline.push(attention_check_procedure7);
+  timeline.push(exposure_procedure2_4);
+  timeline.push(attention_check_procedure8);
+  timeline.push(break_trial_procedure2);
+  timeline.push(exposure_procedure3_1);
+  timeline.push(attention_check_procedure9);
+  timeline.push(exposure_procedure3_2);
+  timeline.push(attention_check_procedure10);
+  timeline.push(exposure_procedure3_3);
+  timeline.push(attention_check_procedure11);
+  timeline.push(exposure_procedure3_4);
+  timeline.push(attention_check_procedure12);
+  timeline.push(break_trial_procedure3);
+  timeline.push(exposure_procedure4_1);
+  timeline.push(attention_check_procedure13);
+  timeline.push(exposure_procedure4_2);
+  timeline.push(attention_check_procedure14);
+  timeline.push(exposure_procedure4_3);
+  timeline.push(attention_check_procedure15);
+  timeline.push(exposure_procedure4_4);
+  timeline.push(attention_check_procedure16);
+  timeline.push(break_trial_procedure4);
+  timeline.push(instruction_test_trial_procedure);
+  timeline.push(test_practice_procedure_1_listen);
+  timeline.push(test_practice_procedure_1); 
+  timeline.push(test_practice_procedure_2_listen);
+  timeline.push(test_practice_procedure_2);
+  timeline.push(test_practice_procedure_3_listen)
+  timeline.push(test_practice_procedure_3);
+  timeline.push(test_practice_procedure_4_listen);
+  timeline.push(test_practice_procedure_4);
+  timeline.push(instruction_test_ready_trial_procedure);
   timeline.push(test_procedure_1_listen);
   timeline.push(test_procedure_1);
   timeline.push(test_procedure_2_listen);
