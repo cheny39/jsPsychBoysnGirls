@@ -5,12 +5,13 @@ let exposure_trial = {
     type: jsPsychHtmlButtonResponseWithGreenBox,
     stimulus: function () {
         const video = jsPsych.evaluateTimelineVariable('video');
+        const video_position = jsPsych.evaluateTimelineVariable('video_position');
         const wrong_button_position = jsPsych.evaluateTimelineVariable('wrong_button_position');
         const wrong_button_image = jsPsych.evaluateTimelineVariable('wrong_button_image');
-        return generateExposureStimulus(`video/${video}`, `image/${wrong_button_image}`, wrong_button_position);
+        return generateExposureStimulus(`video/${video}`, video_position, `image/${wrong_button_image}`, wrong_button_position);
     },
     choices: function () {
-        return [`<img src="image/${jsPsych.evaluateTimelineVariable('correct_button_image')}" style="width:240px; height:135px;">`];
+        return [`<img src="image/${jsPsych.evaluateTimelineVariable('correct_button_image')}" style="width:360px; height:202.5px;">`];
     },
     data: {
         task: "exposure",
@@ -22,7 +23,7 @@ let exposure_trial = {
     button_html: () => {
         const correct_button_position = jsPsych.evaluateTimelineVariable('correct_button_position');
         const correct_button_image = jsPsych.evaluateTimelineVariable('correct_button_image');
-        return `<button id="${CORRECT_BUTTON_ELEMENT_ID}" class="jspsych-btn" style="position:absolute; left:${correct_button_position.left}px; top: ${correct_button_position.top}px"><img src="image/${correct_button_image}" style="width:240px; height:135px;"></button>`;
+        return `<button id="${CORRECT_BUTTON_ELEMENT_ID}" class="jspsych-btn" style="position:absolute; left:${correct_button_position.left}px; top: ${correct_button_position.top}px"><img src="image/${correct_button_image}" style="width:360px; height:202.5px;"></button>`;
     },
     on_load: async function () {
         document.getElementById(WRONG_BUTTON_ELEMENT_ID).addEventListener('click', function () {

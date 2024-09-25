@@ -10,11 +10,13 @@ const CORRECT_BUTTON_ELEMENT_ID = "correctButton";
  * @param {string} wrong_button_position - The position of the wrong button.
  * @returns {string} The HTML string for the video stimulus.
  */
-function generateExposureStimulus(video, wrong_button_image, wrong_button_position) {
+function generateExposureStimulus(video, video_position, wrong_button_image, wrong_button_position) {
     return `<div>
-                <video id="${VIDEO_ELEMENT_ID}"><source src="${video}" type="video/mp4">Your browser does not support the video tag.</video>
+               <video id="${VIDEO_ELEMENT_ID}" style="width:960px; height:540px; position:absolute; left:${video_position.left}px; top:${video_position.top}px;">
+                        <source src="${video}" type="video/mp4"> Your browser does not support the video tag.
+                </video>
                 <button id="${WRONG_BUTTON_ELEMENT_ID}" class="jspsych-btn" style="position:absolute; left:${wrong_button_position.left}px; top: ${wrong_button_position.top}px">
-                        <img src="${wrong_button_image}" style="width:240px; height:135px;">
+                        <img src="${wrong_button_image}" style="width:360px; height:202.5px;">
                 </button>
             </div>`;
 }
@@ -26,10 +28,11 @@ function generateExposureStimulus(video, wrong_button_image, wrong_button_positi
  * @param {string} wrong_button_position - The position of the wrong button.
  * @returns {string} The HTML string for the attention check stimulus.
  */
-function generateAttentionCheckStimulus(wrong_button_image, wrong_button_position) {
+function generateAttentionCheckStimulus(image, image_position, wrong_button_image, wrong_button_position) {
     return `<div>
+                <img src="${image}" style="width:350px; height:550px;position:absolute; left:${image_position.left}px; top: ${image_position.top}px">
                 <button id="${WRONG_BUTTON_ELEMENT_ID}" class="jspsych-btn" style="position:absolute; left:${wrong_button_position.left}px; top: ${wrong_button_position.top}px">
-                        <img src="${wrong_button_image}" style="width:240px; height:135px;">
+                        <img src="${wrong_button_image}" style="max-width:360px; max-height:202.5px;">
                 </button>
             </div>`;
 }
