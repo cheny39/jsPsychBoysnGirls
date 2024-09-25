@@ -1,4 +1,4 @@
-let instruction_trial_procedure = {
+let introduction_trial_procedure = {
     timeline: [instruction_trial],
     timeline_variables:
         [{ 'audio': 'wav/1.Hi_I_am_a_Goolu.wav', 'image': 'intro_gulu1.png' },
