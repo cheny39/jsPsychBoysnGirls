@@ -57,7 +57,8 @@
   // preload resolves image flickering
   var preload = {
     type: jsPsychPreload,
-    images: introduction_trial_procedure.timeline_variables.map(item => `image/${item.image}`)
+    auto_preload: true,
+    // images: introduction_trial_procedure.timeline_variables.map(item => `image/${item.image}`)
   };
 
   timeline.push(preload);
