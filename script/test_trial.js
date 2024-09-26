@@ -6,7 +6,7 @@ let test_trial = {
     },
     choices: ['left', 'right'],
     button_html: (choice) => {
-        return `<button class="jspsych-btn" style="position: absolute; ${choice}: -30px; top: 250px; z-index: 2; background-color: transparent; border: none;">
+        return `<button class="jspsych-btn" style="position: absolute; ${choice}: -25px; top: 250px; z-index: 2; background-color: transparent; border: none;">
                     <img src="image/${jsPsych.evaluateTimelineVariable(choice)}" style="width: 250px; height: 375px"></img>
                  </button>`;
     },
