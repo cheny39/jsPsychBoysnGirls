@@ -11,7 +11,7 @@ let test_practice_procedure_1_listen = {
     ...test_practice_trial_listen_procedure_base,
     timeline_variables: [
         {
-            'audio': 'ice_cream_is_so_yummy.wav',
+            'audio': 'wav/ice_cream_is_so_yummy.wav',
             'image': 'whitesquare.png',
        
         },
@@ -35,7 +35,7 @@ let test_practice_procedure_2_listen = {
     ...test_practice_trial_listen_procedure_base,
     timeline_variables: [
         {
-            'audio': 'cheese_is_my_favorite.wav',
+            'audio': 'wav/cheese_is_my_favorite.wav',
             'image': 'whitesquare.png',
           
         }
@@ -59,7 +59,7 @@ let test_practice_procedure_3_listen = {
     ...test_practice_trial_listen_procedure_base,
     timeline_variables: [
         {
-            'audio': 'icecream_is_awesome.wav',
+            'audio': 'wav/icecream_is_awesome.wav',
             'image': 'whitesquare.png',
       
         }
@@ -83,7 +83,7 @@ let test_practice_procedure_4_listen = {
     ...test_practice_trial_listen_procedure_base,
     timeline_variables: [
         {
-            'audio': 'cheese_is_very_delicious.wav',
+            'audio': 'wav/cheese_is_very_delicious.wav',
             'image': 'whitesquare.png',
          
         }

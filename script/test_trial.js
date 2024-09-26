@@ -25,62 +25,126 @@ let test_trial = {
     }
 };
 
+
+
+// let test_trial_listen = {
+//     type: jsPsychHtmlButtonResponse,
+//     stimulus: function () {
+//         const image = jsPsych.evaluateTimelineVariable('image');
+//         return generateTestStimulus('image/' + image, 'image/background.png');
+//     },
+//     choices: [],
+//     trial_duration: 1500,
+//     data: {
+//         task: "test-listen",
+//         image: jsPsych.timelineVariable('image'),
+//         audio: jsPsych.timelineVariable('audio'),
+//     },
+//     on_load: async function () {
+//         // Play audio and show buttons at the same time
+//         const audio = jsPsych.evaluateTimelineVariable('audio');
+//         playSound(`wav/${audio}`);
+//     }
+// };
+
 let test_trial_listen = {
-    type: jsPsychHtmlButtonResponse,
+    type: jsPsychHtmlEndTrialOnAudioFinish,
     stimulus: function () {
         const image = jsPsych.evaluateTimelineVariable('image');
         return generateTestStimulus('image/' + image, 'image/background.png');
     },
     choices: [],
-    trial_duration: 1500,
+    // trial_duration: 1500,
     data: {
         task: "test-listen",
         image: jsPsych.timelineVariable('image'),
         audio: jsPsych.timelineVariable('audio'),
     },
-    on_load: async function () {
-        // Play audio and show buttons at the same time
-        const audio = jsPsych.evaluateTimelineVariable('audio');
-        playSound(`wav/${audio}`);
+    // on_load: async function () {
+    //     // Play audio and show buttons at the same time
+    //     const audio = jsPsych.evaluateTimelineVariable('audio');
+    //     playSound(`wav/${audio}`);
+    audio: jsPsych.timelineVariable('audio'),
+
     }
-};
+
+// let test_practice_trial_listen = {
+//     type: jsPsychHtmlButtonResponse,
+//     stimulus: function () {
+//         const image = jsPsych.evaluateTimelineVariable('image');
+//         return generateTestStimulus('image/' + image, 'image/background.png');
+//     },
+//     choices: [],
+//     trial_duration: 5000,
+//     data: {
+//         task: "test-practice-listen",
+//         image: jsPsych.timelineVariable('image'),
+//         audio: jsPsych.timelineVariable('audio'),
+//     },
+//     on_load: async function () {
+//         // Play audio and show buttons at the same time
+//         const audio = jsPsych.evaluateTimelineVariable('audio');
+//         playSound(`wav/${audio}`);
+//     }
+// };
 
 let test_practice_trial_listen = {
-    type: jsPsychHtmlButtonResponse,
+    type: jsPsychHtmlEndTrialOnAudioFinish,
     stimulus: function () {
         const image = jsPsych.evaluateTimelineVariable('image');
         return generateTestStimulus('image/' + image, 'image/background.png');
     },
     choices: [],
-    trial_duration: 5000,
+    // trial_duration: 5000,
     data: {
         task: "test-practice-listen",
         image: jsPsych.timelineVariable('image'),
         audio: jsPsych.timelineVariable('audio'),
     },
-    on_load: async function () {
-        // Play audio and show buttons at the same time
-        const audio = jsPsych.evaluateTimelineVariable('audio');
-        playSound(`wav/${audio}`);
-    }
+    // on_load: async function () {
+    //     // Play audio and show buttons at the same time
+    //     const audio = jsPsych.evaluateTimelineVariable('audio');
+    //     playSound(`wav/${audio}`);
+    // }
+    audio: jsPsych.timelineVariable('audio'),
 };
 
+// let dont_touch_screen_prompt_trial = {
+//     type: jsPsychHtmlButtonResponse,
+//     stimulus: function () {
+//         const image = jsPsych.evaluateTimelineVariable('image');
+//         return generateTestStimulus('image/' + image, 'image/background.png');
+//     },
+//     choices: [],
+//     trial_duration: 4000,
+//     data: {
+//         task: "don't touch the screen prompt",
+//         image: jsPsych.timelineVariable('image'),
+//         audio: jsPsych.timelineVariable('audio'),
+//     },
+//     on_load: async function () {
+//         // Play audio and show buttons at the same time
+//         const audio = jsPsych.evaluateTimelineVariable('audio');
+//         playSound(`wav/${audio}`);
+//     }
+// };
 let dont_touch_screen_prompt_trial = {
-    type: jsPsychHtmlButtonResponse,
+    type: jsPsychHtmlEndTrialOnAudioFinish,
     stimulus: function () {
         const image = jsPsych.evaluateTimelineVariable('image');
         return generateTestStimulus('image/' + image, 'image/background.png');
     },
     choices: [],
-    trial_duration: 4000,
+    // trial_duration: 4000,
     data: {
         task: "don't touch the screen prompt",
         image: jsPsych.timelineVariable('image'),
         audio: jsPsych.timelineVariable('audio'),
     },
-    on_load: async function () {
-        // Play audio and show buttons at the same time
-        const audio = jsPsych.evaluateTimelineVariable('audio');
-        playSound(`wav/${audio}`);
-    }
+    // on_load: async function () {
+    //     // Play audio and show buttons at the same time
+    //     const audio = jsPsych.evaluateTimelineVariable('audio');
+    //     playSound(`wav/${audio}`);
+    // }
+    audio: jsPsych.timelineVariable('audio'),
 };
