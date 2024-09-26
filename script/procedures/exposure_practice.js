@@ -2,7 +2,7 @@ const exposure_practice_procedure_base = {
     timeline: [attention_check_trial],
 };
 
-let exposure_practice_procedure_trial = {
+let exposure_practice_trial_procedure = {
     ...exposure_practice_procedure_base,
     timeline_variables: [
         {
