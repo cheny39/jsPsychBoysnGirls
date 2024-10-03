@@ -500,9 +500,9 @@ let exposure_procedure4_3 = {
             video_position: VIDEO_POSITIONS.RIGHT,
             audio: "duck_po_norl5.wav",
             wrong_button_image: "duck-1.jpg",
-            wrong_button_position: EXPOSURE_BUTTON_POSITIONS.UPPER_RIGHT,
+            wrong_button_position: EXPOSURE_BUTTON_POSITIONS.LOWER_RIGHT,
             correct_button_image: "duck-2.jpg",
-            correct_button_position: EXPOSURE_BUTTON_POSITIONS.LOWER_RIGHT,
+            correct_button_position: EXPOSURE_BUTTON_POSITIONS.UPPER_RIGHT,
         },
         {
             video: "gulu7_3.mp4",
