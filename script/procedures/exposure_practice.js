@@ -33,12 +33,12 @@ let exposure_practice_trial_procedure = {
             wrong_button_image: "happy_face.png",
             wrong_button_position: {
                 left: 410,
-                top: 150
+                top: 450
             },
             correct_button_image: "sad_face.png",
             correct_button_position: {
                 left: 410,
-                top: 450
+                top: 150
             },
         },
     ]

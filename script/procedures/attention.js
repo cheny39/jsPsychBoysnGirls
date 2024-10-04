@@ -113,12 +113,12 @@ let attention_check_procedure5 = {
             wrong_button_image: "norl1_short.png",
             wrong_button_position: {
                 left: 410,
-                top: 150
+                top: 450
             },
             correct_button_image: "gulu1_short.png",
             correct_button_position: {
                 left: 410,
-                top: 450
+                top: 150
             },
         },
     ]
@@ -137,12 +137,12 @@ let attention_check_procedure6 = {
             wrong_button_image: "cheese1.jpg",
             wrong_button_position: {
                 left: 410,
-                top: 450
+                top: 150
             },
             correct_button_image: "icecream2.jpg",
             correct_button_position: {
                 left: 410,
-                top: 150
+                top: 450
             },
         },
     ]
@@ -161,12 +161,12 @@ let attention_check_procedure7 = {
             wrong_button_image: "gulu7_short.png",
             wrong_button_position: {
                 left: 410,
-                top: 150
+                top: 450
             },
             correct_button_image: "norl5_short.png",
             correct_button_position: {
                 left: 410,
-                top: 450
+                top: 150
             },
         },
     ]
@@ -185,12 +185,12 @@ let attention_check_procedure8 = {
             wrong_button_image: "icecream1.jpg",
             wrong_button_position: {
                 left: 410,
-                top: 450
+                top: 150
             },
             correct_button_image: "cheese2.jpg",
             correct_button_position: {
                 left: 410,
-                top: 150
+                top: 450
             },
         },
     ]
@@ -208,12 +208,12 @@ let attention_check_procedure9 = {
             wrong_button_image: "norl1_short.png",
             wrong_button_position: {
                 left: 410,
-                top: 150
+                top: 450
             },
             correct_button_image: "gulu1_short.png",
             correct_button_position: {
                 left: 410,
-                top: 450
+                top: 150
             },
         },
     ]
@@ -279,12 +279,12 @@ let attention_check_procedure12 = {
             wrong_button_image: "cheese2.jpg",
             wrong_button_position: {
                 left: 410,
-                top: 450
+                top: 150
             },
             correct_button_image: "icecream2.jpg",
             correct_button_position: {
                 left: 410,
-                top: 150
+                top: 450
             },
         },
     ]
@@ -326,12 +326,12 @@ let attention_check_procedure14 = {
             wrong_button_image: "cheese1.jpg",
             wrong_button_position: {
                 left: 410,
-                top: 450
+                top: 150
             },
             correct_button_image: "icecream2.jpg",
             correct_button_position: {
                 left: 410,
-                top: 150
+                top: 450
             },
         },
     ]
@@ -350,12 +350,12 @@ let attention_check_procedure15 = {
             wrong_button_image: "norl5_short.png",
             wrong_button_position: {
                 left: 410,
-                top: 150
+                top: 450
             },
             correct_button_image: "gulu7_short.png",
             correct_button_position: {
                 left: 410,
-                top: 450
+                top: 150
             },
         },
     ]
