@@ -2,6 +2,87 @@ const VIDEO_ELEMENT_ID = "videoElement";
 const WRONG_BUTTON_ELEMENT_ID = "wrongButton";
 const CORRECT_BUTTON_ELEMENT_ID = "correctButton";
 
+
+/**
+ * Generates a exposure stimulus HTML element.
+ * 
+ * @param {string} video - The path to the video file.
+ * @param {string} video_position - The position of the video
+ * @returns {string} The HTML string for the video stimulus.
+ */
+function generateInstructionStimulus(video, video_position) {
+    return `<div>
+               <video id="${VIDEO_ELEMENT_ID}" style="width:540px; height:540px; position:absolute; left:${video_position.left}px; top:${video_position.top}px;">
+                        <source src="${video}" type="video/mp4"> Your browser does not support the video tag.
+               </video>
+            </div>`;
+}
+/**
+ * Generates an attention check stimulus HTML element.
+ * 
+ * @param {string} wrong_button_image - The path to the wrong button image file.
+ * @param {string} wrong_button_position - The position of the wrong button.
+ * @returns {string} The HTML string for the attention check stimulus.
+ */
+function generateAttentionCheckStimulus(image, image_position, wrong_button_image, wrong_button_position) {
+    return `<div>
+                <img src="${image}" style="width:350px; height:550px;position:absolute; left:${image_position.left}px; top: ${image_position.top}px">
+                <button id="${WRONG_BUTTON_ELEMENT_ID}" class="jspsych-btn" style="position:absolute; left:${wrong_button_position.left}px; top: ${wrong_button_position.top}px">
+                        <img src="${wrong_button_image}" style="max-width:360px; max-height:202.5px;">
+                </button>
+            </div>`;
+}
+
+/**
+ * Generates an attention check stimulus HTML element.
+ * 
+ * @param {string} wrong_button_image - The path to the wrong button image file.
+ * @param {string} wrong_button_position - The position of the wrong button.
+ * @returns {string} The HTML string for the attention check stimulus.
+ */
+function generatePracticeStimulus(image, image_position, wrong_button_image, wrong_button_position, video, video_position) {
+    return `<div>
+                <img src="${image}" style="width:720px; height:405px;position:absolute; left:${image_position.left}px; top: ${image_position.top}px">
+                <button id="${WRONG_BUTTON_ELEMENT_ID}" class="jspsych-btn" style="position:absolute; left:${wrong_button_position.left}px; top: ${wrong_button_position.top}px">
+                        <img src="${wrong_button_image}" style="max-width:100px; max-height:100px;">
+                </button>
+                <video id="${VIDEO_ELEMENT_ID}" style="width:540px; height:540px; position:absolute; left:${video_position.left}px; top:${video_position.top}px;">
+                        <source src="${video}" type="video/mp4"> Your browser does not support the video tag.
+                </video>
+            </div>`;
+}
+/**
+ * Generates a exposure stimulus HTML element.
+ * 
+ * @param {string} video - The path to the video file.
+ * @param {string} image - The path to the wrong button image file.
+ * @param {string} image_position - The position of the wrong button.
+ * @returns {string} The HTML string for the video stimulus.
+ */
+function generateExposureStimulusNew(video, video_position, image, image_position) {
+    return `<div>
+               <video id="${VIDEO_ELEMENT_ID}" style="width:540px; height:540px; position:absolute; left:${video_position.left}px; top:${video_position.top}px;">
+                        <source src="${video}" type="video/mp4"> Your browser does not support the video tag.
+                </video>
+                <img src="${image}" style="width:720px; height:405px;position:absolute; left:${image_position.left}px; top: ${image_position.top}px">
+            </div>`;
+}
+
+/**
+ * Generates a test stimulus HTML element.
+ * 
+ * @param {string} video - The path to the video file.
+ * @param {string} image - The path to the wrong button image file.
+ * @param {string} image_position - The position of the wrong button.
+ * @returns {string} The HTML string for the video stimulus.
+ */
+function generateTestStimulusNew(image, image_position) {
+    return `<div>
+                <img src="${image}" style="width:720px; height:405px;position:absolute; left:${image_position.left}px; top: ${image_position.top}px">
+            </div>`;
+}
+
+
 /**
  * Generates a exposure stimulus HTML element.
  * 

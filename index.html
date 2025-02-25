@@ -2,11 +2,13 @@
 <html>
 
 <head>
-  <title>Index V4</title>
+  <title>Boys and Girls</title>
   <script src="https://unpkg.com/jspsych@8.0.0"></script>
   <script src="https://unpkg.com/@jspsych/plugin-preload@1.1.3"></script>
   <script src="https://unpkg.com/@jspsych/plugin-html-keyboard-response@2.0.0"></script>
   <script src="https://unpkg.com/@jspsych/plugin-html-button-response@2.0.0"></script>
+  <script src="https://unpkg.com/@jspsych/plugin-video-keyboard-response@1.1.3"></script>
+
   <!-- A custom plugin that adds a green box around the button when it's clicked -->
   <script src="script/jspsych/plugin-html-button-response-green-box.js"></script>
   <!-- A custom plugin that ends the trial when the audio is finished playing -->
@@ -29,6 +31,7 @@
 <!-- load trials -->
 <script src="script/instruction_trial.js"></script>
 <script src="script/exposure_trial.js"></script>
+<script src="script/practice_trial.js"></script>
 <script src="script/attention_trial.js"></script>
 <script src="script/break_trial.js"></script>
 <script src="script/test_trial.js"></script>
@@ -40,11 +43,12 @@
 <script src="script/procedures/break.js"></script>
 <script src="script/procedures/attention.js"></script>
 <script src="script/procedures/exposure.js"></script>
+<script src="script/procedures/practice.js"></script>
 <script src="script/procedures/exposure_practice.js"></script>
 <script src="script/procedures/instruction_test.js"></script>
 <script src="script/procedures/instruction_test_ready.js"></script>
 <script src="script/procedures/test.js"></script>
-<script src="script/procedures/test_practice.js"></script>
+<!-- <script src="script/procedures/test_practice.js"></script> -->
 <script src="script/procedures/ending.js"></script>
 
 <!-- construct experiment -->
@@ -65,7 +69,7 @@
     images:
       [].concat(
         // Introduction trial 
-        introduction_trial_procedure.timeline_variables.map(item => `image/${item.image}`),
+        // introduction_trial_procedure.timeline_variables.map(item => `image/${item.image}`),
 
         // Exposure practice trial
         exposure_practice_trial_procedure.timeline_variables.map(item => `image/${item.image}`),
@@ -76,88 +80,44 @@
         instruction_exposure_ready_trial_procedure.timeline_variables.map(item => `image/${item.image}`),
 
         // Exposure trials
-        exposure_procedure1_1.timeline_variables.map(item => `image/${item.wrong_button_image}`),
-        exposure_procedure1_1.timeline_variables.map(item => `image/${item.correct_button_image}`),
-        exposure_procedure1_2.timeline_variables.map(item => `image/${item.wrong_button_image}`),
-        exposure_procedure1_2.timeline_variables.map(item => `image/${item.correct_button_image}`),
-        exposure_procedure1_3.timeline_variables.map(item => `image/${item.wrong_button_image}`),
-        exposure_procedure1_3.timeline_variables.map(item => `image/${item.correct_button_image}`),
-        exposure_procedure1_4.timeline_variables.map(item => `image/${item.wrong_button_image}`),
-        exposure_procedure1_4.timeline_variables.map(item => `image/${item.correct_button_image}`),
-        exposure_procedure2_1.timeline_variables.map(item => `image/${item.wrong_button_image}`),
-        exposure_procedure2_1.timeline_variables.map(item => `image/${item.correct_button_image}`),
-        exposure_procedure2_2.timeline_variables.map(item => `image/${item.wrong_button_image}`),
-        exposure_procedure2_2.timeline_variables.map(item => `image/${item.correct_button_image}`),
-        exposure_procedure2_3.timeline_variables.map(item => `image/${item.wrong_button_image}`),
-        exposure_procedure2_3.timeline_variables.map(item => `image/${item.correct_button_image}`),
-        exposure_procedure2_4.timeline_variables.map(item => `image/${item.wrong_button_image}`),
-        exposure_procedure2_4.timeline_variables.map(item => `image/${item.correct_button_image}`),
-        exposure_procedure3_1.timeline_variables.map(item => `image/${item.wrong_button_image}`),
-        exposure_procedure3_1.timeline_variables.map(item => `image/${item.correct_button_image}`),
-        exposure_procedure3_2.timeline_variables.map(item => `image/${item.wrong_button_image}`),
-        exposure_procedure3_2.timeline_variables.map(item => `image/${item.correct_button_image}`),
-        exposure_procedure3_3.timeline_variables.map(item => `image/${item.wrong_button_image}`),
-        exposure_procedure3_3.timeline_variables.map(item => `image/${item.correct_button_image}`),
-        exposure_procedure3_4.timeline_variables.map(item => `image/${item.wrong_button_image}`),
-        exposure_procedure3_4.timeline_variables.map(item => `image/${item.correct_button_image}`),
-        exposure_procedure4_1.timeline_variables.map(item => `image/${item.wrong_button_image}`),
-        exposure_procedure4_1.timeline_variables.map(item => `image/${item.correct_button_image}`),
-        exposure_procedure4_2.timeline_variables.map(item => `image/${item.wrong_button_image}`),
-        exposure_procedure4_2.timeline_variables.map(item => `image/${item.correct_button_image}`),
-        exposure_procedure4_3.timeline_variables.map(item => `image/${item.wrong_button_image}`),
-        exposure_procedure4_3.timeline_variables.map(item => `image/${item.correct_button_image}`),
-        exposure_procedure4_4.timeline_variables.map(item => `image/${item.wrong_button_image}`),
-        exposure_procedure4_4.timeline_variables.map(item => `image/${item.correct_button_image}`),
+        exposure_procedure1_1.timeline_variables.map(item => `image/${item.image}`),
+        exposure_procedure1_2.timeline_variables.map(item => `image/${item.image}`),
+        exposure_procedure1_3.timeline_variables.map(item => `image/${item.image}`),
+        exposure_procedure1_4.timeline_variables.map(item => `image/${item.image}`),
+        exposure_procedure2_1.timeline_variables.map(item => `image/${item.image}`),
+        exposure_procedure2_2.timeline_variables.map(item => `image/${item.image}`),
+        exposure_procedure2_3.timeline_variables.map(item => `image/${item.image}`),
+        exposure_procedure2_4.timeline_variables.map(item => `image/${item.image}`),
+
+        practice1.timeline_variables.map(item => `image/${item.image}`),
+
 
         // Attention trials
-        attention_check_procedure1.timeline_variables.map(item => `image/${item.image}`),
-        attention_check_procedure1.timeline_variables.map(item => `image/${item.wrong_button_image}`),
-        attention_check_procedure1.timeline_variables.map(item => `image/${item.correct_button_image}`),
-        attention_check_procedure2.timeline_variables.map(item => `image/${item.image}`),
-        attention_check_procedure2.timeline_variables.map(item => `image/${item.wrong_button_image}`),
-        attention_check_procedure2.timeline_variables.map(item => `image/${item.correct_button_image}`),
-        attention_check_procedure3.timeline_variables.map(item => `image/${item.image}`),
-        attention_check_procedure3.timeline_variables.map(item => `image/${item.wrong_button_image}`),
-        attention_check_procedure3.timeline_variables.map(item => `image/${item.correct_button_image}`),
-        attention_check_procedure4.timeline_variables.map(item => `image/${item.image}`),
-        attention_check_procedure4.timeline_variables.map(item => `image/${item.wrong_button_image}`),
-        attention_check_procedure4.timeline_variables.map(item => `image/${item.correct_button_image}`),
-        attention_check_procedure5.timeline_variables.map(item => `image/${item.image}`),
-        attention_check_procedure5.timeline_variables.map(item => `image/${item.wrong_button_image}`),
-        attention_check_procedure5.timeline_variables.map(item => `image/${item.correct_button_image}`),
-        attention_check_procedure6.timeline_variables.map(item => `image/${item.image}`),
-        attention_check_procedure6.timeline_variables.map(item => `image/${item.wrong_button_image}`),
-        attention_check_procedure6.timeline_variables.map(item => `image/${item.correct_button_image}`),
-        attention_check_procedure7.timeline_variables.map(item => `image/${item.image}`),
-        attention_check_procedure7.timeline_variables.map(item => `image/${item.wrong_button_image}`),
-        attention_check_procedure7.timeline_variables.map(item => `image/${item.correct_button_image}`),
-        attention_check_procedure8.timeline_variables.map(item => `image/${item.image}`),
-        attention_check_procedure8.timeline_variables.map(item => `image/${item.wrong_button_image}`),
-        attention_check_procedure8.timeline_variables.map(item => `image/${item.correct_button_image}`),
-        attention_check_procedure9.timeline_variables.map(item => `image/${item.image}`),
-        attention_check_procedure9.timeline_variables.map(item => `image/${item.wrong_button_image}`),
-        attention_check_procedure9.timeline_variables.map(item => `image/${item.correct_button_image}`),
-        attention_check_procedure10.timeline_variables.map(item => `image/${item.image}`),
-        attention_check_procedure10.timeline_variables.map(item => `image/${item.wrong_button_image}`),
-        attention_check_procedure10.timeline_variables.map(item => `image/${item.correct_button_image}`),
-        attention_check_procedure11.timeline_variables.map(item => `image/${item.image}`),
-        attention_check_procedure11.timeline_variables.map(item => `image/${item.wrong_button_image}`),
-        attention_check_procedure11.timeline_variables.map(item => `image/${item.correct_button_image}`),
-        attention_check_procedure12.timeline_variables.map(item => `image/${item.image}`),
-        attention_check_procedure12.timeline_variables.map(item => `image/${item.wrong_button_image}`),
-        attention_check_procedure12.timeline_variables.map(item => `image/${item.correct_button_image}`),
-        attention_check_procedure13.timeline_variables.map(item => `image/${item.image}`),
-        attention_check_procedure13.timeline_variables.map(item => `image/${item.wrong_button_image}`),
-        attention_check_procedure13.timeline_variables.map(item => `image/${item.correct_button_image}`),
-        attention_check_procedure14.timeline_variables.map(item => `image/${item.image}`),
-        attention_check_procedure14.timeline_variables.map(item => `image/${item.wrong_button_image}`),
-        attention_check_procedure14.timeline_variables.map(item => `image/${item.correct_button_image}`),
-        attention_check_procedure15.timeline_variables.map(item => `image/${item.image}`),
-        attention_check_procedure15.timeline_variables.map(item => `image/${item.wrong_button_image}`),
-        attention_check_procedure15.timeline_variables.map(item => `image/${item.correct_button_image}`),
-        attention_check_procedure16.timeline_variables.map(item => `image/${item.image}`),
-        attention_check_procedure16.timeline_variables.map(item => `image/${item.wrong_button_image}`),
-        attention_check_procedure16.timeline_variables.map(item => `image/${item.correct_button_image}`),
+        attention_check_procedure1_1.timeline_variables.map(item => `image/${item.image}`),
+        attention_check_procedure1_1.timeline_variables.map(item => `image/${item.wrong_button_image}`),
+        attention_check_procedure1_1.timeline_variables.map(item => `image/${item.correct_button_image}`),
+        attention_check_procedure1_2.timeline_variables.map(item => `image/${item.image}`),
+        attention_check_procedure1_2.timeline_variables.map(item => `image/${item.wrong_button_image}`),
+        attention_check_procedure1_2.timeline_variables.map(item => `image/${item.correct_button_image}`),
+        attention_check_procedure1_3.timeline_variables.map(item => `image/${item.image}`),
+        attention_check_procedure1_3.timeline_variables.map(item => `image/${item.wrong_button_image}`),
+        attention_check_procedure1_3.timeline_variables.map(item => `image/${item.correct_button_image}`),
+        attention_check_procedure1_4.timeline_variables.map(item => `image/${item.image}`),
+        attention_check_procedure1_4.timeline_variables.map(item => `image/${item.wrong_button_image}`),
+        attention_check_procedure1_4.timeline_variables.map(item => `image/${item.correct_button_image}`),
+        attention_check_procedure2_1.timeline_variables.map(item => `image/${item.image}`),
+        attention_check_procedure2_1.timeline_variables.map(item => `image/${item.wrong_button_image}`),
+        attention_check_procedure2_1.timeline_variables.map(item => `image/${item.correct_button_image}`),
+        attention_check_procedure2_2.timeline_variables.map(item => `image/${item.image}`),
+        attention_check_procedure2_2.timeline_variables.map(item => `image/${item.wrong_button_image}`),
+        attention_check_procedure2_2.timeline_variables.map(item => `image/${item.correct_button_image}`),
+        attention_check_procedure2_3.timeline_variables.map(item => `image/${item.image}`),
+        attention_check_procedure2_3.timeline_variables.map(item => `image/${item.wrong_button_image}`),
+        attention_check_procedure2_3.timeline_variables.map(item => `image/${item.correct_button_image}`),
+        attention_check_procedure2_4.timeline_variables.map(item => `image/${item.image}`),
+        attention_check_procedure2_4.timeline_variables.map(item => `image/${item.wrong_button_image}`),
+        attention_check_procedure2_4.timeline_variables.map(item => `image/${item.correct_button_image}`),
+ 
 
         // Break trials
         break_trial_procedure1.timeline_variables.map(item => `image/${item.image}`),
@@ -168,84 +128,38 @@
         // Instruction test trials
         instruction_test_trial_procedure.timeline_variables.map(item => `image/${item.image}`),
 
-        // Test practice listen trials
-        test_practice_procedure_1_listen.timeline_variables.map(item => `image/${item.image}`),
-        test_practice_procedure_2_listen.timeline_variables.map(item => `image/${item.image}`),
-        test_practice_procedure_3_listen.timeline_variables.map(item => `image/${item.image}`),
-        test_practice_procedure_4_listen.timeline_variables.map(item => `image/${item.image}`),
+        // // Test practice listen trials
+        // test_practice_procedure_1_listen.timeline_variables.map(item => `image/${item.image}`),
+        // test_practice_procedure_2_listen.timeline_variables.map(item => `image/${item.image}`),
+        // test_practice_procedure_3_listen.timeline_variables.map(item => `image/${item.image}`),
+        // test_practice_procedure_4_listen.timeline_variables.map(item => `image/${item.image}`),
 
-        // Test practice trials
-        test_practice_procedure_1.timeline_variables.map(item => `image/${item.image}`),
-        test_practice_procedure_1.timeline_variables.map(item => `image/${item.left}`),
-        test_practice_procedure_1.timeline_variables.map(item => `image/${item.right}`),
-        test_practice_procedure_2.timeline_variables.map(item => `image/${item.image}`),
-        test_practice_procedure_2.timeline_variables.map(item => `image/${item.left}`),
-        test_practice_procedure_2.timeline_variables.map(item => `image/${item.right}`),
-        test_practice_procedure_3.timeline_variables.map(item => `image/${item.image}`),
-        test_practice_procedure_3.timeline_variables.map(item => `image/${item.left}`),
-        test_practice_procedure_3.timeline_variables.map(item => `image/${item.right}`),
-        test_practice_procedure_4.timeline_variables.map(item => `image/${item.image}`),
-        test_practice_procedure_4.timeline_variables.map(item => `image/${item.left}`),
-        test_practice_procedure_4.timeline_variables.map(item => `image/${item.right}`),
+        // // Test practice trials
+        // test_practice_procedure_1.timeline_variables.map(item => `image/${item.image}`),
+        // test_practice_procedure_1.timeline_variables.map(item => `image/${item.left}`),
+        // test_practice_procedure_1.timeline_variables.map(item => `image/${item.right}`),
+        // test_practice_procedure_2.timeline_variables.map(item => `image/${item.image}`),
+        // test_practice_procedure_2.timeline_variables.map(item => `image/${item.left}`),
+        // test_practice_procedure_2.timeline_variables.map(item => `image/${item.right}`),
+        // test_practice_procedure_3.timeline_variables.map(item => `image/${item.image}`),
+        // test_practice_procedure_3.timeline_variables.map(item => `image/${item.left}`),
+        // test_practice_procedure_3.timeline_variables.map(item => `image/${item.right}`),
+        // test_practice_procedure_4.timeline_variables.map(item => `image/${item.image}`),
+        // test_practice_procedure_4.timeline_variables.map(item => `image/${item.left}`),
+        // test_practice_procedure_4.timeline_variables.map(item => `image/${item.right}`),
 
-        // Instruction test ready trials
-        instruction_test_ready_trial_procedure.timeline_variables.map(item => `image/${item.image}`),
+        // // Instruction test ready trials
+        // instruction_test_ready_trial_procedure.timeline_variables.map(item => `image/${item.image}`),
 
-        // Don't touch screen prompt trials
-        dont_touch_screen_prompt_trial_procedure.timeline_variables.map(item => `image/${item.image}`),
+        // // Don't touch screen prompt trials
+        // dont_touch_screen_prompt_trial_procedure.timeline_variables.map(item => `image/${item.image}`),
 
         // Test listen trials
         test_procedure_1_listen.timeline_variables.map(item => `image/${item.image}`),
         test_procedure_2_listen.timeline_variables.map(item => `image/${item.image}`),
         test_procedure_3_listen.timeline_variables.map(item => `image/${item.image}`),
         test_procedure_4_listen.timeline_variables.map(item => `image/${item.image}`),
-        test_procedure_5_listen.timeline_variables.map(item => `image/${item.image}`),
-        test_procedure_6_listen.timeline_variables.map(item => `image/${item.image}`),
-        test_procedure_7_listen.timeline_variables.map(item => `image/${item.image}`),
-        test_procedure_8_listen.timeline_variables.map(item => `image/${item.image}`),
-        test_procedure_9_listen.timeline_variables.map(item => `image/${item.image}`),
-        test_procedure_10_listen.timeline_variables.map(item => `image/${item.image}`),
-        test_procedure_11_listen.timeline_variables.map(item => `image/${item.image}`),
-        test_procedure_12_listen.timeline_variables.map(item => `image/${item.image}`),
-
-        // Test trials
-        test_procedure_1.timeline_variables.map(item => `image/${item.image}`),
-        test_procedure_1.timeline_variables.map(item => `image/${item.left}`),
-        test_procedure_1.timeline_variables.map(item => `image/${item.right}`),
-        test_procedure_2.timeline_variables.map(item => `image/${item.image}`),
-        test_procedure_2.timeline_variables.map(item => `image/${item.left}`),
-        test_procedure_2.timeline_variables.map(item => `image/${item.right}`),
-        test_procedure_3.timeline_variables.map(item => `image/${item.image}`),
-        test_procedure_3.timeline_variables.map(item => `image/${item.left}`),
-        test_procedure_3.timeline_variables.map(item => `image/${item.right}`),
-        test_procedure_4.timeline_variables.map(item => `image/${item.image}`),
-        test_procedure_4.timeline_variables.map(item => `image/${item.left}`),
-        test_procedure_4.timeline_variables.map(item => `image/${item.right}`),
-        test_procedure_5.timeline_variables.map(item => `image/${item.image}`),
-        test_procedure_5.timeline_variables.map(item => `image/${item.left}`),
-        test_procedure_5.timeline_variables.map(item => `image/${item.right}`),
-        test_procedure_6.timeline_variables.map(item => `image/${item.image}`),
-        test_procedure_6.timeline_variables.map(item => `image/${item.left}`),
-        test_procedure_6.timeline_variables.map(item => `image/${item.right}`),
-        test_procedure_7.timeline_variables.map(item => `image/${item.image}`),
-        test_procedure_7.timeline_variables.map(item => `image/${item.left}`),
-        test_procedure_7.timeline_variables.map(item => `image/${item.right}`),
-        test_procedure_8.timeline_variables.map(item => `image/${item.image}`),
-        test_procedure_8.timeline_variables.map(item => `image/${item.left}`),
-        test_procedure_8.timeline_variables.map(item => `image/${item.right}`),
-        test_procedure_9.timeline_variables.map(item => `image/${item.image}`),
-        test_procedure_9.timeline_variables.map(item => `image/${item.left}`),
-        test_procedure_9.timeline_variables.map(item => `image/${item.right}`),
-        test_procedure_10.timeline_variables.map(item => `image/${item.image}`),
-        test_procedure_10.timeline_variables.map(item => `image/${item.left}`),
-        test_procedure_10.timeline_variables.map(item => `image/${item.right}`),
-        test_procedure_11.timeline_variables.map(item => `image/${item.image}`),
-        test_procedure_11.timeline_variables.map(item => `image/${item.left}`),
-        test_procedure_11.timeline_variables.map(item => `image/${item.right}`),
-        test_procedure_12.timeline_variables.map(item => `image/${item.image}`),
-        test_procedure_12.timeline_variables.map(item => `image/${item.left}`),
-        test_procedure_12.timeline_variables.map(item => `image/${item.right}`),
-
+       
         // Ending trial
         ending_trial_procedure.timeline_variables.map(item => `image/${item.image}`),
 
@@ -253,6 +167,11 @@
 
     video:
       [].concat(
+        // Introduction trials
+        introduction_trial_procedure1.timeline_variables.map(item => item.video[0]),
+        introduction_trial_procedure2.timeline_variables.map(item => item.video[0]),
+        introduction_trial_procedure3.timeline_variables.map(item => item.video[0]),
+
         // Exposure trials
         exposure_procedure1_1.timeline_variables.map(item => `video/${item.video}`),
         exposure_procedure1_2.timeline_variables.map(item => `video/${item.video}`),
@@ -262,21 +181,15 @@
         exposure_procedure2_2.timeline_variables.map(item => `video/${item.video}`),
         exposure_procedure2_3.timeline_variables.map(item => `video/${item.video}`),
         exposure_procedure2_4.timeline_variables.map(item => `video/${item.video}`),
-        exposure_procedure3_1.timeline_variables.map(item => `video/${item.video}`),
-        exposure_procedure3_2.timeline_variables.map(item => `video/${item.video}`),
-        exposure_procedure3_3.timeline_variables.map(item => `video/${item.video}`),
-        exposure_procedure3_4.timeline_variables.map(item => `video/${item.video}`),
-        exposure_procedure4_1.timeline_variables.map(item => `video/${item.video}`),
-        exposure_procedure4_2.timeline_variables.map(item => `video/${item.video}`),
-        exposure_procedure4_3.timeline_variables.map(item => `video/${item.video}`),
-        exposure_procedure4_4.timeline_variables.map(item => `video/${item.video}`),
+        // Practice trials
+        practice1.timeline_variables.map(item => `video/${item.video}`),
 
         []),
 
     audio:
       [].concat(
         // Introduction trial
-        introduction_trial_procedure.timeline_variables.map(item => `${item.audio}`),
+        // introduction_trial_procedure.timeline_variables.map(item => `${item.audio}`),
 
         // Exposure practice trial
         exposure_practice_trial_procedure.timeline_variables.map(item => `wav/${item.audio}`),
@@ -285,40 +198,40 @@
         instruction_exposure_ready_trial_procedure.timeline_variables.map(item => `${item.audio}`),
 
         // Exposure trials
-        exposure_procedure1_1.timeline_variables.map(item => `wav/${item.audio}`),
-        exposure_procedure1_2.timeline_variables.map(item => `wav/${item.audio}`),
-        exposure_procedure1_3.timeline_variables.map(item => `wav/${item.audio}`),
-        exposure_procedure1_4.timeline_variables.map(item => `wav/${item.audio}`),
-        exposure_procedure2_1.timeline_variables.map(item => `wav/${item.audio}`),
-        exposure_procedure2_2.timeline_variables.map(item => `wav/${item.audio}`),
-        exposure_procedure2_3.timeline_variables.map(item => `wav/${item.audio}`),
-        exposure_procedure2_4.timeline_variables.map(item => `wav/${item.audio}`),
-        exposure_procedure3_1.timeline_variables.map(item => `wav/${item.audio}`),
-        exposure_procedure3_2.timeline_variables.map(item => `wav/${item.audio}`),
-        exposure_procedure3_3.timeline_variables.map(item => `wav/${item.audio}`),
-        exposure_procedure3_4.timeline_variables.map(item => `wav/${item.audio}`),
-        exposure_procedure4_1.timeline_variables.map(item => `wav/${item.audio}`),
-        exposure_procedure4_2.timeline_variables.map(item => `wav/${item.audio}`),
-        exposure_procedure4_3.timeline_variables.map(item => `wav/${item.audio}`),
-        exposure_procedure4_4.timeline_variables.map(item => `wav/${item.audio}`),
+        // exposure_procedure1_1.timeline_variables.map(item => `wav/${item.audio}`),
+        // exposure_procedure1_2.timeline_variables.map(item => `wav/${item.audio}`),
+        // exposure_procedure1_3.timeline_variables.map(item => `wav/${item.audio}`),
+        // exposure_procedure1_4.timeline_variables.map(item => `wav/${item.audio}`),
+        // exposure_procedure2_1.timeline_variables.map(item => `wav/${item.audio}`),
+        // exposure_procedure2_2.timeline_variables.map(item => `wav/${item.audio}`),
+        // exposure_procedure2_3.timeline_variables.map(item => `wav/${item.audio}`),
+        // exposure_procedure2_4.timeline_variables.map(item => `wav/${item.audio}`),
+        // exposure_procedure3_1.timeline_variables.map(item => `wav/${item.audio}`),
+        // exposure_procedure3_2.timeline_variables.map(item => `wav/${item.audio}`),
+        // exposure_procedure3_3.timeline_variables.map(item => `wav/${item.audio}`),
+        // exposure_procedure3_4.timeline_variables.map(item => `wav/${item.audio}`),
+        // exposure_procedure4_1.timeline_variables.map(item => `wav/${item.audio}`),
+        // exposure_procedure4_2.timeline_variables.map(item => `wav/${item.audio}`),
+        // exposure_procedure4_3.timeline_variables.map(item => `wav/${item.audio}`),
+        // exposure_procedure4_4.timeline_variables.map(item => `wav/${item.audio}`),
 
         // Attention trials
-        attention_check_procedure1.timeline_variables.map(item => `wav/${item.audio}`),
-        attention_check_procedure2.timeline_variables.map(item => `wav/${item.audio}`),
-        attention_check_procedure3.timeline_variables.map(item => `wav/${item.audio}`),
-        attention_check_procedure4.timeline_variables.map(item => `wav/${item.audio}`),
-        attention_check_procedure5.timeline_variables.map(item => `wav/${item.audio}`),
-        attention_check_procedure6.timeline_variables.map(item => `wav/${item.audio}`),
-        attention_check_procedure7.timeline_variables.map(item => `wav/${item.audio}`),
-        attention_check_procedure8.timeline_variables.map(item => `wav/${item.audio}`),
-        attention_check_procedure9.timeline_variables.map(item => `wav/${item.audio}`),
-        attention_check_procedure10.timeline_variables.map(item => `wav/${item.audio}`),
-        attention_check_procedure11.timeline_variables.map(item => `wav/${item.audio}`),
-        attention_check_procedure12.timeline_variables.map(item => `wav/${item.audio}`),
-        attention_check_procedure13.timeline_variables.map(item => `wav/${item.audio}`),
-        attention_check_procedure14.timeline_variables.map(item => `wav/${item.audio}`),
-        attention_check_procedure15.timeline_variables.map(item => `wav/${item.audio}`),
-        attention_check_procedure16.timeline_variables.map(item => `wav/${item.audio}`),
+        attention_check_procedure1_1.timeline_variables.map(item => `wav/${item.audio}`),
+        attention_check_procedure1_2.timeline_variables.map(item => `wav/${item.audio}`),
+        attention_check_procedure1_3.timeline_variables.map(item => `wav/${item.audio}`),
+        attention_check_procedure1_4.timeline_variables.map(item => `wav/${item.audio}`),
+        attention_check_procedure2_1.timeline_variables.map(item => `wav/${item.audio}`),
+        attention_check_procedure2_2.timeline_variables.map(item => `wav/${item.audio}`),
+        attention_check_procedure2_3.timeline_variables.map(item => `wav/${item.audio}`),
+        attention_check_procedure2_4.timeline_variables.map(item => `wav/${item.audio}`),
+        // attention_check_procedure9.timeline_variables.map(item => `wav/${item.audio}`),
+        // attention_check_procedure10.timeline_variables.map(item => `wav/${item.audio}`),
+        // attention_check_procedure11.timeline_variables.map(item => `wav/${item.audio}`),
+        // attention_check_procedure12.timeline_variables.map(item => `wav/${item.audio}`),
+        // attention_check_procedure13.timeline_variables.map(item => `wav/${item.audio}`),
+        // attention_check_procedure14.timeline_variables.map(item => `wav/${item.audio}`),
+        // attention_check_procedure15.timeline_variables.map(item => `wav/${item.audio}`),
+        // attention_check_procedure16.timeline_variables.map(item => `wav/${item.audio}`),
 
         // Break trials
         break_trial_procedure1.timeline_variables.map(item => `${item.audio}`),
@@ -329,51 +242,30 @@
         // Instruction test trials
         instruction_test_trial_procedure.timeline_variables.map(item => `${item.audio}`),
 
-        // Test practice listen trials
-        test_practice_procedure_1_listen.timeline_variables.map(item => `${item.audio}`),
-        test_practice_procedure_2_listen.timeline_variables.map(item => `${item.audio}`),
-        test_practice_procedure_3_listen.timeline_variables.map(item => `${item.audio}`),
-        test_practice_procedure_4_listen.timeline_variables.map(item => `${item.audio}`),
+        // // Test practice listen trials
+        // test_practice_procedure_1_listen.timeline_variables.map(item => `${item.audio}`),
+        // test_practice_procedure_2_listen.timeline_variables.map(item => `${item.audio}`),
+        // test_practice_procedure_3_listen.timeline_variables.map(item => `${item.audio}`),
+        // test_practice_procedure_4_listen.timeline_variables.map(item => `${item.audio}`),
 
-        // Test practice trials
-        test_practice_procedure_1.timeline_variables.map(item => `wav/${item.audio}`),
-        test_practice_procedure_2.timeline_variables.map(item => `wav/${item.audio}`),
-        test_practice_procedure_3.timeline_variables.map(item => `wav/${item.audio}`),
-        test_practice_procedure_4.timeline_variables.map(item => `wav/${item.audio}`),
+        // // Test practice trials
+        // test_practice_procedure_1.timeline_variables.map(item => `wav/${item.audio}`),
+        // test_practice_procedure_2.timeline_variables.map(item => `wav/${item.audio}`),
+        // test_practice_procedure_3.timeline_variables.map(item => `wav/${item.audio}`),
+        // test_practice_procedure_4.timeline_variables.map(item => `wav/${item.audio}`),
 
-        // Instruction test ready trials
-        instruction_test_ready_trial_procedure.timeline_variables.map(item => `${item.audio}`),
+        // // Instruction test ready trials
+        // instruction_test_ready_trial_procedure.timeline_variables.map(item => `${item.audio}`),
 
-        // Don't touch screen prompt trials
-        dont_touch_screen_prompt_trial_procedure.timeline_variables.map(item => `${item.audio}`),
+        // // Don't touch screen prompt trials
+        // dont_touch_screen_prompt_trial_procedure.timeline_variables.map(item => `${item.audio}`),
 
-        // Test listen trials
-        test_procedure_1_listen.timeline_variables.map(item => `${item.audio}`),
-        test_procedure_2_listen.timeline_variables.map(item => `${item.audio}`),
-        test_procedure_3_listen.timeline_variables.map(item => `${item.audio}`),
-        test_procedure_4_listen.timeline_variables.map(item => `${item.audio}`),
-        test_procedure_5_listen.timeline_variables.map(item => `${item.audio}`),
-        test_procedure_6_listen.timeline_variables.map(item => `${item.audio}`),
-        test_procedure_7_listen.timeline_variables.map(item => `${item.audio}`),
-        test_procedure_8_listen.timeline_variables.map(item => `${item.audio}`),
-        test_procedure_9_listen.timeline_variables.map(item => `${item.audio}`),
-        test_procedure_10_listen.timeline_variables.map(item => `${item.audio}`),
-        test_procedure_11_listen.timeline_variables.map(item => `${item.audio}`),
-        test_procedure_12_listen.timeline_variables.map(item => `${item.audio}`),
-
-        // Test trials
-        test_procedure_1.timeline_variables.map(item => `wav/${item.audio}`),
-        test_procedure_2.timeline_variables.map(item => `wav/${item.audio}`),
-        test_procedure_3.timeline_variables.map(item => `wav/${item.audio}`),
-        test_procedure_4.timeline_variables.map(item => `wav/${item.audio}`),
-        test_procedure_5.timeline_variables.map(item => `wav/${item.audio}`),
-        test_procedure_6.timeline_variables.map(item => `wav/${item.audio}`),
-        test_procedure_7.timeline_variables.map(item => `wav/${item.audio}`),
-        test_procedure_8.timeline_variables.map(item => `wav/${item.audio}`),
-        test_procedure_9.timeline_variables.map(item => `wav/${item.audio}`),
-        test_procedure_10.timeline_variables.map(item => `wav/${item.audio}`),
-        test_procedure_11.timeline_variables.map(item => `wav/${item.audio}`),
-        test_procedure_12.timeline_variables.map(item => `wav/${item.audio}`),
+        // // Test listen trials
+        // test_procedure_1_listen.timeline_variables.map(item => `${item.audio}`),
+        // test_procedure_2_listen.timeline_variables.map(item => `${item.audio}`),
+        // test_procedure_3_listen.timeline_variables.map(item => `${item.audio}`),
+        // test_procedure_4_listen.timeline_variables.map(item => `${item.audio}`),
+       
 
         // Ending trial
         ending_trial_procedure.timeline_variables.map(item => `${item.audio}`),
@@ -382,82 +274,49 @@
   };
   timeline.push(preload);
   timeline.push(instructions);
-  timeline.push(introduction_trial_procedure);
-  timeline.push(exposure_practice_trial_procedure);
-  timeline.push(instruction_exposure_ready_trial_procedure);
+  timeline.push(introduction_trial_procedure1);
+
+  // timeline.push(exposure_practice_trial_procedure);
+  // timeline.push(instruction_exposure_ready_trial_procedure);
+
   timeline.push(exposure_procedure1_1);
-  timeline.push(attention_check_procedure1);
+  timeline.push(attention_check_procedure1_1);
   timeline.push(exposure_procedure1_2);
-  timeline.push(attention_check_procedure2);
-  timeline.push(exposure_procedure1_3);
-  timeline.push(attention_check_procedure3);
-  timeline.push(exposure_procedure1_4);
-  timeline.push(attention_check_procedure4);
-  timeline.push(break_trial_procedure1);
-  timeline.push(exposure_procedure2_1);
-  timeline.push(attention_check_procedure5);
-  timeline.push(exposure_procedure2_2);
-  timeline.push(attention_check_procedure6);
-  timeline.push(exposure_procedure2_3);
-  timeline.push(attention_check_procedure7);
-  timeline.push(exposure_procedure2_4);
-  timeline.push(attention_check_procedure8);
-  timeline.push(break_trial_procedure2);
-  timeline.push(exposure_procedure3_1);
-  timeline.push(attention_check_procedure9);
-  timeline.push(exposure_procedure3_2);
-  timeline.push(attention_check_procedure10);
-  timeline.push(exposure_procedure3_3);
-  timeline.push(attention_check_procedure11);
-  timeline.push(exposure_procedure3_4);
-  timeline.push(attention_check_procedure12);
-  timeline.push(break_trial_procedure3);
-  timeline.push(exposure_procedure4_1);
-  timeline.push(attention_check_procedure13);
-  timeline.push(exposure_procedure4_2);
-  timeline.push(attention_check_procedure14);
-  timeline.push(exposure_procedure4_3);
-  timeline.push(attention_check_procedure15);
-  timeline.push(exposure_procedure4_4);
-  timeline.push(attention_check_procedure16);
-  timeline.push(break_trial_procedure4);
-  timeline.push(instruction_test_trial_procedure);
-  timeline.push(test_practice_procedure_1_listen);
-  timeline.push(test_practice_procedure_1);
-  timeline.push(test_practice_procedure_2_listen);
-  timeline.push(test_practice_procedure_2);
-  timeline.push(test_practice_procedure_3_listen)
-  timeline.push(test_practice_procedure_3);
-  timeline.push(test_practice_procedure_4_listen);
-  timeline.push(test_practice_procedure_4);
-  timeline.push(instruction_test_ready_trial_procedure);
-  timeline.push(dont_touch_screen_prompt_trial_procedure);
+  timeline.push(attention_check_procedure1_2);
+  // timeline.push(exposure_procedure1_3);
+  // timeline.push(attention_check_procedure1_3);
+  // timeline.push(exposure_procedure1_4);
+  // timeline.push(attention_check_procedure1_4);
+  // // timeline.push(break_trial_procedure1);
+  // timeline.push(exposure_procedure2_1);
+  // timeline.push(attention_check_procedure2_1);
+  // timeline.push(exposure_procedure2_2);
+  // timeline.push(attention_check_procedure2_2);
+  // timeline.push(exposure_procedure2_3);
+  // timeline.push(attention_check_procedure2_3);
+  // timeline.push(exposure_procedure2_4);
+  // timeline.push(attention_check_procedure2_4);
+
+  // timeline.push(instruction_test_trial_procedure);
+  // timeline.push(test_practice_procedure_1_listen);
+  // timeline.push(test_practice_procedure_1);
+  // timeline.push(test_practice_procedure_2_listen);
+  // timeline.push(test_practice_procedure_2);
+  // timeline.push(test_practice_procedure_3_listen)
+  // timeline.push(test_practice_procedure_3);
+  // timeline.push(test_practice_procedure_4_listen);
+  // timeline.push(test_practice_procedure_4);
+  // timeline.push(instruction_test_ready_trial_procedure);
+  // timeline.push(dont_touch_screen_prompt_trial_procedure);
+  // timeline.push(break_trial_procedure2);
+  timeline.push(introduction_trial_procedure2);
+  timeline.push(practice1);
+  timeline.push(introduction_trial_procedure3);
   timeline.push(test_procedure_1_listen);
-  timeline.push(test_procedure_1);
-  timeline.push(dont_touch_screen_prompt_trial_procedure);
   timeline.push(test_procedure_2_listen);
-  timeline.push(test_procedure_2);
-  timeline.push(test_procedure_3_listen);
-  timeline.push(test_procedure_3);
-  timeline.push(test_procedure_4_listen);
-  timeline.push(test_procedure_4);
-  timeline.push(test_procedure_5_listen);
-  timeline.push(test_procedure_5);
-  timeline.push(test_procedure_6_listen);
-  timeline.push(test_procedure_6);
-  timeline.push(test_procedure_7_listen);
-  timeline.push(test_procedure_7);
-  timeline.push(test_procedure_8_listen);
-  timeline.push(test_procedure_8);
-  timeline.push(test_procedure_9_listen);
-  timeline.push(test_procedure_9);
-  timeline.push(test_procedure_10_listen);
-  timeline.push(test_procedure_10);
-  timeline.push(test_procedure_11_listen);
-  timeline.push(test_procedure_11);
-  timeline.push(test_procedure_12_listen);
-  timeline.push(test_procedure_12);
-  timeline.push(ending_trial_procedure);
+  // timeline.push(test_procedure_3_listen);
+  // timeline.push(test_procedure_4_listen);
+  // timeline.push(ending_trial_procedure);
 
 
   const subject_id = jsPsych.randomization.randomID(10);

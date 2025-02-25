@@ -1,3 +1,5 @@
+let WRONG_BUTTON_CLICKED = false;
+
 let attention_check_trial = {
     type: jsPsychHtmlButtonResponseWithGreenBox,
     stimulus: function () {
