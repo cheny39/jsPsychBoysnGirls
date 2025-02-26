@@ -47,6 +47,7 @@
 
 let practice_trial_new = {
     type: jsPsychHtmlKeyboardResponse,
+    // randomize_order: true,
     stimulus: function () {
         const video = jsPsych.evaluateTimelineVariable('video');
         const video_position = jsPsych.evaluateTimelineVariable('video_position');

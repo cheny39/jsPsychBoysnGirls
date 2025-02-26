@@ -25,7 +25,7 @@ const VIDEO_POSITIONS = {
         top: 150
     },
     'RIGHT': {
-        left: 1080,
+        left: 1050,
         top: 150
     }
 };
