@@ -71,6 +71,20 @@ function generateExposureStimulusNew(video, video_position, image, image_positio
 }
 
 /**
+ * Generates a exposure stimulus HTML element.
+ * 
+ * @param {string} video - The path to the video file.
+ * @param {string} image - The path to the wrong button image file.
+ * @param {string} image_position - The position of the wrong button.
+ * @returns {string} The HTML string for the video stimulus.
+ */
+function generateBreakStimulus( image, image_position) {
+    return `<div>
+                <img src="${image}" style="width:720px; height:720px;position:absolute; left:${image_position.left}px; top: ${image_position.top}px">
+            </div>`;
+}
+
+/**
  * Generates a test stimulus HTML element.
  * 
  * @param {string} video - The path to the video file.
