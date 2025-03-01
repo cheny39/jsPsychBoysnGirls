@@ -68,3 +68,20 @@ let introduction_trial_procedure3 = {
         { video: ['video/11-In_this_level-_you_will_descri.mp4']},
     ]
 };
+
+let introduction_trial_procedure4 = {
+    timeline: [instruction_trial],
+//     timeline_variables:
+//         [
+//         { video: '1.Welcome_to_our_language_learni.mp4', video_position: VIDEO_POSITIONS_INTRO.CENTER},
+//         { video: '2.And_my_name_is_Henry.mp4', video_position: VIDEO_POSITIONS_INTRO.CENTER},
+//         { video: '3-In_this_game-_you_will_listen_.mp4', video_position: VIDEO_POSITIONS_INTRO.CENTER},
+//         { video:'4-In_this_first_part-_you_will_s.mp4', video_position: VIDEO_POSITIONS_INTRO.CENTER}
+//   ]
+    timeline_variables:
+        [
+       
+        { video: ['video/12-Wow_great_job-_You_have_finish.mp4']},
+        { video: ['video/15-See_you_next_time.mp4']},
+    ]
+};
