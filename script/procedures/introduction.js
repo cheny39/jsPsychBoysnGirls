@@ -48,8 +48,8 @@ let introduction_trial_procedure2 = {
     timeline_variables:
         [
         { video: ['video/5-Great_Job_with_level_1-_You_ar.mp4'], width: 540, height: 540},
-        { video: ['video/6-_In_this_part-_you_will_guess_.mp4'], width: 540, height: 540},
-        { video: ['video/7-or_I-_Henry-_would_describe_th.mp4'], width: 540, height: 540},
+        { video: ['video/13-_In_this_part-_you_will_guess_.mp4'], width: 540, height: 540},
+        { video: ['video/And_then_we_would_say_it.mp4'], width: 540, height: 540},
         { video: ['video/8-Here_we_go-.mp4'], width: 540, height: 540}
     ]
 };
