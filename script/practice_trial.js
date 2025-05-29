@@ -65,7 +65,7 @@ let practice_trial_new = {
 
     data: {
         task: "practice",
-        image: jsPsych.timelineVariable('wrong_button_image'),
+        image: jsPsych.timelineVariable('image'),
         wrong_button_image: jsPsych.timelineVariable('wrong_button_image'),
         // correct_button_image: jsPsych.timelineVariable('correct_button_image'),
         video: jsPsych.timelineVariable('video'),

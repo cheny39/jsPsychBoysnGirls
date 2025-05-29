@@ -12,7 +12,7 @@ let practice1 = {
                 left: 380,
                 top: 200
             },
-            video: "pig_boy.mp4",
+            video: "pig_boy1.mp4",
             video_position: VIDEO_POSITIONS.LEFT,
 
             wrong_button_image: "question_mark.png",
@@ -28,7 +28,7 @@ let practice1 = {
                 left: 380,
                 top: 200
             },
-            video: "pig_po_girl.mp4",
+            video: "pig_po_girl1.mp4",
             video_position: VIDEO_POSITIONS.RIGHT,
 
             wrong_button_image: "question_mark.png",
@@ -43,7 +43,7 @@ let practice1 = {
                 left: 380,
                 top: 200
             },
-            video: "pig_ka_boy.mp4",
+            video: "pig_ka_boy2.mp4",
             video_position: VIDEO_POSITIONS.LEFT,
 
             wrong_button_image: "question_mark.png",
@@ -60,7 +60,7 @@ let practice1 = {
                 left: 380,
                 top: 200
             },
-            video: "pig_po_girl.mp4",
+            video: "pig_po_girl2.mp4",
             video_position: VIDEO_POSITIONS.RIGHT,
 
             wrong_button_image: "question_mark.png",
@@ -75,7 +75,7 @@ let practice1 = {
                 left: 380,
                 top: 200
             },
-            video: "pig_ka_boy.mp4",
+            video: "pig_ka_boy1.mp4",
             video_position: VIDEO_POSITIONS.LEFT,
 
             wrong_button_image: "question_mark.png",
@@ -90,7 +90,7 @@ let practice1 = {
                 left: 380,
                 top: 200
             },
-            video: "sheep_girl.mp4",
+            video: "sheep_girl1.mp4",
             video_position: VIDEO_POSITIONS.RIGHT,
 
             wrong_button_image: "question_mark.png",
@@ -105,7 +105,7 @@ let practice1 = {
                 left: 380,
                 top: 200
             },
-            video: "sheep_ka_boy.mp4",
+            video: "sheep_ka_boy3.mp4",
             video_position: VIDEO_POSITIONS.LEFT,
 
             wrong_button_image: "question_mark.png",
@@ -120,7 +120,7 @@ let practice1 = {
                 left: 380,
                 top: 200
             },
-            video: "sheep_po_girl.mp4",
+            video: "sheep_po_girl4.mp4",
             video_position: VIDEO_POSITIONS.RIGHT,
 
             wrong_button_image: "question_mark.png",
@@ -135,7 +135,7 @@ let practice1 = {
                 left: 380,
                 top: 200
             },
-            video: "sheep_ka_boy.mp4",
+            video: "sheep_ka_boy4.mp4",
             video_position: VIDEO_POSITIONS.LEFT,
 
             wrong_button_image: "question_mark.png",
@@ -151,7 +151,7 @@ let practice1 = {
                 left: 380,
                 top: 200
             },
-            video: "sheep_po_girl.mp4",
+            video: "sheep_po_girl3.mp4",
             video_position: VIDEO_POSITIONS.RIGHT,
 
             wrong_button_image: "question_mark.png",
@@ -168,39 +168,8 @@ let practice1 = {
                 left: 380,
                 top: 200
             },
-            video: "chicken_boy.mp4",
-            video_position: VIDEO_POSITIONS.LEFT,
-
-            wrong_button_image: "question_mark.png",
-            wrong_button_position: {
-                left: 650,
-                top: 600
-            },
-        },
-
-        {
-            image:"chicken-2.jpg",
-            image_position: {
-                left: 380,
-                top: 200
-            },
-            video: "chicken_po_girl.mp4",
+            video: "chicken_girl2.mp4",
             video_position: VIDEO_POSITIONS.RIGHT,
-
-            wrong_button_image: "question_mark.png",
-            wrong_button_position: {
-                left: 650,
-                top: 600
-            },
-        },
-        {
-            image:"chicken-2.jpg",
-            image_position: {
-                left: 380,
-                top: 200
-            },
-            video: "chicken_ka_boy.mp4",
-            video_position: VIDEO_POSITIONS.LEFT,
 
             wrong_button_image: "question_mark.png",
             wrong_button_position: {
@@ -215,8 +184,39 @@ let practice1 = {
                 left: 380,
                 top: 200
             },
-            video: "chicken_po_girl.mp4",
+            video: "chicken_ka_boy2.mp4",
+            video_position: VIDEO_POSITIONS.LEFT,
+
+            wrong_button_image: "question_mark.png",
+            wrong_button_position: {
+                left: 650,
+                top: 600
+            },
+        },
+        {
+            image:"chicken-2.jpg",
+            image_position: {
+                left: 380,
+                top: 200
+            },
+            video: "chicken_po_girl2.mp4",
             video_position: VIDEO_POSITIONS.RIGHT,
+
+            wrong_button_image: "question_mark.png",
+            wrong_button_position: {
+                left: 650,
+                top: 600
+            },
+        },
+
+        {
+            image:"chicken-2.jpg",
+            image_position: {
+                left: 380,
+                top: 200
+            },
+            video: "chicken_ka_boy1.mp4",
+            video_position: VIDEO_POSITIONS.LEFT,
 
             wrong_button_image: "question_mark.png",
             wrong_button_position: {
@@ -230,8 +230,8 @@ let practice1 = {
                 left: 380,
                 top: 200
             },
-            video: "chicken_ka_boy.mp4",
-            video_position: VIDEO_POSITIONS.LEFT,
+            video: "chicken_po_girl1.mp4",
+            video_position: VIDEO_POSITIONS.RIGHT,
 
             wrong_button_image: "question_mark.png",
             wrong_button_position: {
@@ -247,8 +247,8 @@ let practice1 = {
                 left: 380,
                 top: 200
             },
-            video: "duck_girl.mp4",
-            video_position: VIDEO_POSITIONS.RIGHT,
+            video: "duck_boy2.mp4",
+            video_position: VIDEO_POSITIONS.LEFT,
             wrong_button_image: "question_mark.png",
             wrong_button_position: {
                 left: 650,
@@ -262,8 +262,8 @@ let practice1 = {
                 left: 380,
                 top: 200
             },
-            video: "duck_ka_boy.mp4",
-            video_position: VIDEO_POSITIONS.LEFT,
+            video: "duck_po_girl4.mp4",
+            video_position: VIDEO_POSITIONS.RIGHT,
 
             wrong_button_image: "question_mark.png",
             wrong_button_position: {
@@ -277,22 +277,7 @@ let practice1 = {
                 left: 380,
                 top: 200
             },
-            video: "duck_po_girl.mp4",
-            video_position: VIDEO_POSITIONS.RIGHT,
-
-            wrong_button_image: "question_mark.png",
-            wrong_button_position: {
-                left: 650,
-                top: 600
-            },
-        },
-        {
-            image:"duck-4.jpg",
-            image_position: {
-                left: 380,
-                top: 200
-            },
-            video: "duck_ka_boy.mp4",
+            video: "duck_ka_boy3.mp4",
             video_position: VIDEO_POSITIONS.LEFT,
 
             wrong_button_image: "question_mark.png",
@@ -301,6 +286,21 @@ let practice1 = {
                 top: 600
             },
         },
+        {
+            image:"duck-4.jpg",
+            image_position: {
+                left: 380,
+                top: 200
+            },
+            video: "duck_po_girl3.mp4",
+            video_position: VIDEO_POSITIONS.RIGHT,
+
+            wrong_button_image: "question_mark.png",
+            wrong_button_position: {
+                left: 650,
+                top: 600
+            },
+        },
 
         {
             image:"duck-4.jpg",
@@ -308,8 +308,8 @@ let practice1 = {
                 left: 380,
                 top: 200
             },
-            video: "duck_po_girl.mp4",
-            video_position: VIDEO_POSITIONS.RIGHT,
+            video: "duck_ka_boy4.mp4",
+            video_position: VIDEO_POSITIONS.LEFT,
 
             wrong_button_image: "question_mark.png",
             wrong_button_position: {
@@ -329,7 +329,7 @@ let practice2 = {
                 left: 380,
                 top: 200
             },
-            video: "pig_girl.mp4",
+            video: "pig_girl3.mp4",
             video_position: VIDEO_POSITIONS.RIGHT,
 
             wrong_button_image: "question_mark.png",
@@ -341,12 +341,12 @@ let practice2 = {
 
        
         {
-            image:"pig-2.jpg",
+            image:"pig-4.jpg",
             image_position: {
                 left: 380,
                 top: 200
             },
-            video: "pig_ka_boy.mp4",
+            video: "pig_ka_boy3.mp4",
             video_position: VIDEO_POSITIONS.LEFT,
 
             wrong_button_image: "question_mark.png",
@@ -361,7 +361,7 @@ let practice2 = {
                 left: 380,
                 top: 200
             },
-            video: "pig_po_girl.mp4",
+            video: "pig_po_girl3.mp4",
             video_position: VIDEO_POSITIONS.RIGHT,
 
             wrong_button_image: "question_mark.png",
@@ -371,12 +371,12 @@ let practice2 = {
             },
         },
         {
-            image:"pig-4.jpg",
+            image:"pig-2.jpg",
             image_position: {
                 left: 380,
                 top: 200
             },
-            video: "pig_ka_boy.mp4",
+            video: "pig_ka_boy4.mp4",
             video_position: VIDEO_POSITIONS.LEFT,
 
             wrong_button_image: "question_mark.png",
@@ -392,7 +392,7 @@ let practice2 = {
                 left: 380,
                 top: 200
             },
-            video: "pig_po_girl.mp4",
+            video: "pig_po_girl4.mp4",
             video_position: VIDEO_POSITIONS.RIGHT,
 
             wrong_button_image: "question_mark.png",
@@ -408,7 +408,7 @@ let practice2 = {
                 left: 380,
                 top: 200
             },
-            video: "sheep_boy.mp4",
+            video: "sheep_boy3.mp4",
             video_position: VIDEO_POSITIONS.LEFT,
 
             wrong_button_image: "question_mark.png",
@@ -419,12 +419,12 @@ let practice2 = {
         },
  
         {
-            image:"sheep-2.jpg",
+            image:"sheep-4.jpg",
             image_position: {
                 left: 380,
                 top: 200
             },
-            video: "sheep_po_girl.mp4",
+            video: "sheep_po_girl1.mp4",
             video_position: VIDEO_POSITIONS.RIGHT,
 
             wrong_button_image: "question_mark.png",
@@ -435,12 +435,12 @@ let practice2 = {
         },
 
         {
-            image:"sheep-2.jpg",
+            image:"sheep-4.jpg",
             image_position: {
                 left: 380,
                 top: 200
             },
-            video: "sheep_ka_boy.mp4",
+            video: "sheep_ka_boy1.mp4",
             video_position: VIDEO_POSITIONS.LEFT,
 
             wrong_button_image: "question_mark.png",
@@ -452,12 +452,12 @@ let practice2 = {
     
 
         {
-            image:"sheep-4.jpg",
+            image:"sheep-2.jpg",
             image_position: {
                 left: 380,
                 top: 200
             },
-            video: "sheep_po_girl.mp4",
+            video: "sheep_po_girl2.mp4",
             video_position: VIDEO_POSITIONS.RIGHT,
 
             wrong_button_image: "question_mark.png",
@@ -468,12 +468,12 @@ let practice2 = {
         },
 
         {
-            image:"sheep-4.jpg",
+            image:"sheep-2.jpg",
             image_position: {
                 left: 380,
                 top: 200
             },
-            video: "sheep_ka_boy.mp4",
+            video: "sheep_ka_boy2.mp4",
             video_position: VIDEO_POSITIONS.LEFT,
 
             wrong_button_image: "question_mark.png",
@@ -482,7 +482,6 @@ let practice2 = {
                 top: 600
             },
         },
-
 
         {
             image:"chicken-1.jpg",
@@ -490,23 +489,7 @@ let practice2 = {
                 left: 380,
                 top: 200
             },
-            video: "chicken_girl.mp4",
-            video_position: VIDEO_POSITIONS.RIGHT,
-
-            wrong_button_image: "question_mark.png",
-            wrong_button_position: {
-                left: 650,
-                top: 600
-            },
-        },
-
-        {
-            image:"chicken-2.jpg",
-            image_position: {
-                left: 380,
-                top: 200
-            },
-            video: "chicken_ka_boy.mp4",
+            video: "chicken_boy4.mp4",
             video_position: VIDEO_POSITIONS.LEFT,
 
             wrong_button_image: "question_mark.png",
@@ -522,7 +505,7 @@ let practice2 = {
                 left: 380,
                 top: 200
             },
-            video: "chicken_po_girl.mp4",
+            video: "chicken_po_girl4.mp4",
             video_position: VIDEO_POSITIONS.RIGHT,
 
             wrong_button_image: "question_mark.png",
@@ -531,14 +514,13 @@ let practice2 = {
                 top: 600
             },
         },
-
         {
-            image:"chicken-4.jpg",
+            image:"chicken-2.jpg",
             image_position: {
                 left: 380,
                 top: 200
             },
-            video: "chicken_ka_boy.mp4",
+            video: "chicken_ka_boy4.mp4",
             video_position: VIDEO_POSITIONS.LEFT,
 
             wrong_button_image: "question_mark.png",
@@ -547,13 +529,14 @@ let practice2 = {
                 top: 600
             },
         },
+
         {
             image:"chicken-4.jpg",
             image_position: {
                 left: 380,
                 top: 200
             },
-            video: "chicken_po_girl.mp4",
+            video: "chicken_po_girl3.mp4",
             video_position: VIDEO_POSITIONS.RIGHT,
 
             wrong_button_image: "question_mark.png",
@@ -562,6 +545,22 @@ let practice2 = {
                 top: 600
             },
         },
+        {
+            image:"chicken-4.jpg",
+            image_position: {
+                left: 380,
+                top: 200
+            },
+            video: "chicken_ka_boy3.mp4",
+            video_position: VIDEO_POSITIONS.LEFT,
+
+            wrong_button_image: "question_mark.png",
+            wrong_button_position: {
+                left: 650,
+                top: 600
+            },
+        },
+
  
         {
             image:"duck-1.jpg",
@@ -569,8 +568,8 @@ let practice2 = {
                 left: 380,
                 top: 200
             },
-            video: "duck_boy.mp4",
-            video_position: VIDEO_POSITIONS.LEFT,
+            video: "duck_girl4.mp4",
+            video_position: VIDEO_POSITIONS.RIGHT,
             wrong_button_image: "question_mark.png",
             wrong_button_position: {
                 left: 650,
@@ -584,7 +583,22 @@ let practice2 = {
                 left: 380,
                 top: 200
             },
-            video: "duck_po_girl.mp4",
+            video: "duck_ka_boy1.mp4",
+            video_position: VIDEO_POSITIONS.LEFT,
+
+            wrong_button_image: "question_mark.png",
+            wrong_button_position: {
+                left: 650,
+                top: 600
+            },
+        },
+        {
+            image:"duck-2.jpg",
+            image_position: {
+                left: 380,
+                top: 200
+            },
+            video: "duck_po_girl1.mp4",
             video_position: VIDEO_POSITIONS.RIGHT,
 
             wrong_button_image: "question_mark.png",
@@ -593,14 +607,13 @@ let practice2 = {
                 top: 600
             },
         },
-
         {
-            image:"duck-2.jpg",
+            image:"duck-4.jpg",
             image_position: {
                 left: 380,
                 top: 200
             },
-            video: "duck_ka_boy.mp4",
+            video: "duck_ka_boy2.mp4",
             video_position: VIDEO_POSITIONS.LEFT,
 
             wrong_button_image: "question_mark.png",
@@ -616,23 +629,8 @@ let practice2 = {
                 left: 380,
                 top: 200
             },
-            video: "duck_po_girl.mp4",
+            video: "duck_po_girl2.mp4",
             video_position: VIDEO_POSITIONS.RIGHT,
-
-            wrong_button_image: "question_mark.png",
-            wrong_button_position: {
-                left: 650,
-                top: 600
-            },
-        },
-        {
-            image:"duck-4.jpg",
-            image_position: {
-                left: 380,
-                top: 200
-            },
-            video: "duck_ka_boy.mp4",
-            video_position: VIDEO_POSITIONS.LEFT,
 
             wrong_button_image: "question_mark.png",
             wrong_button_position: {

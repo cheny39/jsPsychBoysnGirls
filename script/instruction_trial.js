@@ -24,9 +24,12 @@ let instruction_trial = {
     //     return generateInstructionStimulus(`video/${video}`, video_position);
     // },
     stimulus: jsPsych.timelineVariable('video'),
-    width:540,
-    height:540,
-    choices: "NO_KEYS",
-    trial_ends_after_video: true,
+    width:  jsPsych.timelineVariable('width'),
+    height: jsPsych.timelineVariable('height'),
+    // width:540,
+    // height:540,
+    // choices: "NO_KEYS",
+    choices: ['ENTER'],
+    trial_ends_after_video: false,
     autoplay: true
   };
