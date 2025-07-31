@@ -55,8 +55,12 @@ let practice_trial_new = {
         const wrong_button_image = jsPsych.evaluateTimelineVariable('wrong_button_image');
         const image_position = jsPsych.evaluateTimelineVariable('image_position');
         const image = jsPsych.evaluateTimelineVariable('image');
+        const person_image = jsPsych.evaluateTimelineVariable('person_image');
+        const person_image_position = jsPsych.evaluateTimelineVariable('person_image_position');
+        const bubble_image = jsPsych.evaluateTimelineVariable('bubble_image');
+        const bubble_image_position = jsPsych.evaluateTimelineVariable('bubble_image_position');
 
-        return generatePracticeStimulus(`image/${image}`, image_position, `image/${wrong_button_image}`, wrong_button_position, `video/${video}`, video_position);
+        return generatePracticeStimulus(`image/${image}`, image_position, `image/${wrong_button_image}`, wrong_button_position, `video/${video}`, video_position, `image/${person_image}`, person_image_position, `image/${bubble_image}`, bubble_image_position);
     },
     // choices: function () {
     //     return [`<img src="image/${jsPsych.evaluateTimelineVariable('correct_button_image')}" style="width:240px; height:135px;">`];
@@ -67,8 +71,10 @@ let practice_trial_new = {
         task: "practice",
         image: jsPsych.timelineVariable('image'),
         wrong_button_image: jsPsych.timelineVariable('wrong_button_image'),
+        person_image: jsPsych.timelineVariable('person_image'),
         // correct_button_image: jsPsych.timelineVariable('correct_button_image'),
         video: jsPsych.timelineVariable('video'),
+        
     },
     // button_html: () => {
     //     const correct_button_position = jsPsych.evaluateTimelineVariable('correct_button_position');

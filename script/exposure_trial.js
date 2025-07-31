@@ -7,14 +7,18 @@ let exposure_trial= {
         // const wrong_button_image = jsPsych.evaluateTimelineVariable('wrong_button_image');
         const image = jsPsych.evaluateTimelineVariable('image');
         const image_position = jsPsych.evaluateTimelineVariable('image_position');
+        const person_image = jsPsych.evaluateTimelineVariable('person_image');
+        const person_image_position = jsPsych.evaluateTimelineVariable('person_image_position');
+        const bubble_image = jsPsych.evaluateTimelineVariable('bubble_image');
+        const bubble_image_position = jsPsych.evaluateTimelineVariable('bubble_image_position');
 
-
-        return generateExposureStimulusNew(`video/${video}`, video_position, `image/${image}`, image_position);
+        return generateExposureStimulusNew(`video/${video}`, video_position, `image/${image}`, image_position, `image/${person_image}`, person_image_position, `image/${bubble_image}`, bubble_image_position);
     },
     choices: ['ENTER'],
     data: {
         task: "exposure",
         image: jsPsych.timelineVariable('image'),
+        person_image: jsPsych.timelineVariable('person_image'),
         video: jsPsych.timelineVariable('video'),
     },
 

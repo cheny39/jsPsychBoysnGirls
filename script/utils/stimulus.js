@@ -41,16 +41,18 @@ function generateAttentionCheckStimulus(image, image_position, wrong_button_imag
  * @param {string} wrong_button_position - The position of the wrong button.
  * @returns {string} The HTML string for the attention check stimulus.
  */
-function generatePracticeStimulus(image, image_position, wrong_button_image, wrong_button_position, video, video_position) {
+function generatePracticeStimulus(image, image_position, wrong_button_image, wrong_button_position, video, video_position,  person_image, person_image_position, bubble_image, bubble_image_position) {
     return `<div>
                 
                 <button id="${WRONG_BUTTON_ELEMENT_ID}" class="jspsych-btn" style="position:absolute; left:${wrong_button_position.left}px; top: ${wrong_button_position.top}px">
                         <img src="${wrong_button_image}" style="max-width:100px; max-height:100px;">
                 </button>
-                <video id="${VIDEO_ELEMENT_ID}" style="width:540px; height:540px; position:absolute; left:${video_position.left}px; top:${video_position.top}px;">
+                <video id="${VIDEO_ELEMENT_ID}" style="width:461.7px; height:461.7px; position:absolute; left:${video_position.left}px; top:${video_position.top}px;">
                         <source src="${video}" type="video/mp4"> Your browser does not support the video tag.
                 </video>
-                <img src="${image}" style="width:720px; height:405px;position:absolute; left:${image_position.left}px; top: ${image_position.top}px">
+                <img src="${image}" style="width:504px; height:283.5px;position:absolute; left:${image_position.left}px; top: ${image_position.top}px; border: 2px solid silver">
+                <img src="${person_image}" style="width:513px; height:461.7px;position:absolute; left:${person_image_position.left}px; top: ${person_image_position.top}px;">
+                <img src="${bubble_image}" style="width:256.5px; height:135px;position:absolute; left:${bubble_image_position.left}px; top: ${bubble_image_position.top}px;">
             </div>`;
 }
 /**
@@ -61,12 +63,14 @@ function generatePracticeStimulus(image, image_position, wrong_button_image, wro
  * @param {string} image_position - The position of the wrong button.
  * @returns {string} The HTML string for the video stimulus.
  */
-function generateExposureStimulusNew(video, video_position, image, image_position) {
+function generateExposureStimulusNew(video, video_position, image, image_position, person_image, person_image_position, bubble_image, bubble_image_position) {
     return `<div>
-               <video id="${VIDEO_ELEMENT_ID}" style="width:540px; height:540px; position:absolute; left:${video_position.left}px; top:${video_position.top}px;">
+               <video id="${VIDEO_ELEMENT_ID}" style="width:461.7px; height:461.7px; position:absolute; left:${video_position.left}px; top:${video_position.top}px;">
                         <source src="${video}" type="video/mp4"> Your browser does not support the video tag.
                 </video>
-                <img src="${image}" style="width:720px; height:405px;position:absolute; left:${image_position.left}px; top: ${image_position.top}px">
+                <img src="${image}" style="width:504px; height:283.5px;position:absolute; left:${image_position.left}px; top: ${image_position.top}px; border: 2px solid silver">
+                <img src="${person_image}" style="width:513px; height:461.7px;position:absolute; left:${person_image_position.left}px; top: ${person_image_position.top}px;">
+                <img src="${bubble_image}" style="width:256.5px; height:135px;position:absolute; left:${bubble_image_position.left}px; top: ${bubble_image_position.top}px;">
             </div>`;
 }
 
