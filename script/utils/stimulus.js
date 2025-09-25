@@ -33,6 +33,17 @@ function generateAttentionCheckStimulus(image, image_position, wrong_button_imag
             </div>`;
 
 }
+function generatePeerPreferenceStimulus(left_image, left_image_position, right_image, right_image_position) {
+    return `<div>
+                <button id="${RIGHT_BUTTON_ELEMENT_ID}" class="jspsych-btn" style="position:absolute; left:${right_image_position.left}px; top: ${right_image_position.top}px">
+                        <img src="${right_image}" style="max-width:270px; max-height:400px;">
+                </button>
+                <button id="${LEFT_BUTTON_ELEMENT_ID}" class="jspsych-btn" style="position:absolute; left:${left_image_position.left}px; top: ${left_image_position.top}px">
+                        <img src="${left_image}" style="max-width:270px; max-height:400px;">
+                </button>
+            </div>`;
+
+}
 
 /**
  * Generates an attention check stimulus HTML element.

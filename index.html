@@ -36,6 +36,8 @@
 <script src="script/break_trial.js"></script>
 <script src="script/test_trial.js"></script>
 <script src="script/ending_trial.js"></script>
+<script src="script/peer_preference_trial.js"></script>
+<script src="script/toyClothing_preference_trial.js"></script>
 
 <!-- load procedures -->
 <script src="script/procedures/introduction.js"></script>
@@ -48,6 +50,8 @@
 <script src="script/procedures/instruction_test.js"></script>
 <script src="script/procedures/instruction_test_ready.js"></script>
 <script src="script/procedures/test.js"></script>
+<script src="script/procedures/peer_preference.js"></script>
+<script src="script/procedures/toyClothing_preference.js"></script>
 <!-- <script src="script/procedures/test_practice.js"></script> -->
 <script src="script/procedures/ending.js"></script>
 
@@ -127,6 +131,68 @@
 
         // Instruction test trials
         instruction_test_trial_procedure.timeline_variables.map(item => `image/${item.image}`),
+
+        // Peer preference trials
+        peer_preference_task1.timeline_variables.map(item => `image/${item.left_image}`),
+        peer_preference_task1.timeline_variables.map(item => `image/${item.right_image}`),
+        peer_preference_task2.timeline_variables.map(item => `image/${item.left_image}`),
+        peer_preference_task2.timeline_variables.map(item => `image/${item.right_image}`),
+        peer_preference_task3.timeline_variables.map(item => `image/${item.left_image}`),
+        peer_preference_task3.timeline_variables.map(item => `image/${item.right_image}`),
+        peer_preference_task4.timeline_variables.map(item => `image/${item.left_image}`),
+        peer_preference_task4.timeline_variables.map(item => `image/${item.right_image}`),
+        peer_preference_task5.timeline_variables.map(item => `image/${item.left_image}`),
+        peer_preference_task5.timeline_variables.map(item => `image/${item.right_image}`),
+        peer_preference_task6.timeline_variables.map(item => `image/${item.left_image}`),
+        peer_preference_task6.timeline_variables.map(item => `image/${item.right_image}`),
+        peer_preference_task7.timeline_variables.map(item => `image/${item.left_image}`),
+        peer_preference_task7.timeline_variables.map(item => `image/${item.right_image}`),
+        peer_preference_task8.timeline_variables.map(item => `image/${item.left_image}`),
+        peer_preference_task8.timeline_variables.map(item => `image/${item.right_image}`),
+
+
+
+        // TC preference trials
+        toy_preference_task1.timeline_variables.map(item => `image/${item.A_image}`),
+        toy_preference_task1.timeline_variables.map(item => `image/${item.B_image}`),
+        toy_preference_task1.timeline_variables.map(item => `image/${item.C_image}`),
+        toy_preference_task1.timeline_variables.map(item => `image/${item.D_image}`),
+        toy_preference_task1.timeline_variables.map(item => `image/${item.E_image}`),
+        toy_preference_task2.timeline_variables.map(item => `image/${item.A_image}`),
+        toy_preference_task2.timeline_variables.map(item => `image/${item.B_image}`),
+        toy_preference_task2.timeline_variables.map(item => `image/${item.C_image}`),
+        toy_preference_task2.timeline_variables.map(item => `image/${item.D_image}`),
+        toy_preference_task2.timeline_variables.map(item => `image/${item.E_image}`),
+        toy_preference_task3.timeline_variables.map(item => `image/${item.A_image}`),
+        toy_preference_task3.timeline_variables.map(item => `image/${item.B_image}`),
+        toy_preference_task3.timeline_variables.map(item => `image/${item.C_image}`),
+        toy_preference_task3.timeline_variables.map(item => `image/${item.D_image}`),
+        toy_preference_task3.timeline_variables.map(item => `image/${item.E_image}`),
+        toy_preference_task4.timeline_variables.map(item => `image/${item.A_image}`),
+        toy_preference_task4.timeline_variables.map(item => `image/${item.B_image}`),
+        toy_preference_task4.timeline_variables.map(item => `image/${item.C_image}`),
+        toy_preference_task4.timeline_variables.map(item => `image/${item.D_image}`),
+        toy_preference_task4.timeline_variables.map(item => `image/${item.E_image}`),
+        cloth_preference_task1.timeline_variables.map(item => `image/${item.A_image}`),
+        cloth_preference_task1.timeline_variables.map(item => `image/${item.B_image}`),
+        cloth_preference_task1.timeline_variables.map(item => `image/${item.C_image}`),
+        cloth_preference_task1.timeline_variables.map(item => `image/${item.D_image}`),
+        cloth_preference_task1.timeline_variables.map(item => `image/${item.E_image}`),
+        cloth_preference_task2.timeline_variables.map(item => `image/${item.A_image}`),
+        cloth_preference_task2.timeline_variables.map(item => `image/${item.B_image}`),
+        cloth_preference_task2.timeline_variables.map(item => `image/${item.C_image}`),
+        cloth_preference_task2.timeline_variables.map(item => `image/${item.D_image}`),
+        cloth_preference_task2.timeline_variables.map(item => `image/${item.E_image}`),
+        cloth_preference_task3.timeline_variables.map(item => `image/${item.A_image}`),
+        cloth_preference_task3.timeline_variables.map(item => `image/${item.B_image}`),
+        cloth_preference_task3.timeline_variables.map(item => `image/${item.C_image}`),
+        cloth_preference_task3.timeline_variables.map(item => `image/${item.D_image}`),
+        cloth_preference_task3.timeline_variables.map(item => `image/${item.E_image}`),
+        cloth_preference_task4.timeline_variables.map(item => `image/${item.A_image}`),
+        cloth_preference_task4.timeline_variables.map(item => `image/${item.B_image}`),
+        cloth_preference_task4.timeline_variables.map(item => `image/${item.C_image}`),
+        cloth_preference_task4.timeline_variables.map(item => `image/${item.D_image}`),
+        cloth_preference_task4.timeline_variables.map(item => `image/${item.E_image}`),
 
         // // Test practice listen trials
         // test_practice_procedure_1_listen.timeline_variables.map(item => `image/${item.image}`),
@@ -305,7 +371,23 @@
   timeline.push(test_procedure_3_listen);
   timeline.push(test_procedure_4_listen);
   timeline.push(break_trial_procedure);
-  timeline.push(introduction_trial_procedure4);
+  // timeline.push(introduction_trial_procedure4);
+  timeline.push(peer_preference_task1);
+  timeline.push(peer_preference_task2);
+  timeline.push(peer_preference_task3);
+  timeline.push(peer_preference_task4);
+  timeline.push(peer_preference_task5);
+  timeline.push(peer_preference_task6);
+  timeline.push(peer_preference_task7);
+  timeline.push(peer_preference_task8);
+  timeline.push(toy_preference_task1);
+  timeline.push(toy_preference_task2);
+  timeline.push(toy_preference_task3);
+  timeline.push(toy_preference_task2);
+  timeline.push(cloth_preference_task1);
+  timeline.push(cloth_preference_task2);
+  timeline.push(cloth_preference_task3);
+  timeline.push(cloth_preference_task4);
 
   const subject_id = jsPsych.randomization.randomID(10);
   const filename = `${subject_id}.csv`;
