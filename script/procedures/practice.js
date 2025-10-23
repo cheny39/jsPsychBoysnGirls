@@ -372,7 +372,7 @@ let practice2 = {
                 left: 685,
                 top: 600
             },
-            person_image: "girl2_girl3_girl4.png",
+            person_image: "girl1_girl2_girl4.png",
             person_image_position: PERSON_IMAGE_POSITIONS.RIGHT,
             bubble_image: "girl_speech_bubble.png",
             bubble_image_position: BUBBLE_IMAGE_POSITIONS.RIGHT,
@@ -693,7 +693,7 @@ let practice2 = {
                 left: 685,
                 top: 600
             },
-            person_image: "boy1_boy2_boy3.png",
+            person_image: "boy1_boy3_boy4.png",
             person_image_position: PERSON_IMAGE_POSITIONS.LEFT,
             bubble_image: "boy_speech_bubble.png",
             bubble_image_position: BUBBLE_IMAGE_POSITIONS.LEFT,
