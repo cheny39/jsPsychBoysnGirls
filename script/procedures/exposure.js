@@ -405,7 +405,7 @@ let exposure_procedure2_2 = {
         {
             video: "lime_po_girl3.mp4",
             video_position: VIDEO_POSITIONS.RIGHT,
-            image: "lime-4.jpg",
+            image: "lime-2.jpg",
             image_position: EXPOSURE_IMAGE_POSITIONS.CENTER,
             person_image: "girl1_girl2_girl4.png",
             person_image_position: PERSON_IMAGE_POSITIONS.RIGHT,
