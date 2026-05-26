@@ -1,5 +1,6 @@
 const test_trial_procedure_base = {
     timeline: [test_trial],
+    randomize_order: true
 };
 
 // const test_trial_listen_procedure_base = {
@@ -27,53 +28,50 @@ let test_procedure_1_listen = {
     timeline_variables: [
         
         {
-            // 'audio': 'wav/pig_ka_norl3.wav',
             'image': 'pig-3.jpg',
             image_position: TEST_IMAGE_POSITIONS.CENTER,
         
         },
         {
-            // 'audio': 'wav/sheep_ka_norl3.wav',
-            'image': 'sheep-5.jpg',
-            image_position: TEST_IMAGE_POSITIONS.CENTER,
-          
-        },
-        {
-            // 'audio': 'wav/chicken_ka_norl3.wav',
-            'image': 'chicken-3.jpg',
-            image_position: TEST_IMAGE_POSITIONS.CENTER,
-          
-        },
-        {
-            // 'audio': 'wav/duck_ka_norl3.wav',
-            'image': 'duck-5.jpg',
-            image_position: TEST_IMAGE_POSITIONS.CENTER,
-
-        },
-        {
-            // 'audio': 'wav/cat_ka_norl3.wav',
-            'image': 'cat-3.jpg',
-            image_position: TEST_IMAGE_POSITIONS.CENTER,
-       
-        },
-        {
-            // 'audio': 'wav/dog_ka_norl3.wav',
-            'image': 'dog-5.jpg',
-            image_position: TEST_IMAGE_POSITIONS.CENTER,
-
-        },
-        {
-            // 'audio': 'wav/cow_ka_norl3.wav',
-            'image': 'cow-3.jpg',
-            image_position: TEST_IMAGE_POSITIONS.CENTER,
-
-        },
-        {
-            // 'audio': 'wav/horse_ka_norl3.wav',
-            'image': 'horse-5.jpg',
+            'image': 'orange-3.jpg',
             image_position: TEST_IMAGE_POSITIONS.CENTER,
          
-        }
+        },
+        
+        {
+            'image': 'chicken-5.jpg',
+            image_position: TEST_IMAGE_POSITIONS.CENTER,
+          
+        },
+
+        {
+            'image': 'apple-3.jpg',
+            image_position: TEST_IMAGE_POSITIONS.CENTER,
+         
+        },
+     
+        {
+            'image': 'cow-5.jpg',
+            image_position: TEST_IMAGE_POSITIONS.CENTER,
+
+        },
+        
+        {
+            'image': 'lime-5.jpg',
+            image_position: TEST_IMAGE_POSITIONS.CENTER,
+         
+        },
+
+        {
+            'image': 'dog-3.jpg',
+            image_position: TEST_IMAGE_POSITIONS.CENTER,
+
+        },
+        {
+            'image': 'grape-5.jpg',
+            image_position: TEST_IMAGE_POSITIONS.CENTER,
+         
+        },
 
     ]
 };
@@ -83,57 +81,50 @@ let test_procedure_2_listen = {
     timeline_variables: [
         
         {
-            // 'audio': 'wav/chicken_ka_norl3.wav',
+            'image': 'orange-5.jpg',
+            image_position: TEST_IMAGE_POSITIONS.CENTER,
+         
+        },
+        {
+            'image': 'cow-3.jpg',
+            image_position: TEST_IMAGE_POSITIONS.CENTER,
+
+        },
+        {
+            'image': 'lime-3.jpg',
+            image_position: TEST_IMAGE_POSITIONS.CENTER,
+         
+        },
+
+        {
+            'image': 'apple-5.jpg',
+            image_position: TEST_IMAGE_POSITIONS.CENTER,
+         
+        },
+        {
+            'image': 'pig-5.jpg',
+            image_position: TEST_IMAGE_POSITIONS.CENTER,
+        
+        },
+
+        {
+            'image': 'grape-3.jpg',
+            image_position: TEST_IMAGE_POSITIONS.CENTER,
+         
+        },      
+
+        {
             'image': 'chicken-3.jpg',
             image_position: TEST_IMAGE_POSITIONS.CENTER,
           
         },
         {
-            // 'audio': 'wav/pig_ka_norl3.wav',
-            'image': 'pig-3.jpg',
-            image_position: TEST_IMAGE_POSITIONS.CENTER,
-        
-        },
-        {
-            // 'audio': 'wav/cat_ka_norl3.wav',
-            'image': 'cat-5.jpg',
-            image_position: TEST_IMAGE_POSITIONS.CENTER,
-       
-        },
-        {
-            // 'audio': 'wav/cow_ka_norl3.wav',
-            'image': 'cow-5.jpg',
-            image_position: TEST_IMAGE_POSITIONS.CENTER,
-         
-        },
-
-        {
-            // 'audio': 'wav/duck_ka_norl3.wav',
-            'image': 'duck-5.jpg',
-            image_position: TEST_IMAGE_POSITIONS.CENTER,
-       
-        },
-        {
-            // 'audio': 'wav/sheep_ka_norl3.wav',
-            'image': 'sheep-5.jpg',
-            image_position: TEST_IMAGE_POSITIONS.CENTER,
-          
-        },
-
-        {
-            // 'audio': 'wav/dog_ka_norl3.wav',
-            'image': 'dog-3.jpg',
+            'image': 'dog-5.jpg',
             image_position: TEST_IMAGE_POSITIONS.CENTER,
 
-        
         },
 
-        {
-            // 'audio': 'wav/horse_ka_norl3.wav',
-            'image': 'horse-3.jpg',
-            image_position: TEST_IMAGE_POSITIONS.CENTER,
-         
-        }
+   
 
     ]
 };
@@ -142,54 +133,50 @@ let test_procedure_3_listen = {
     timeline_variables: [
         
         {
-            // 'audio': 'wav/chicken_ka_norl3.wav',
             'image': 'chicken-5.jpg',
             image_position: TEST_IMAGE_POSITIONS.CENTER,
           
         },
         {
-            // 'audio': 'wav/cow_ka_norl3.wav',
-            'image': 'cow-3.jpg',
+            'image': 'orange-3.jpg',
             image_position: TEST_IMAGE_POSITIONS.CENTER,
          
         },
         {
-            // 'audio': 'wav/pig_ka_norl3.wav',
-            'image': 'pig-5.jpg',
+            'image': 'dog-3.jpg',
             image_position: TEST_IMAGE_POSITIONS.CENTER,
-        
-        },
-        {
-            // 'audio': 'wav/cat_ka_norl3.wav',
-            'image': 'cat-3.jpg',
-            image_position: TEST_IMAGE_POSITIONS.CENTER,
-       
-        },
-        {
-            // 'audio': 'wav/sheep_ka_norl3.wav',
-            'image': 'sheep-3.jpg',
-            image_position: TEST_IMAGE_POSITIONS.CENTER,
-          
-        },
-        {
-            // 'audio': 'wav/horse_ka_norl3.wav',
-            'image': 'horse-5.jpg',
-            image_position: TEST_IMAGE_POSITIONS.CENTER,
-         
-        },
-        {
-            // 'audio': 'wav/duck_ka_norl3.wav',
-            'image': 'duck-3.jpg',
-            image_position: TEST_IMAGE_POSITIONS.CENTER,
-       
+
         },
 
         {
-            // 'audio': 'wav/dog_ka_norl3.wav',
-            'image': 'dog-5.jpg',
+            'image': 'grape-5.jpg',
+            image_position: TEST_IMAGE_POSITIONS.CENTER,
+         
+        },
+        {
+            'image': 'cow-5.jpg',
+            image_position: TEST_IMAGE_POSITIONS.CENTER,
+
+        },
+        {
+            'image': 'lime-5.jpg',
+            image_position: TEST_IMAGE_POSITIONS.CENTER,
+         
+        },
+
+        {
+            'image': 'pig-3.jpg',
             image_position: TEST_IMAGE_POSITIONS.CENTER,
         
         },
+        
+
+        {
+            'image': 'apple-3.jpg',
+            image_position: TEST_IMAGE_POSITIONS.CENTER,
+         
+        },
+
     ]
 };
 
@@ -198,54 +185,45 @@ let test_procedure_4_listen = {
     timeline_variables: [
        
         {
-            // 'audio': 'wav/duck_ka_norl3.wav',
-            'image': 'duck-3.jpg',
+            'image': 'pig-5.jpg',
             image_position: TEST_IMAGE_POSITIONS.CENTER,
-       
-        },
-        {
-            // 'audio': 'wav/cat_ka_norl3.wav',
-            'image': 'cat-5.jpg',
-            image_position: TEST_IMAGE_POSITIONS.CENTER,
-       
-        },
-        {
-            // 'audio': 'wav/sheep_ka_norl3.wav',
-            'image': 'sheep-3.jpg',
-            image_position: TEST_IMAGE_POSITIONS.CENTER,
-          
-        },
-        {
-            // 'audio': 'wav/chicken_ka_norl3.wav',
-            'image': 'chicken-5.jpg',
-            image_position: TEST_IMAGE_POSITIONS.CENTER,
-          
-        },
-
-        {
-            // 'audio': 'wav/dog_ka_norl3.wav',
-            'image': 'dog-3.jpg',
-            image_position: TEST_IMAGE_POSITIONS.CENTER,
-
         
         },
+
         {
-            // 'audio': 'wav/cow_ka_norl3.wav',
-            'image': 'cow-5.jpg',
+            'image': 'grape-3.jpg',
             image_position: TEST_IMAGE_POSITIONS.CENTER,
          
         },
         {
-            // 'audio': 'wav/pig_ka_norl3.wav',
-            'image': 'pig-5.jpg',
+            'image': 'lime-3.jpg',
             image_position: TEST_IMAGE_POSITIONS.CENTER,
-
-        
+         
         },
 
         {
-            // 'audio': 'wav/horse_ka_norl3.wav',
-            'image': 'horse-3.jpg',
+            'image': 'chicken-3.jpg',
+            image_position: TEST_IMAGE_POSITIONS.CENTER,
+          
+        },
+        {
+            'image': 'cow-3.jpg',
+            image_position: TEST_IMAGE_POSITIONS.CENTER,
+
+        },
+        {
+            'image': 'orange-5.jpg',
+            image_position: TEST_IMAGE_POSITIONS.CENTER,
+         
+        },
+        {
+            'image': 'dog-5.jpg',
+            image_position: TEST_IMAGE_POSITIONS.CENTER,
+
+        },
+
+        {
+            'image': 'apple-5.jpg',
             image_position: TEST_IMAGE_POSITIONS.CENTER,
          
         },

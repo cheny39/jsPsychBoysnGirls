@@ -60,9 +60,6 @@ let exposure_procedure1_1 = {
         {
             video: "pig_boy1.mp4",
             video_position: VIDEO_POSITIONS.LEFT,
-            // audio: "pig_null_gulu1.wav",
-            // wrong_button_image: "chicken-1.jpg",
-            // wrong_button_position: EXPOSURE_BUTTON_POSITIONS.UPPER_RIGHT,
             image: "pig-1.jpg",
             image_position: EXPOSURE_IMAGE_POSITIONS.CENTER,
             person_image: "boy2_boy3_boy4.png",
@@ -73,23 +70,8 @@ let exposure_procedure1_1 = {
         },
 
         {
-            video: "pig_po_girl1.mp4",
-            video_position: VIDEO_POSITIONS.RIGHT,
-            // audio: "pig_po_norl1.wav",
-            // wrong_button_image: "pig-1.jpg",
-            // wrong_button_position: EXPOSURE_BUTTON_POSITIONS.UPPER_RIGHT,
-            image: "pig-2.jpg",
-            image_position: EXPOSURE_IMAGE_POSITIONS.CENTER,
-            person_image: "girl2_girl3_girl4.png",
-            person_image_position: PERSON_IMAGE_POSITIONS.RIGHT,
-            bubble_image: "girl_speech_bubble.png",
-            bubble_image_position: BUBBLE_IMAGE_POSITIONS.RIGHT,
-        },
-        {
             video: "pig_ka_boy2.mp4",
             video_position: VIDEO_POSITIONS.LEFT,
-            // audio: "pig_ka_gulu1.wav",
-            // wrong_button_image: "pig-1.jpg",
             // wrong_button_position: EXPOSURE_BUTTON_POSITIONS.LOWER_RIGHT,
             image: "pig-2.jpg",
             image_position: EXPOSURE_IMAGE_POSITIONS.CENTER,
@@ -100,17 +82,26 @@ let exposure_procedure1_1 = {
 
         },
         {
-            video: "pig_po_girl2.mp4",
-            video_position: VIDEO_POSITIONS.RIGHT,
-            // audio: "pig_po_norl1.wav",
-            // wrong_button_image: "pig-1.jpg",
-            // wrong_button_position: EXPOSURE_BUTTON_POSITIONS.UPPER_RIGHT,
+            video: "pig_ka_boy3.mp4",
+            video_position: VIDEO_POSITIONS.LEFT,
             image: "pig-4.jpg",
             image_position: EXPOSURE_IMAGE_POSITIONS.CENTER,
-            person_image: "girl1_girl3_girl4.png",
-            person_image_position: PERSON_IMAGE_POSITIONS.RIGHT,
-            bubble_image: "girl_speech_bubble.png",
-            bubble_image_position: BUBBLE_IMAGE_POSITIONS.RIGHT,
+            person_image: "boy1_boy2_boy4.png",
+            person_image_position: PERSON_IMAGE_POSITIONS.LEFT,
+            bubble_image: "boy_speech_bubble.png",
+            bubble_image_position: BUBBLE_IMAGE_POSITIONS.LEFT,
+
+        },
+        {
+            video: "pig_ka_boy4.mp4",
+            video_position: VIDEO_POSITIONS.LEFT,
+            image: "pig-2.jpg",
+            image_position: EXPOSURE_IMAGE_POSITIONS.CENTER,
+            person_image: "boy1_boy2_boy3.png",
+            person_image_position: PERSON_IMAGE_POSITIONS.LEFT,
+            bubble_image: "boy_speech_bubble.png",
+            bubble_image_position: BUBBLE_IMAGE_POSITIONS.LEFT,
+
         },
 
         {
@@ -127,57 +118,56 @@ let exposure_procedure1_1 = {
     ]
 };
 
-let exposure_procedure2_1 = {
+let exposure_procedure1_2 = {
     ...exposure_trial_procedure_base,
     timeline_variables: [
         {
-            video: "pig_girl3.mp4",
+            video: "orange_girl1.mp4",
             video_position: VIDEO_POSITIONS.RIGHT,
-            image: "pig-1.jpg",
+            image: "orange-1.jpg",
+            image_position: EXPOSURE_IMAGE_POSITIONS.CENTER,
+            person_image: "girl2_girl3_girl4.png",
+            person_image_position: PERSON_IMAGE_POSITIONS.RIGHT,
+            bubble_image: "girl_speech_bubble.png",
+            bubble_image_position: BUBBLE_IMAGE_POSITIONS.RIGHT,
+        },
+        {
+            video: "orange_po_girl2.mp4",
+            video_position: VIDEO_POSITIONS.RIGHT,
+            image: "orange-2.jpg",
+            image_position: EXPOSURE_IMAGE_POSITIONS.CENTER,
+            person_image: "girl1_girl3_girl4.png",
+            person_image_position: PERSON_IMAGE_POSITIONS.RIGHT,
+            bubble_image: "girl_speech_bubble.png",
+            bubble_image_position: BUBBLE_IMAGE_POSITIONS.RIGHT,
+        },
+
+        {
+            video: "orange_po_girl1.mp4",
+            video_position: VIDEO_POSITIONS.RIGHT,
+            image: "orange-4.jpg",
+            image_position: EXPOSURE_IMAGE_POSITIONS.CENTER,
+            person_image: "girl2_girl3_girl4.png",
+            person_image_position: PERSON_IMAGE_POSITIONS.RIGHT,
+            bubble_image: "girl_speech_bubble.png",
+            bubble_image_position: BUBBLE_IMAGE_POSITIONS.RIGHT,
+        },
+       
+        {
+            video: "orange_po_girl3.mp4",
+            video_position: VIDEO_POSITIONS.RIGHT,
+            image: "orange-2.jpg",
             image_position: EXPOSURE_IMAGE_POSITIONS.CENTER,
             person_image: "girl1_girl2_girl4.png",
             person_image_position: PERSON_IMAGE_POSITIONS.RIGHT,
             bubble_image: "girl_speech_bubble.png",
             bubble_image_position: BUBBLE_IMAGE_POSITIONS.RIGHT,
         },
-        {
-            video: "pig_ka_boy3.mp4",
-            video_position: VIDEO_POSITIONS.LEFT,
-            image: "pig-4.jpg",
-            image_position: EXPOSURE_IMAGE_POSITIONS.CENTER,
-            person_image: "boy1_boy2_boy4.png",
-            person_image_position: PERSON_IMAGE_POSITIONS.LEFT,
-            bubble_image: "boy_speech_bubble.png",
-            bubble_image_position: BUBBLE_IMAGE_POSITIONS.LEFT,
-
-        },
 
         {
-            video: "pig_po_girl3.mp4",
+            video: "orange_po_girl4.mp4",
             video_position: VIDEO_POSITIONS.RIGHT,
-            image: "pig-2.jpg",
-            image_position: EXPOSURE_IMAGE_POSITIONS.CENTER,
-            person_image: "girl1_girl2_girl4.png",
-            person_image_position: PERSON_IMAGE_POSITIONS.RIGHT,
-            bubble_image: "girl_speech_bubble.png",
-            bubble_image_position: BUBBLE_IMAGE_POSITIONS.RIGHT,
-        },
-        {
-            video: "pig_ka_boy4.mp4",
-            video_position: VIDEO_POSITIONS.LEFT,
-            image: "pig-2.jpg",
-            image_position: EXPOSURE_IMAGE_POSITIONS.CENTER,
-            person_image: "boy1_boy2_boy3.png",
-            person_image_position: PERSON_IMAGE_POSITIONS.LEFT,
-            bubble_image: "boy_speech_bubble.png",
-            bubble_image_position: BUBBLE_IMAGE_POSITIONS.LEFT,
-
-        },
-
-        {
-            video: "pig_po_girl4.mp4",
-            video_position: VIDEO_POSITIONS.RIGHT,
-            image: "pig-4.jpg",
+            image: "orange-4.jpg",
             image_position: EXPOSURE_IMAGE_POSITIONS.CENTER,
             person_image: "girl1_girl2_girl3.png",
             person_image_position: PERSON_IMAGE_POSITIONS.RIGHT,
@@ -188,18 +178,18 @@ let exposure_procedure2_1 = {
 };
 
 
-let exposure_procedure1_2 = {
+let exposure_procedure1_3 = {
     ...exposure_trial_procedure_base,
     timeline_variables: [
         {
-            video: "sheep_girl1.mp4",
-            video_position: VIDEO_POSITIONS.RIGHT,
+            video: "sheep_boy2.mp4",
+            video_position: VIDEO_POSITIONS.LEFT,
             image: "sheep-1.jpg",
             image_position: EXPOSURE_IMAGE_POSITIONS.CENTER,
-            person_image: "girl2_girl3_girl4.png",
-            person_image_position: PERSON_IMAGE_POSITIONS.RIGHT,
-            bubble_image: "girl_speech_bubble.png",
-            bubble_image_position: BUBBLE_IMAGE_POSITIONS.RIGHT,
+            person_image: "boy1_boy3_boy4.png",
+            person_image_position: PERSON_IMAGE_POSITIONS.LEFT,
+            bubble_image: "boy_speech_bubble.png",
+            bubble_image_position: BUBBLE_IMAGE_POSITIONS.LEFT,
         },
         {
             video: "sheep_ka_boy3.mp4",
@@ -212,16 +202,7 @@ let exposure_procedure1_2 = {
             bubble_image_position: BUBBLE_IMAGE_POSITIONS.LEFT,
 
         },
-        {
-            video: "sheep_po_girl4.mp4",
-            video_position: VIDEO_POSITIONS.RIGHT,
-            image: "sheep-4.jpg",
-            image_position: EXPOSURE_IMAGE_POSITIONS.CENTER,
-            person_image: "girl1_girl2_girl3.png",
-            person_image_position: PERSON_IMAGE_POSITIONS.RIGHT,
-            bubble_image: "girl_speech_bubble.png",
-            bubble_image_position: BUBBLE_IMAGE_POSITIONS.RIGHT,
-        },
+ 
         {
             video: "sheep_ka_boy4.mp4",
             video_position: VIDEO_POSITIONS.LEFT,
@@ -234,55 +215,55 @@ let exposure_procedure1_2 = {
 
         },
         {
-            video: "sheep_po_girl3.mp4",
-            video_position: VIDEO_POSITIONS.RIGHT,
-            image: "sheep-2.jpg",
-            image_position: EXPOSURE_IMAGE_POSITIONS.CENTER,
-            person_image: "girl1_girl2_girl4.png",
-            person_image_position: PERSON_IMAGE_POSITIONS.RIGHT,
-            bubble_image: "girl_speech_bubble.png",
-            bubble_image_position: BUBBLE_IMAGE_POSITIONS.RIGHT,
-        }
-    ]
-};
-let exposure_procedure2_2 = {
-    ...exposure_trial_procedure_base,
-    timeline_variables: [
-        {
-            video: "sheep_boy3.mp4",
-            video_position: VIDEO_POSITIONS.LEFT,
-            image: "sheep-1.jpg",
-            image_position: EXPOSURE_IMAGE_POSITIONS.CENTER,
-            person_image: "boy1_boy2_boy4.png",
-            person_image_position: PERSON_IMAGE_POSITIONS.LEFT,
-            bubble_image: "boy_speech_bubble.png",
-            bubble_image_position: BUBBLE_IMAGE_POSITIONS.LEFT,
-
-        },
-        {
-            video: "sheep_po_girl1.mp4",
-            video_position: VIDEO_POSITIONS.RIGHT,
-            image: "sheep-4.jpg",
-            image_position: EXPOSURE_IMAGE_POSITIONS.CENTER,
-            person_image: "girl2_girl3_girl4.png",
-            person_image_position: PERSON_IMAGE_POSITIONS.RIGHT,
-            bubble_image: "girl_speech_bubble.png",
-            bubble_image_position: BUBBLE_IMAGE_POSITIONS.RIGHT,
-        },
-        {
             video: "sheep_ka_boy1.mp4",
             video_position: VIDEO_POSITIONS.LEFT,
-            image: "sheep-4.jpg",
+            image: "sheep-2.jpg",
             image_position: EXPOSURE_IMAGE_POSITIONS.CENTER,
             person_image: "boy2_boy3_boy4.png",
             person_image_position: PERSON_IMAGE_POSITIONS.LEFT,
             bubble_image: "boy_speech_bubble.png",
             bubble_image_position: BUBBLE_IMAGE_POSITIONS.LEFT,
+        },
+        {
+            video: "sheep_ka_boy2.mp4",
+            video_position: VIDEO_POSITIONS.LEFT,
+            image: "sheep-4.jpg",
+            image_position: EXPOSURE_IMAGE_POSITIONS.CENTER,
+            person_image: "boy1_boy3_boy4.png",
+            person_image_position: PERSON_IMAGE_POSITIONS.LEFT,
+            bubble_image: "boy_speech_bubble.png",
+            bubble_image_position: BUBBLE_IMAGE_POSITIONS.LEFT,
+        }
+    ]
+};
+let exposure_procedure1_4 = {
+    ...exposure_trial_procedure_base,
+    timeline_variables: [
+        {
+            video: "cherry_girl2.mp4",
+            video_position: VIDEO_POSITIONS.RIGHT,
+            image: "cherry-1.jpg",
+            image_position: EXPOSURE_IMAGE_POSITIONS.CENTER,
+            person_image: "girl1_girl3_girl4.png",
+            person_image_position: PERSON_IMAGE_POSITIONS.RIGHT,
+            bubble_image: "girl_speech_bubble.png",
+            bubble_image_position: BUBBLE_IMAGE_POSITIONS.RIGHT,
+
+        },
+        {
+            video: "cherry_po_girl3.mp4",
+            video_position: VIDEO_POSITIONS.RIGHT,
+            image: "cherry-2.jpg",
+            image_position: EXPOSURE_IMAGE_POSITIONS.CENTER,
+            person_image: "girl1_girl2_girl4.png",
+            person_image_position: PERSON_IMAGE_POSITIONS.RIGHT,
+            bubble_image: "girl_speech_bubble.png",
+            bubble_image_position: BUBBLE_IMAGE_POSITIONS.RIGHT,
 
         }, {
-            video: "sheep_po_girl2.mp4",
+            video: "cherry_po_girl2.mp4",
             video_position: VIDEO_POSITIONS.RIGHT,
-            image: "sheep-2.jpg",
+            image: "cherry-2.jpg",
             image_position: EXPOSURE_IMAGE_POSITIONS.CENTER,
             person_image: "girl1_girl3_girl4.png",
             person_image_position: PERSON_IMAGE_POSITIONS.RIGHT,
@@ -290,34 +271,43 @@ let exposure_procedure2_2 = {
             bubble_image_position: BUBBLE_IMAGE_POSITIONS.RIGHT,
         },
         {
-            video: "sheep_ka_boy2.mp4",
-            video_position: VIDEO_POSITIONS.LEFT,
-            image: "sheep-2.jpg",
+            video: "cherry_po_girl4.mp4",
+            video_position: VIDEO_POSITIONS.RIGHT,
+            image: "cherry-4.jpg",
             image_position: EXPOSURE_IMAGE_POSITIONS.CENTER,
-            person_image: "boy1_boy3_boy4.png",
-            person_image_position: PERSON_IMAGE_POSITIONS.LEFT,
-            bubble_image: "boy_speech_bubble.png",
-            bubble_image_position: BUBBLE_IMAGE_POSITIONS.LEFT,
-
+            person_image: "girl1_girl2_girl3.png",
+            person_image_position: PERSON_IMAGE_POSITIONS.RIGHT,
+            bubble_image: "girl_speech_bubble.png",
+            bubble_image_position: BUBBLE_IMAGE_POSITIONS.RIGHT,
+        },
+        {
+            video: "cherry_po_girl1.mp4",
+            video_position: VIDEO_POSITIONS.RIGHT,
+            image: "cherry-4.jpg",
+            image_position: EXPOSURE_IMAGE_POSITIONS.CENTER,
+            person_image: "girl2_girl3_girl4.png",
+            person_image_position: PERSON_IMAGE_POSITIONS.RIGHT,
+            bubble_image: "girl_speech_bubble.png",
+            bubble_image_position: BUBBLE_IMAGE_POSITIONS.RIGHT,
         }
     ]
 };
 
 
 
-let exposure_procedure1_3 = {
+let exposure_procedure2_1 = {
     ...exposure_trial_procedure_base,
     timeline_variables: [
 
         {
-            video: "chicken_girl2.mp4",
-            video_position: VIDEO_POSITIONS.RIGHT,
+            video: "chicken_boy3.mp4",
+            video_position: VIDEO_POSITIONS.LEFT,
             image: "chicken-1.jpg",
             image_position: EXPOSURE_IMAGE_POSITIONS.CENTER,
-            person_image: "girl1_girl3_girl4.png",
-            person_image_position: PERSON_IMAGE_POSITIONS.RIGHT,
-            bubble_image: "girl_speech_bubble.png",
-            bubble_image_position: BUBBLE_IMAGE_POSITIONS.RIGHT,
+            person_image: "boy1_boy2_boy4.png",
+            person_image_position: PERSON_IMAGE_POSITIONS.LEFT,
+            bubble_image: "boy_speech_bubble.png",
+            bubble_image_position: BUBBLE_IMAGE_POSITIONS.LEFT,
         },
         {
             video: "chicken_ka_boy2.mp4",
@@ -331,16 +321,6 @@ let exposure_procedure1_3 = {
 
         },
         {
-            video: "chicken_po_girl2.mp4",
-            video_position: VIDEO_POSITIONS.RIGHT,
-            image: "chicken-2.jpg",
-            image_position: EXPOSURE_IMAGE_POSITIONS.CENTER,
-            person_image: "girl1_girl3_girl4.png",
-            person_image_position: PERSON_IMAGE_POSITIONS.RIGHT,
-            bubble_image: "girl_speech_bubble.png",
-            bubble_image_position: BUBBLE_IMAGE_POSITIONS.RIGHT,
-        },
-        {
             video: "chicken_ka_boy1.mp4",
             video_position: VIDEO_POSITIONS.LEFT,
             image: "chicken-2.jpg",
@@ -352,11 +332,82 @@ let exposure_procedure1_3 = {
 
         },
         {
-            video: "chicken_po_girl1.mp4",
-            video_position: VIDEO_POSITIONS.RIGHT,
+            video: "chicken_ka_boy4.mp4",
+            video_position: VIDEO_POSITIONS.LEFT,
+            image: "chicken-2.jpg",
+            image_position: EXPOSURE_IMAGE_POSITIONS.CENTER,
+            person_image: "boy1_boy2_boy3.png",
+            person_image_position: PERSON_IMAGE_POSITIONS.LEFT,
+            bubble_image: "boy_speech_bubble.png",
+            bubble_image_position: BUBBLE_IMAGE_POSITIONS.LEFT,
+        },
+        {
+            video: "chicken_ka_boy3.mp4",
+            video_position: VIDEO_POSITIONS.LEFT,
             image: "chicken-4.jpg",
             image_position: EXPOSURE_IMAGE_POSITIONS.CENTER,
+            person_image: "boy1_boy2_boy4.png",
+            person_image_position: PERSON_IMAGE_POSITIONS.LEFT,
+            bubble_image: "boy_speech_bubble.png",
+            bubble_image_position: BUBBLE_IMAGE_POSITIONS.LEFT,
+        }
+  
+    ]
+};
+
+let exposure_procedure2_2 = {
+    ...exposure_trial_procedure_base,
+    timeline_variables: [
+        {
+            video: "lime_girl3.mp4",
+            video_position: VIDEO_POSITIONS.RIGHT,
+            image: "lime-1.jpg",
+            image_position: EXPOSURE_IMAGE_POSITIONS.CENTER,
+            person_image: "girl1_girl2_girl4.png",
+            person_image_position: PERSON_IMAGE_POSITIONS.RIGHT,
+            bubble_image: "girl_speech_bubble.png",
+            bubble_image_position: BUBBLE_IMAGE_POSITIONS.RIGHT,
+
+        },
+        {
+            video: "lime_po_girl1.mp4",
+            video_position: VIDEO_POSITIONS.RIGHT,
+            image: "lime-4.jpg",
+            image_position: EXPOSURE_IMAGE_POSITIONS.CENTER,
             person_image: "girl2_girl3_girl4.png",
+            person_image_position: PERSON_IMAGE_POSITIONS.RIGHT,
+            bubble_image: "girl_speech_bubble.png",
+            bubble_image_position: BUBBLE_IMAGE_POSITIONS.RIGHT,
+        },
+        {
+            video: "lime_po_girl2.mp4",
+            video_position: VIDEO_POSITIONS.RIGHT,
+            image: "lime-2.jpg",
+            image_position: EXPOSURE_IMAGE_POSITIONS.CENTER,
+            person_image: "girl1_girl3_girl4.png",
+            person_image_position: PERSON_IMAGE_POSITIONS.RIGHT,
+            bubble_image: "girl_speech_bubble.png",
+            bubble_image_position: BUBBLE_IMAGE_POSITIONS.RIGHT,
+
+        },  
+  
+        {
+            video: "lime_po_girl4.mp4",
+            video_position: VIDEO_POSITIONS.RIGHT,
+            image: "lime-4.jpg",
+            image_position: EXPOSURE_IMAGE_POSITIONS.CENTER,
+            person_image: "girl1_girl2_girl3.png",
+            person_image_position: PERSON_IMAGE_POSITIONS.RIGHT,
+            bubble_image: "girl_speech_bubble.png",
+            bubble_image_position: BUBBLE_IMAGE_POSITIONS.RIGHT,
+
+        },
+        {
+            video: "lime_po_girl3.mp4",
+            video_position: VIDEO_POSITIONS.RIGHT,
+            image: "lime-4.jpg",
+            image_position: EXPOSURE_IMAGE_POSITIONS.CENTER,
+            person_image: "girl1_girl2_girl4.png",
             person_image_position: PERSON_IMAGE_POSITIONS.RIGHT,
             bubble_image: "girl_speech_bubble.png",
             bubble_image_position: BUBBLE_IMAGE_POSITIONS.RIGHT,
@@ -368,84 +419,25 @@ let exposure_procedure2_3 = {
     ...exposure_trial_procedure_base,
     timeline_variables: [
         {
-            video: "chicken_boy4.mp4",
-            video_position: VIDEO_POSITIONS.LEFT,
-            image: "chicken-1.jpg",
-            image_position: EXPOSURE_IMAGE_POSITIONS.CENTER,
-            person_image: "boy1_boy2_boy3.png",
-            person_image_position: PERSON_IMAGE_POSITIONS.LEFT,
-            bubble_image: "boy_speech_bubble.png",
-            bubble_image_position: BUBBLE_IMAGE_POSITIONS.LEFT,
-
-        },
-        {
-            video: "chicken_po_girl4.mp4",
-            video_position: VIDEO_POSITIONS.RIGHT,
-            image: "chicken-2.jpg",
-            image_position: EXPOSURE_IMAGE_POSITIONS.CENTER,
-            person_image: "girl1_girl2_girl3.png",
-            person_image_position: PERSON_IMAGE_POSITIONS.RIGHT,
-            bubble_image: "girl_speech_bubble.png",
-            bubble_image_position: BUBBLE_IMAGE_POSITIONS.RIGHT,
-        },
-        {
-            video: "chicken_ka_boy4.mp4",
-            video_position: VIDEO_POSITIONS.LEFT,
-            image: "chicken-2.jpg",
-            image_position: EXPOSURE_IMAGE_POSITIONS.CENTER,
-            person_image: "boy1_boy2_boy3.png",
-            person_image_position: PERSON_IMAGE_POSITIONS.LEFT,
-            bubble_image: "boy_speech_bubble.png",
-            bubble_image_position: BUBBLE_IMAGE_POSITIONS.LEFT,
-
-        },  
-        {
-            video: "chicken_po_girl3.mp4",
-            video_position: VIDEO_POSITIONS.RIGHT,
-            image: "chicken-4.jpg",
-            image_position: EXPOSURE_IMAGE_POSITIONS.CENTER,
-            person_image: "girl1_girl2_girl4.png",
-            person_image_position: PERSON_IMAGE_POSITIONS.RIGHT,
-            bubble_image: "girl_speech_bubble.png",
-            bubble_image_position: BUBBLE_IMAGE_POSITIONS.RIGHT,
-        },
-        {
-            video: "chicken_ka_boy3.mp4",
-            video_position: VIDEO_POSITIONS.LEFT,
-            image: "chicken-4.jpg",
-            image_position: EXPOSURE_IMAGE_POSITIONS.CENTER,
-            person_image: "boy1_boy2_boy4.png",
-            person_image_position: PERSON_IMAGE_POSITIONS.LEFT,
-            bubble_image: "boy_speech_bubble.png",
-            bubble_image_position: BUBBLE_IMAGE_POSITIONS.LEFT,
-
-        }
-    ]
-};
-
-let exposure_procedure1_4 = {
-    ...exposure_trial_procedure_base,
-    timeline_variables: [
-        {
-            video: "duck_boy2.mp4",
+            video: "duck_boy4.mp4",
             video_position: VIDEO_POSITIONS.LEFT,
             image: "duck-1.jpg",
             image_position: EXPOSURE_IMAGE_POSITIONS.CENTER,
-            person_image: "boy1_boy3_boy4.png",
+            person_image: "boy1_boy2_boy3.png",
             person_image_position: PERSON_IMAGE_POSITIONS.LEFT,
             bubble_image: "boy_speech_bubble.png",
             bubble_image_position: BUBBLE_IMAGE_POSITIONS.LEFT,
 
         },
         {
-            video: "duck_po_girl4.mp4",
-            video_position: VIDEO_POSITIONS.RIGHT,
-            image: "duck-2.jpg",
+            video: "duck_ka_boy1.mp4",
+            video_position: VIDEO_POSITIONS.LEFT,
+            image: "duck-4.jpg",
             image_position: EXPOSURE_IMAGE_POSITIONS.CENTER,
-            person_image: "girl1_girl2_girl3.png",
-            person_image_position: PERSON_IMAGE_POSITIONS.RIGHT,
-            bubble_image: "girl_speech_bubble.png",
-            bubble_image_position: BUBBLE_IMAGE_POSITIONS.RIGHT,
+            person_image: "boy2_boy3_boy4.png",
+            person_image_position: PERSON_IMAGE_POSITIONS.LEFT,
+            bubble_image: "boy_speech_bubble.png",
+            bubble_image_position: BUBBLE_IMAGE_POSITIONS.LEFT,
         },
         {
             video: "duck_ka_boy3.mp4",
@@ -459,19 +451,19 @@ let exposure_procedure1_4 = {
 
         },
         {
-            video: "duck_po_girl3.mp4",
-            video_position: VIDEO_POSITIONS.RIGHT,
+            video: "duck_ka_boy2.mp4",
+            video_position: VIDEO_POSITIONS.LEFT,
             image: "duck-4.jpg",
             image_position: EXPOSURE_IMAGE_POSITIONS.CENTER,
-            person_image: "girl1_girl2_girl4.png",
-            person_image_position: PERSON_IMAGE_POSITIONS.RIGHT,
-            bubble_image: "girl_speech_bubble.png",
-            bubble_image_position: BUBBLE_IMAGE_POSITIONS.RIGHT,
+            person_image: "boy1_boy3_boy4.png",
+            person_image_position: PERSON_IMAGE_POSITIONS.LEFT,
+            bubble_image: "boy_speech_bubble.png",
+            bubble_image_position: BUBBLE_IMAGE_POSITIONS.LEFT,
         },
         {
             video: "duck_ka_boy4.mp4",
             video_position: VIDEO_POSITIONS.LEFT,
-            image: "duck-4.jpg",
+            image: "duck-2.jpg",
             image_position: EXPOSURE_IMAGE_POSITIONS.CENTER,
             person_image: "boy1_boy2_boy3.png",
             person_image_position: PERSON_IMAGE_POSITIONS.LEFT,
@@ -486,9 +478,9 @@ let exposure_procedure2_4 = {
     ...exposure_trial_procedure_base,
     timeline_variables: [
         {
-            video: "duck_girl4.mp4",
+            video: "pear_girl4.mp4",
             video_position: VIDEO_POSITIONS.RIGHT,
-            image: "duck-1.jpg",
+            image: "pear-1.jpg",
             image_position: EXPOSURE_IMAGE_POSITIONS.CENTER,
             person_image: "girl1_girl2_girl3.png",
             person_image_position: PERSON_IMAGE_POSITIONS.RIGHT,
@@ -496,41 +488,41 @@ let exposure_procedure2_4 = {
             bubble_image_position: BUBBLE_IMAGE_POSITIONS.RIGHT,
         },
         {
-            video: "duck_ka_boy1.mp4",
-            video_position: VIDEO_POSITIONS.LEFT,
-            image: "duck-2.jpg",
-            image_position: EXPOSURE_IMAGE_POSITIONS.CENTER,
-            person_image: "boy2_boy3_boy4.png",
-            person_image_position: PERSON_IMAGE_POSITIONS.LEFT,
-            bubble_image: "boy_speech_bubble.png",
-            bubble_image_position: BUBBLE_IMAGE_POSITIONS.LEFT,
-
-        },
-        {
-            video: "duck_po_girl1.mp4",
+            video: "pear_po_girl1.mp4",
             video_position: VIDEO_POSITIONS.RIGHT,
-            image: "duck-2.jpg",
+            image: "pear-4.jpg",
             image_position: EXPOSURE_IMAGE_POSITIONS.CENTER,
             person_image: "girl2_girl3_girl4.png",
             person_image_position: PERSON_IMAGE_POSITIONS.RIGHT,
             bubble_image: "girl_speech_bubble.png",
             bubble_image_position: BUBBLE_IMAGE_POSITIONS.RIGHT,
-        },
-        {
-            video: "duck_ka_boy2.mp4",
-            video_position: VIDEO_POSITIONS.LEFT,
-            image: "duck-4.jpg",
-            image_position: EXPOSURE_IMAGE_POSITIONS.CENTER,
-            person_image: "boy1_boy3_boy4.png",
-            person_image_position: PERSON_IMAGE_POSITIONS.LEFT,
-            bubble_image: "boy_speech_bubble.png",
-            bubble_image_position: BUBBLE_IMAGE_POSITIONS.LEFT,
 
         },
         {
-            video: "duck_po_girl2.mp4",
+            video: "pear_po_girl4.mp4",
             video_position: VIDEO_POSITIONS.RIGHT,
-            image: "duck-4.jpg",
+            image: "pear-4.jpg",
+            image_position: EXPOSURE_IMAGE_POSITIONS.CENTER,
+            person_image: "girl1_girl2_girl3.png",
+            person_image_position: PERSON_IMAGE_POSITIONS.RIGHT,
+            bubble_image: "girl_speech_bubble.png",
+            bubble_image_position: BUBBLE_IMAGE_POSITIONS.RIGHT,
+
+        },
+        {
+            video: "pear_po_girl3.mp4",
+            video_position: VIDEO_POSITIONS.RIGHT,
+            image: "pear-2.jpg",
+            image_position: EXPOSURE_IMAGE_POSITIONS.CENTER,
+            person_image: "girl1_girl2_girl4.png",
+            person_image_position: PERSON_IMAGE_POSITIONS.RIGHT,
+            bubble_image: "girl_speech_bubble.png",
+            bubble_image_position: BUBBLE_IMAGE_POSITIONS.RIGHT,
+        },
+        {
+            video: "pear_po_girl2.mp4",
+            video_position: VIDEO_POSITIONS.RIGHT,
+            image: "pear-2.jpg",
             image_position: EXPOSURE_IMAGE_POSITIONS.CENTER,
             person_image: "girl1_girl3_girl4.png",
             person_image_position: PERSON_IMAGE_POSITIONS.RIGHT,
