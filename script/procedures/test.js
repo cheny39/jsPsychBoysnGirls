@@ -68,7 +68,7 @@ let test_procedure_1_listen = {
 
         },
         {
-            'image': 'grape-5.jpg',
+            'image': 'peach-5.jpg',
             image_position: TEST_IMAGE_POSITIONS.CENTER,
          
         },
@@ -108,7 +108,7 @@ let test_procedure_2_listen = {
         },
 
         {
-            'image': 'grape-3.jpg',
+            'image': 'peach-3.jpg',
             image_position: TEST_IMAGE_POSITIONS.CENTER,
          
         },      
@@ -149,7 +149,7 @@ let test_procedure_3_listen = {
         },
 
         {
-            'image': 'grape-5.jpg',
+            'image': 'peach-5.jpg',
             image_position: TEST_IMAGE_POSITIONS.CENTER,
          
         },
@@ -191,7 +191,7 @@ let test_procedure_4_listen = {
         },
 
         {
-            'image': 'grape-3.jpg',
+            'image': 'peach-3.jpg',
             image_position: TEST_IMAGE_POSITIONS.CENTER,
          
         },
