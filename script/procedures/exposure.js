@@ -54,7 +54,7 @@ const exposure_trial_procedure_base = {
     timeline: [exposure_trial],
 };
 
-let exposure_procedure1_1 = {
+let exposure_procedure_order1_1_1 = {
     ...exposure_trial_procedure_base,
     timeline_variables: [
         {
@@ -118,7 +118,7 @@ let exposure_procedure1_1 = {
     ]
 };
 
-let exposure_procedure1_2 = {
+let exposure_procedure_order1_1_2 = {
     ...exposure_trial_procedure_base,
     timeline_variables: [
         {
@@ -178,7 +178,7 @@ let exposure_procedure1_2 = {
 };
 
 
-let exposure_procedure1_3 = {
+let exposure_procedure_order1_1_3 = {
     ...exposure_trial_procedure_base,
     timeline_variables: [
         {
@@ -236,7 +236,7 @@ let exposure_procedure1_3 = {
         }
     ]
 };
-let exposure_procedure1_4 = {
+let exposure_procedure_order1_1_4 = {
     ...exposure_trial_procedure_base,
     timeline_variables: [
         {
@@ -295,7 +295,7 @@ let exposure_procedure1_4 = {
 
 
 
-let exposure_procedure2_1 = {
+let exposure_procedure_order1_2_1 = {
     ...exposure_trial_procedure_base,
     timeline_variables: [
 
@@ -355,7 +355,7 @@ let exposure_procedure2_1 = {
     ]
 };
 
-let exposure_procedure2_2 = {
+let exposure_procedure_order1_2_2 = {
     ...exposure_trial_procedure_base,
     timeline_variables: [
         {
@@ -415,7 +415,7 @@ let exposure_procedure2_2 = {
     ]
 };
 
-let exposure_procedure2_3 = {
+let exposure_procedure_order1_2_3 = {
     ...exposure_trial_procedure_base,
     timeline_variables: [
         {
@@ -474,7 +474,7 @@ let exposure_procedure2_3 = {
     ]
 };
 
-let exposure_procedure2_4 = {
+let exposure_procedure_order1_2_4 = {
     ...exposure_trial_procedure_base,
     timeline_variables: [
         {
@@ -528,6 +528,481 @@ let exposure_procedure2_4 = {
             person_image_position: PERSON_IMAGE_POSITIONS.RIGHT,
             bubble_image: "girl_speech_bubble.png",
             bubble_image_position: BUBBLE_IMAGE_POSITIONS.RIGHT,
+        }
+    ]
+};
+
+let exposure_procedure_order2_1_1 = {
+    ...exposure_trial_procedure_base,
+    timeline_variables: [
+        {
+            video: "pig_girl1.mp4",
+            video_position: VIDEO_POSITIONS.RIGHT,
+            image: "pig-1.jpg",
+            image_position: EXPOSURE_IMAGE_POSITIONS.CENTER,
+            person_image: "girl2_girl3_girl4.png",
+            person_image_position: PERSON_IMAGE_POSITIONS.RIGHT,
+            bubble_image: "girl_speech_bubble.png",
+            bubble_image_position: BUBBLE_IMAGE_POSITIONS.RIGHT,
+
+        },
+
+        {
+            video: "pig_po_girl2.mp4",
+            video_position: VIDEO_POSITIONS.RIGHT,
+            image: "pig-2.jpg",
+            image_position: EXPOSURE_IMAGE_POSITIONS.CENTER,
+            person_image: "girl1_girl3_girl4.png",
+            person_image_position: PERSON_IMAGE_POSITIONS.RIGHT,
+            bubble_image: "girl_speech_bubble.png",
+            bubble_image_position: BUBBLE_IMAGE_POSITIONS.RIGHT,
+
+        },
+        {
+            video: "pig_po_girl3.mp4",
+            video_position: VIDEO_POSITIONS.RIGHT,
+            image: "pig-4.jpg",
+            image_position: EXPOSURE_IMAGE_POSITIONS.CENTER,
+            person_image: "girl1_girl2_girl4.png",
+            person_image_position: PERSON_IMAGE_POSITIONS.RIGHT,
+            bubble_image: "girl_speech_bubble.png",
+            bubble_image_position: BUBBLE_IMAGE_POSITIONS.RIGHT,
+
+        },
+        {
+            video: "pig_po_girl4.mp4",
+            video_position: VIDEO_POSITIONS.RIGHT,
+            image: "pig-2.jpg",
+            image_position: EXPOSURE_IMAGE_POSITIONS.CENTER,
+            person_image: "girl1_girl2_girl3.png",
+            person_image_position: PERSON_IMAGE_POSITIONS.RIGHT,
+            bubble_image: "girl_speech_bubble.png",
+            bubble_image_position: BUBBLE_IMAGE_POSITIONS.RIGHT,
+
+        },
+
+        {
+            video: "pig_po_girl1.mp4",
+            video_position: VIDEO_POSITIONS.RIGHT,
+            image: "pig-4.jpg",
+            image_position: EXPOSURE_IMAGE_POSITIONS.CENTER,
+            person_image: "girl2_girl3_girl4.png",
+            person_image_position: PERSON_IMAGE_POSITIONS.RIGHT,
+            bubble_image: "girl_speech_bubble.png",
+            bubble_image_position: BUBBLE_IMAGE_POSITIONS.RIGHT,
+
+        },
+    ]
+};
+
+let exposure_procedure_order2_1_2 = {
+    ...exposure_trial_procedure_base,
+    timeline_variables: [
+        {
+            video: "orange_boy1.mp4",
+            video_position: VIDEO_POSITIONS.LEFT,
+            image: "orange-1.jpg",
+            image_position: EXPOSURE_IMAGE_POSITIONS.CENTER,
+            person_image: "boy2_boy3_boy4.png",
+            person_image_position: PERSON_IMAGE_POSITIONS.LEFT,
+            bubble_image: "boy_speech_bubble.png",
+            bubble_image_position: BUBBLE_IMAGE_POSITIONS.LEFT,
+        },
+        {
+            video: "orange_ka_boy2.mp4",
+            video_position: VIDEO_POSITIONS.LEFT,
+            image: "orange-2.jpg",
+            image_position: EXPOSURE_IMAGE_POSITIONS.CENTER,
+            person_image: "boy1_boy3_boy4.png",
+            person_image_position: PERSON_IMAGE_POSITIONS.LEFT,
+            bubble_image: "boy_speech_bubble.png",
+            bubble_image_position: BUBBLE_IMAGE_POSITIONS.LEFT,
+        },
+
+        {
+            video: "orange_ka_boy1.mp4",
+            video_position: VIDEO_POSITIONS.LEFT,
+            image: "orange-4.jpg",
+            image_position: EXPOSURE_IMAGE_POSITIONS.CENTER,
+            person_image: "boy2_boy3_boy4.png",
+            person_image_position: PERSON_IMAGE_POSITIONS.LEFT,
+            bubble_image: "boy_speech_bubble.png",
+            bubble_image_position: BUBBLE_IMAGE_POSITIONS.LEFT,
+        },
+       
+        {
+            video: "orange_ka_boy3.mp4",
+            video_position: VIDEO_POSITIONS.LEFT,
+            image: "orange-2.jpg",
+            image_position: EXPOSURE_IMAGE_POSITIONS.CENTER,
+            person_image: "boy1_boy2_boy4.png",
+            person_image_position: PERSON_IMAGE_POSITIONS.LEFT,
+            bubble_image: "boy_speech_bubble.png",
+            bubble_image_position: BUBBLE_IMAGE_POSITIONS.LEFT,
+        },
+
+        {
+            video: "orange_ka_boy4.mp4",
+            video_position: VIDEO_POSITIONS.LEFT,
+            image: "orange-4.jpg",
+            image_position: EXPOSURE_IMAGE_POSITIONS.CENTER,
+            person_image: "boy1_boy2_boy3.png",
+            person_image_position: PERSON_IMAGE_POSITIONS.LEFT,
+            bubble_image: "boy_speech_bubble.png",
+            bubble_image_position: BUBBLE_IMAGE_POSITIONS.LEFT,
+        }
+    ]
+};
+
+
+let exposure_procedure_order2_1_3 = {
+    ...exposure_trial_procedure_base,
+    timeline_variables: [
+        {
+            video: "sheep_girl2.mp4",
+            video_position: VIDEO_POSITIONS.RIGHT,
+            image: "sheep-1.jpg",
+            image_position: EXPOSURE_IMAGE_POSITIONS.CENTER,
+            person_image: "girl1_girl3_girl4.png",
+            person_image_position: PERSON_IMAGE_POSITIONS.RIGHT,
+            bubble_image: "girl_speech_bubble.png",
+            bubble_image_position: BUBBLE_IMAGE_POSITIONS.RIGHT,
+        },
+        {
+            video: "sheep_po_girl3.mp4",
+            video_position: VIDEO_POSITIONS.RIGHT,
+            image: "sheep-2.jpg",
+            image_position: EXPOSURE_IMAGE_POSITIONS.CENTER,
+            person_image: "girl1_girl2_girl4.png",
+            person_image_position: PERSON_IMAGE_POSITIONS.RIGHT,
+            bubble_image: "girl_speech_bubble.png",
+            bubble_image_position: BUBBLE_IMAGE_POSITIONS.RIGHT,
+
+        },
+ 
+        {
+            video: "sheep_po_girl4.mp4",
+            video_position: VIDEO_POSITIONS.RIGHT,
+            image: "sheep-4.jpg",
+            image_position: EXPOSURE_IMAGE_POSITIONS.CENTER,
+            person_image: "girl1_girl2_girl3.png",
+            person_image_position: PERSON_IMAGE_POSITIONS.RIGHT,
+            bubble_image: "girl_speech_bubble.png",
+            bubble_image_position: BUBBLE_IMAGE_POSITIONS.RIGHT,
+
+        },
+        {
+            video: "sheep_po_girl1.mp4",
+            video_position: VIDEO_POSITIONS.RIGHT,
+            image: "sheep-2.jpg",
+            image_position: EXPOSURE_IMAGE_POSITIONS.CENTER,
+            person_image: "girl2_girl3_girl4.png",
+            person_image_position: PERSON_IMAGE_POSITIONS.RIGHT,
+            bubble_image: "girl_speech_bubble.png",
+            bubble_image_position: BUBBLE_IMAGE_POSITIONS.RIGHT,
+        },
+        {
+            video: "sheep_po_girl2.mp4",
+            video_position: VIDEO_POSITIONS.RIGHT,
+            image: "sheep-4.jpg",
+            image_position: EXPOSURE_IMAGE_POSITIONS.CENTER,
+            person_image: "girl1_girl3_girl4.png",
+            person_image_position: PERSON_IMAGE_POSITIONS.RIGHT,
+            bubble_image: "girl_speech_bubble.png",
+            bubble_image_position: BUBBLE_IMAGE_POSITIONS.RIGHT,
+        }
+    ]
+};
+let exposure_procedure_order2_1_4 = {
+    ...exposure_trial_procedure_base,
+    timeline_variables: [
+        {
+            video: "cherry_boy2.mp4",
+            video_position: VIDEO_POSITIONS.LEFT,
+            image: "cherry-1.jpg",
+            image_position: EXPOSURE_IMAGE_POSITIONS.CENTER,
+            person_image: "boy1_boy3_boy4.png",
+            person_image_position: PERSON_IMAGE_POSITIONS.LEFT,
+            bubble_image: "boy_speech_bubble.png",
+            bubble_image_position: BUBBLE_IMAGE_POSITIONS.LEFT,
+
+        },
+        {
+            video: "cherry_ka_boy3.mp4",
+            video_position: VIDEO_POSITIONS.LEFT,
+            image: "cherry-2.jpg",
+            image_position: EXPOSURE_IMAGE_POSITIONS.CENTER,
+            person_image: "boy1_boy2_boy4.png",
+            person_image_position: PERSON_IMAGE_POSITIONS.LEFT,
+            bubble_image: "boy_speech_bubble.png",
+            bubble_image_position: BUBBLE_IMAGE_POSITIONS.LEFT,
+
+        }, {
+            video: "cherry_ka_boy2.mp4",
+            video_position: VIDEO_POSITIONS.LEFT,
+            image: "cherry-2.jpg",
+            image_position: EXPOSURE_IMAGE_POSITIONS.CENTER,
+            person_image: "boy1_boy3_boy4.png",
+            person_image_position: PERSON_IMAGE_POSITIONS.LEFT,
+            bubble_image: "boy_speech_bubble.png",
+            bubble_image_position: BUBBLE_IMAGE_POSITIONS.LEFT,
+        },
+        {
+            video: "cherry_ka_boy4.mp4",
+            video_position: VIDEO_POSITIONS.LEFT,
+            image: "cherry-4.jpg",
+            image_position: EXPOSURE_IMAGE_POSITIONS.CENTER,
+            person_image: "boy1_boy2_boy3.png",
+            person_image_position: PERSON_IMAGE_POSITIONS.LEFT,
+            bubble_image: "boy_speech_bubble.png",
+            bubble_image_position: BUBBLE_IMAGE_POSITIONS.LEFT,
+        },
+        {
+            video: "cherry_ka_boy1.mp4",
+            video_position: VIDEO_POSITIONS.LEFT,
+            image: "cherry-4.jpg",
+            image_position: EXPOSURE_IMAGE_POSITIONS.CENTER,
+            person_image: "boy2_boy3_boy4.png",
+            person_image_position: PERSON_IMAGE_POSITIONS.LEFT,
+            bubble_image: "boy_speech_bubble.png",
+            bubble_image_position: BUBBLE_IMAGE_POSITIONS.LEFT,
+        }
+    ]
+};
+
+let exposure_procedure_order2_2_1 = {
+    ...exposure_trial_procedure_base,
+    timeline_variables: [
+
+        {
+            video: "chicken_girl3.mp4",
+            video_position: VIDEO_POSITIONS.RIGHT,
+            image: "chicken-1.jpg",
+            image_position: EXPOSURE_IMAGE_POSITIONS.CENTER,
+            person_image: "girl1_girl2_girl4.png",
+            person_image_position: PERSON_IMAGE_POSITIONS.RIGHT,
+            bubble_image: "girl_speech_bubble.png",
+            bubble_image_position: BUBBLE_IMAGE_POSITIONS.RIGHT,
+        },
+        {
+            video: "chicken_po_girl2.mp4",
+            video_position: VIDEO_POSITIONS.RIGHT,
+            image: "chicken-4.jpg",
+            image_position: EXPOSURE_IMAGE_POSITIONS.CENTER,
+            person_image: "girl1_girl3_girl4.png",
+            person_image_position: PERSON_IMAGE_POSITIONS.RIGHT,
+            bubble_image: "girl_speech_bubble.png",
+            bubble_image_position: BUBBLE_IMAGE_POSITIONS.RIGHT,
+
+        },
+        {
+            video: "chicken_po_girl1.mp4",
+            video_position: VIDEO_POSITIONS.RIGHT,
+            image: "chicken-2.jpg",
+            image_position: EXPOSURE_IMAGE_POSITIONS.CENTER,
+            person_image: "girl2_girl3_girl4.png",
+            person_image_position: PERSON_IMAGE_POSITIONS.RIGHT,
+            bubble_image: "girl_speech_bubble.png",
+            bubble_image_position: BUBBLE_IMAGE_POSITIONS.RIGHT,
+
+        },
+        {
+            video: "chicken_po_girl4.mp4",
+            video_position: VIDEO_POSITIONS.RIGHT,
+            image: "chicken-2.jpg",
+            image_position: EXPOSURE_IMAGE_POSITIONS.CENTER,
+            person_image: "girl1_girl2_girl3.png",
+            person_image_position: PERSON_IMAGE_POSITIONS.RIGHT,
+            bubble_image: "girl_speech_bubble.png",
+            bubble_image_position: BUBBLE_IMAGE_POSITIONS.RIGHT,
+        },
+        {
+            video: "chicken_po_girl3.mp4",
+            video_position: VIDEO_POSITIONS.RIGHT,
+            image: "chicken-4.jpg",
+            image_position: EXPOSURE_IMAGE_POSITIONS.CENTER,
+            person_image: "girl1_girl2_girl4.png",
+            person_image_position: PERSON_IMAGE_POSITIONS.RIGHT,
+            bubble_image: "girl_speech_bubble.png",
+            bubble_image_position: BUBBLE_IMAGE_POSITIONS.RIGHT,
+        }
+  
+    ]
+};
+
+let exposure_procedure_order2_2_2 = {
+    ...exposure_trial_procedure_base,
+    timeline_variables: [
+        {
+            video: "lime_boy3.mp4",
+            video_position: VIDEO_POSITIONS.LEFT,
+            image: "lime-1.jpg",
+            image_position: EXPOSURE_IMAGE_POSITIONS.CENTER,
+            person_image: "boy1_boy2_boy4.png",
+            person_image_position: PERSON_IMAGE_POSITIONS.LEFT,
+            bubble_image: "boy_speech_bubble.png",
+            bubble_image_position: BUBBLE_IMAGE_POSITIONS.LEFT,
+
+        },
+        {
+            video: "lime_ka_boy1.mp4",
+            video_position: VIDEO_POSITIONS.LEFT,
+            image: "lime-4.jpg",
+            image_position: EXPOSURE_IMAGE_POSITIONS.CENTER,
+            person_image: "boy2_boy3_boy4.png",
+            person_image_position: PERSON_IMAGE_POSITIONS.LEFT,
+            bubble_image: "boy_speech_bubble.png",
+            bubble_image_position: BUBBLE_IMAGE_POSITIONS.LEFT,
+        },
+        {
+            video: "lime_ka_boy2.mp4",
+            video_position: VIDEO_POSITIONS.LEFT,
+            image: "lime-2.jpg",
+            image_position: EXPOSURE_IMAGE_POSITIONS.CENTER,
+            person_image: "boy1_boy3_boy4.png",
+            person_image_position: PERSON_IMAGE_POSITIONS.LEFT,
+            bubble_image: "boy_speech_bubble.png",
+            bubble_image_position: BUBBLE_IMAGE_POSITIONS.LEFT,
+
+        },  
+  
+        {
+            video: "lime_ka_boy4.mp4",
+            video_position: VIDEO_POSITIONS.LEFT,
+            image: "lime-4.jpg",
+            image_position: EXPOSURE_IMAGE_POSITIONS.CENTER,
+            person_image: "boy1_boy2_boy3.png",
+            person_image_position: PERSON_IMAGE_POSITIONS.LEFT,
+            bubble_image: "boy_speech_bubble.png",
+            bubble_image_position: BUBBLE_IMAGE_POSITIONS.LEFT,
+
+        },
+        {
+            video: "lime_ka_boy3.mp4",
+            video_position: VIDEO_POSITIONS.LEFT,
+            image: "lime-2.jpg",
+            image_position: EXPOSURE_IMAGE_POSITIONS.CENTER,
+            person_image: "boy1_boy2_boy4.png",
+            person_image_position: PERSON_IMAGE_POSITIONS.LEFT,
+            bubble_image: "boy_speech_bubble.png",
+            bubble_image_position: BUBBLE_IMAGE_POSITIONS.LEFT,
+        }
+    ]
+};
+
+let exposure_procedure_order2_2_3 = {
+    ...exposure_trial_procedure_base,
+    timeline_variables: [
+        {
+            video: "duck_girl4.mp4",
+            video_position: VIDEO_POSITIONS.RIGHT,
+            image: "duck-1.jpg",
+            image_position: EXPOSURE_IMAGE_POSITIONS.CENTER,
+            person_image: "girl1_girl2_girl3.png",
+            person_image_position: PERSON_IMAGE_POSITIONS.RIGHT,
+            bubble_image: "girl_speech_bubble.png",
+            bubble_image_position: BUBBLE_IMAGE_POSITIONS.RIGHT,
+
+        },
+        {
+            video: "duck_po_girl1.mp4",
+            video_position: VIDEO_POSITIONS.RIGHT,
+            image: "duck-4.jpg",
+            image_position: EXPOSURE_IMAGE_POSITIONS.CENTER,
+            person_image: "girl2_girl3_girl4.png",
+            person_image_position: PERSON_IMAGE_POSITIONS.RIGHT,
+            bubble_image: "girl_speech_bubble.png",
+            bubble_image_position: BUBBLE_IMAGE_POSITIONS.RIGHT,
+        },
+        {
+            video: "duck_po_girl3.mp4",
+            video_position: VIDEO_POSITIONS.RIGHT,
+            image: "duck-2.jpg",
+            image_position: EXPOSURE_IMAGE_POSITIONS.CENTER,
+            person_image: "girl1_girl2_girl4.png",
+            person_image_position: PERSON_IMAGE_POSITIONS.RIGHT,
+            bubble_image: "girl_speech_bubble.png",
+            bubble_image_position: BUBBLE_IMAGE_POSITIONS.RIGHT,
+
+        },
+        {
+            video: "duck_po_girl2.mp4",
+            video_position: VIDEO_POSITIONS.RIGHT,
+            image: "duck-4.jpg",
+            image_position: EXPOSURE_IMAGE_POSITIONS.CENTER,
+            person_image: "girl1_girl3_girl4.png",
+            person_image_position: PERSON_IMAGE_POSITIONS.RIGHT,
+            bubble_image: "girl_speech_bubble.png",
+            bubble_image_position: BUBBLE_IMAGE_POSITIONS.RIGHT,
+        },
+        {
+            video: "duck_po_girl4.mp4",
+            video_position: VIDEO_POSITIONS.RIGHT,
+            image: "duck-2.jpg",
+            image_position: EXPOSURE_IMAGE_POSITIONS.CENTER,
+            person_image: "girl1_girl2_girl3.png",
+            person_image_position: PERSON_IMAGE_POSITIONS.RIGHT,
+            bubble_image: "girl_speech_bubble.png",
+            bubble_image_position: BUBBLE_IMAGE_POSITIONS.RIGHT,
+
+        }
+    ]
+};
+
+let exposure_procedure_order2_2_4 = {
+    ...exposure_trial_procedure_base,
+    timeline_variables: [
+        {
+            video: "pear_boy4.mp4",
+            video_position: VIDEO_POSITIONS.LEFT,
+            image: "pear-1.jpg",
+            image_position: EXPOSURE_IMAGE_POSITIONS.CENTER,
+            person_image: "boy1_boy2_boy3.png",
+            person_image_position: PERSON_IMAGE_POSITIONS.LEFT,
+            bubble_image: "boy_speech_bubble.png",
+            bubble_image_position: BUBBLE_IMAGE_POSITIONS.LEFT,
+        },
+        {
+            video: "pear_ka_boy1.mp4",
+            video_position: VIDEO_POSITIONS.LEFT,
+            image: "pear-4.jpg",
+            image_position: EXPOSURE_IMAGE_POSITIONS.CENTER,
+            person_image: "boy2_boy3_boy4.png",
+            person_image_position: PERSON_IMAGE_POSITIONS.LEFT,
+            bubble_image: "boy_speech_bubble.png",
+            bubble_image_position: BUBBLE_IMAGE_POSITIONS.LEFT,
+
+        },
+        {
+            video: "pear_ka_boy4.mp4",
+            video_position: VIDEO_POSITIONS.LEFT,
+            image: "pear-4.jpg",
+            image_position: EXPOSURE_IMAGE_POSITIONS.CENTER,
+            person_image: "boy1_boy2_boy3.png",
+            person_image_position: PERSON_IMAGE_POSITIONS.LEFT,
+            bubble_image: "boy_speech_bubble.png",
+            bubble_image_position: BUBBLE_IMAGE_POSITIONS.LEFT,
+
+        },
+        {
+            video: "pear_ka_boy3.mp4",
+            video_position: VIDEO_POSITIONS.LEFT,
+            image: "pear-2.jpg",
+            image_position: EXPOSURE_IMAGE_POSITIONS.CENTER,
+            person_image: "boy1_boy2_boy4.png",
+            person_image_position: PERSON_IMAGE_POSITIONS.LEFT,
+            bubble_image: "boy_speech_bubble.png",
+            bubble_image_position: BUBBLE_IMAGE_POSITIONS.LEFT,
+        },
+        {
+            video: "pear_ka_boy2.mp4",
+            video_position: VIDEO_POSITIONS.LEFT,
+            image: "pear-2.jpg",
+            image_position: EXPOSURE_IMAGE_POSITIONS.CENTER,
+            person_image: "boy1_boy3_boy4.png",
+            person_image_position: PERSON_IMAGE_POSITIONS.LEFT,
+            bubble_image: "boy_speech_bubble.png",
+            bubble_image_position: BUBBLE_IMAGE_POSITIONS.LEFT,
         }
     ]
 };
