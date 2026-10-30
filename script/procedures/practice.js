@@ -1383,7 +1383,7 @@ let practice2 = {
             },
             person_image: "boy1_boy2_boy3.png",
             person_image_position: PERSON_IMAGE_POSITIONS.LEFT,
-            bubble_image: "girl_speech_bubble.png",
+            bubble_image: "boy_speech_bubble.png",
             bubble_image_position: BUBBLE_IMAGE_POSITIONS.LEFT,
         },
     ]
